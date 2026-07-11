@@ -6,7 +6,7 @@
     "milestone": "Foundation",
     "status": "🎯 Sprint Backlog"
   },
-     {
+  {
     "title": "Fluxo de trajetória mapeada ao pegar as chaves",
     "body": "Inicio -> Fase de terra -> Fase de fogo -> Fase de agua -> Saída",
     "labels": ["type: feature", "area: map", "priority: high"],
@@ -104,7 +104,7 @@
     "milestone": "Enemy AI",
     "status": "📥 Product Backlog"
   },
-     {
+  {
     "title": "Criar ambiente de terra (fase com o baú)",
     "body": "Definir fase de terra contendo plataformas, uma monte com uma parede escondendo o baú, necessidade de contornar a parede para chegar ao báu sendo interceptado pela criatura em um primeiro momento, elementos que poderão ser controlados pela criatura, a partir da fase de terra será possivel ir para a fase de fogo a direira e para a fase de agua a esquerda, a fase de terra também conterá a porta principal no centro superior que leva ao fim do jogo",
     "labels": ["type: feature", "area: map", "priority: high"],
@@ -118,14 +118,14 @@
     "milestone": "Mechanics",
     "status": "📥 Product Backlog"
   },
-   {
+  {
     "title": "Criar ambiente de lava (fase do vulcção)",
     "body": "Definir fase de fogo contendo plataforma, um vulcão maior ao fundo e um menor na fase que está ativo, jogador deverá dar a volta ou subir pelo vulcão para ter acesso a plataforma e chegar a entrada oculta no vulcão que contém a chave, elementos que poderão ser controlados pela criatura, a partir dela será possivel ir para a fase de terra a esquerda",
     "labels": ["type: feature", "area: map", "priority: high"],
     "milestone": "Mechanics",
     "status": "📥 Product Backlog"
   },
-    {
+  {
     "title": "Criatura da agua",
     "body": "Criar o tentaculo portando um machado que bloqueará o jogador de chegar rappidamente na chave, tem controle de elementos do ambiente",
     "labels": ["type: feature", "area: map", "priority: high"],
@@ -139,7 +139,7 @@
     "milestone": "Mechanics",
     "status": "📥 Product Backlog"
   },
-   {
+  {
     "title": "Criatura da lava",
     "body": "Criar a enguia de lava contendo um bola de espinhos no fim do corpo, tem controle de elementos do ambiente",
     "labels": ["type: feature", "area: map", "priority: high"],
