@@ -1,0 +1,67 @@
+[
+  {
+    "name": "type: feature",
+    "color": "0E8A16",
+    "description": "Nova funcionalidade"
+  },
+  {
+    "name": "type: bug",
+    "color": "D73A4A",
+    "description": "Bug"
+  },
+  {
+    "name": "type: polish",
+    "color": "FBCA04",
+    "description": "Melhorias visuais ou gameplay"
+  },
+  {
+    "name": "type: balancing",
+    "color": "C2E0C6",
+    "description": "Balanceamento"
+  },
+  {
+    "name": "area: player",
+    "color": "5319E7",
+    "description": "Jogador"
+  },
+  {
+    "name": "area: enemy",
+    "color": "B60205",
+    "description": "IA da criatura"
+  },
+  {
+    "name": "area: map",
+    "color": "1D76DB",
+    "description": "Mapa"
+  },
+  {
+    "name": "area: ui",
+    "color": "0052CC",
+    "description": "Interface"
+  },
+  {
+    "name": "area: audio",
+    "color": "006B75",
+    "description": "Áudio"
+  },
+  {
+    "name": "area: art",
+    "color": "C5DEF5",
+    "description": "Arte"
+  },
+  {
+    "name": "priority: high",
+    "color": "D93F0B",
+    "description": "Essencial para entregar"
+  },
+  {
+    "name": "priority: medium",
+    "color": "FBCA04",
+    "description": "Importante"
+  },
+  {
+    "name": "priority: low",
+    "color": "BFDADC",
+    "description": "Opcional"
+  }
+]

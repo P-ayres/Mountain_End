@@ -1,0 +1,219 @@
+[
+  {
+    "title": "Configurar estrutura inicial do projeto no Godot",
+    "body": "Criar a estrutura de pastas (assets, audio, scenes, scripts, addons), configurar o Input Map e as configurações básicas do projeto (janela, física, camadas de colisão).",
+    "labels": ["type: feature", "priority: high"],
+    "milestone": "Day 1 - Foundation",
+    "status": "🎯 Sprint Backlog"
+  },
+  {
+    "title": "Implementar movimentação do jogador",
+    "body": "Criar o script de controle do protagonista (movimento, colisão, animação básica de andar/parado).",
+    "labels": ["type: feature", "area: player", "priority: high"],
+    "milestone": "Day 1 - Foundation",
+    "status": "🎯 Sprint Backlog"
+  },
+  {
+    "title": "Criar cena base do ambiente (protótipo de nível)",
+    "body": "Montar um nível de teste com um bioma simples (ex: caverna) para validar movimentação e câmera.",
+    "labels": ["type: feature", "area: map", "priority: high"],
+    "milestone": "Day 1 - Foundation",
+    "status": "🎯 Sprint Backlog"
+  },
+  {
+    "title": "Implementar câmera do jogador",
+    "body": "Configurar câmera (top-down ou seguimento) com limites de nível e transição suave.",
+    "labels": ["type: feature", "area: player", "priority: medium"],
+    "milestone": "Day 1 - Foundation",
+    "status": "🎯 Sprint Backlog"
+  },
+  {
+    "title": "Implementar ação de abrir/fechar o mapa",
+    "body": "Adicionar input dedicado (tecla/botão) para abrir e fechar a tela do mapa do mundo, pausando ou não o jogo conforme design.",
+    "labels": ["type: feature", "area: ui", "priority: high"],
+    "milestone": "Day 1 - Foundation",
+    "status": "🎯 Sprint Backlog"
+  },
+  {
+    "title": "Criar UI do mapa do mundo com posição do jogador",
+    "body": "Tela de mapa exibindo o ícone do jogador na posição atual dentro do ambiente.",
+    "labels": ["type: feature", "area: map", "area: ui", "priority: high"],
+    "milestone": "Day 2 - Core Gameplay",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Exibir posição da criatura no mapa",
+    "body": "Adicionar ao mapa o indicador da posição (ou direção/distância aproximada) da criatura, permitindo ao jogador planejar como evitá-la.",
+    "labels": ["type: feature", "area: map", "area: enemy", "priority: high"],
+    "milestone": "Day 2 - Core Gameplay",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Implementar loop principal de evitar a criatura",
+    "body": "Conectar movimentação, mapa e presença da criatura em um loop jogável: explorar o ambiente evitando ser detectado/pego.",
+    "labels": ["type: feature", "priority: high"],
+    "milestone": "Day 2 - Core Gameplay",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Criar gerenciador de estado de jogo",
+    "body": "Sistema central para estados de game over, vitória e pausa, permitindo reiniciar ou continuar a partida.",
+    "labels": ["type: feature", "priority: medium"],
+    "milestone": "Day 2 - Core Gameplay",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Criar máquina de estados da criatura",
+    "body": "Implementar estados básicos (inativa, observando, perseguindo) que orientam o comportamento da IA da criatura.",
+    "labels": ["type: feature", "area: enemy", "priority: high"],
+    "milestone": "Day 3 - Enemy AI",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Implementar comportamento de observar à distância",
+    "body": "A criatura deve permanecer visível/perceptível ao longe, dando a sensação constante de estar sendo observado.",
+    "labels": ["type: feature", "area: enemy", "priority: high"],
+    "milestone": "Day 3 - Enemy AI",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Sistema de detecção do jogador",
+    "body": "Implementar linha de visão e distância de detecção para que a criatura saiba quando o jogador está próximo ou visível.",
+    "labels": ["type: feature", "area: enemy", "priority: high"],
+    "milestone": "Day 3 - Enemy AI",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Feedback visual e sonoro de observação da criatura",
+    "body": "Adicionar pistas (som, iluminação, distorção de câmera) quando a criatura estiver observando o jogador, reforçando a ambientação dark.",
+    "labels": ["type: polish", "area: enemy", "area: audio", "priority: medium"],
+    "milestone": "Day 3 - Enemy AI",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Sistema de biomas/zonas do ambiente",
+    "body": "Definir zonas distintas no ambiente (caverna, rio, floresta, etc.) que servirão de base para as habilidades da criatura.",
+    "labels": ["type: feature", "area: map", "priority: high"],
+    "milestone": "Day 4 - Mechanics",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Habilidade da criatura: paredes de pedra na caverna",
+    "body": "Na zona de caverna, a criatura pode criar paredes de pedra para bloquear ou direcionar o jogador.",
+    "labels": ["type: feature", "area: enemy", "priority: medium"],
+    "milestone": "Day 4 - Mechanics",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Habilidade da criatura: jatos de água no rio",
+    "body": "Na zona de rio, a criatura pode lançar jatos de água contra o jogador.",
+    "labels": ["type: feature", "area: enemy", "priority: medium"],
+    "milestone": "Day 4 - Mechanics",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Implementar condição de derrota",
+    "body": "Definir o que acontece quando a criatura alcança o jogador (game over, reinício de checkpoint, etc.).",
+    "labels": ["type: feature", "priority: high"],
+    "milestone": "Day 4 - Mechanics",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Sistema de esconderijo/furtividade para o jogador",
+    "body": "Permitir que o jogador se esconda ou reduza sua chance de detecção em certos pontos do cenário.",
+    "labels": ["type: feature", "area: player", "priority: medium"],
+    "milestone": "Day 4 - Mechanics",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Montar nível completo combinando os biomas",
+    "body": "Construir o nível final integrando todas as zonas (caverna, rio, floresta, etc.) em um único mapa coeso.",
+    "labels": ["type: feature", "area: map", "priority: high"],
+    "milestone": "Day 5 - Content",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Adicionar elemento ridiculamente grande no cenário",
+    "body": "Incluir um objeto ou estrutura exageradamente grande no ambiente, atendendo à carta temática 'ter algo ridiculamente grande'.",
+    "labels": ["type: feature", "area: art", "priority: low"],
+    "milestone": "Day 5 - Content",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Criar cutscene de revelação do plot",
+    "body": "Sequência final revelando que todo o ambiente era, na verdade, a própria criatura gigante brincando com o protagonista.",
+    "labels": ["type: feature", "priority: high"],
+    "milestone": "Day 5 - Content",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Finalizar arte do mapa do mundo",
+    "body": "Produzir a arte final da tela de mapa (ícones do jogador/criatura, textura de fundo, legendas).",
+    "labels": ["type: feature", "area: map", "area: art", "priority: medium"],
+    "milestone": "Day 5 - Content",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Ambientação dark: iluminação e pós-processamento",
+    "body": "Ajustar iluminação, sombras e efeitos de pós-processamento para reforçar o clima sombrio do jogo.",
+    "labels": ["type: polish", "area: art", "priority: high"],
+    "milestone": "Day 6 - Polish",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Implementar áudio ambiente, música e efeitos sonoros",
+    "body": "Adicionar trilha sonora, sons ambientes e efeitos (passos, criatura, interações) ao jogo.",
+    "labels": ["type: feature", "area: audio", "priority: medium"],
+    "milestone": "Day 6 - Polish",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Polir UI/HUD",
+    "body": "Revisar e finalizar menus, tela de mapa e indicadores em tela (HUD) para consistência visual.",
+    "labels": ["type: polish", "area: ui", "priority: medium"],
+    "milestone": "Day 6 - Polish",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Correção de bugs e balanceamento geral",
+    "body": "Rodada de bugfixing e ajuste de dificuldade (velocidade da criatura, tempo de detecção, tamanho do nível).",
+    "labels": ["type: bug", "type: balancing", "priority: high"],
+    "milestone": "Day 6 - Polish",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Playtest completo e ajustes finais",
+    "body": "Sessão de testes de ponta a ponta com foco em dificuldade, clareza do mapa e bugs críticos.",
+    "labels": ["type: polish", "priority: high"],
+    "milestone": "Day 7 - Release",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Criar página da jam no itch.io",
+    "body": "Preparar capa, descrição, screenshots e informações de controle para a página de submissão.",
+    "labels": ["type: feature", "priority: high"],
+    "milestone": "Day 7 - Release",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Exportar build final",
+    "body": "Gerar os exports finais (Windows e/ou Web) e validar que rodam corretamente fora do editor.",
+    "labels": ["type: feature", "priority: high"],
+    "milestone": "Day 7 - Release",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Gravar trailer/gif de divulgação",
+    "body": "Capturar um vídeo curto ou gif mostrando o gameplay principal para divulgação na submissão.",
+    "labels": ["type: polish", "priority: low"],
+    "milestone": "Day 7 - Release",
+    "status": "📥 Product Backlog"
+  },
+  {
+    "title": "Submeter o jogo na Godot Wild Jam #95",
+    "body": "Finalizar e enviar a submissão oficial dentro do prazo da jam.",
+    "labels": ["type: feature", "priority: high"],
+    "milestone": "Day 7 - Release",
+    "status": "📥 Product Backlog"
+  }
+]

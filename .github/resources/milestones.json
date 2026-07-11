@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Day 1 - Foundation",
+    "description": "Projeto criado e movimentação funcionando"
+  },
+  {
+    "title": "Day 2 - Core Gameplay",
+    "description": "Loop principal do jogo"
+  },
+  {
+    "title": "Day 3 - Enemy AI",
+    "description": "Criatura funcional"
+  },
+  {
+    "title": "Day 4 - Mechanics",
+    "description": "Mapa e habilidades"
+  },
+  {
+    "title": "Day 5 - Content",
+    "description": "Level completo"
+  },
+  {
+    "title": "Day 6 - Polish",
+    "description": "Áudio, efeitos e correções"
+  },
+  {
+    "title": "Day 7 - Release",
+    "description": "Build final"
+  }
+]

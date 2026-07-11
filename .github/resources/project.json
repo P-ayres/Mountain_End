@@ -1,0 +1,44 @@
+{
+  "name": "Godot Wild Jam #95 Board",
+  "description": "Board Kanban para organizar o desenvolvimento durante os 7 dias da Godot Wild Jam #95.",
+  "fields": [
+    {
+      "name": "Status",
+      "type": "single_select",
+      "options": [
+        {
+          "name": "📥 Product Backlog",
+          "color": "GRAY",
+          "description": "Features waiting to be prioritized."
+        },
+        {
+          "name": "🎯 Sprint Backlog",
+          "color": "BLUE",
+          "description": "Planned work for the current sprint."
+        },
+        {
+          "name": "🚧 In Progress",
+          "color": "YELLOW",
+          "description": "Currently being implemented."
+        },
+        {
+          "name": "🧪 Testing",
+          "color": "ORANGE",
+          "description": "Ready for validation and functional testing."
+        },
+        {
+          "name": "✅ Done",
+          "color": "GREEN",
+          "description": "Completed, tested and merged into main."
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "name": "Board",
+      "layout": "board",
+      "groupBy": "Status"
+    }
+  ]
+}
