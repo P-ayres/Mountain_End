@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c17xpgheck1ro"]
+
+[ext_resource type="Texture2D" uid="uid://fj4ft7ylmmy5" path="res://assets/WhatsApp Image 2026-07-12 at 11.16.59.jpeg" id="1_2umt7"]
+[ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="1_afhwv"]
+
+[node name="Earth" type="Node2D" unique_id=502879821]
+
+[node name="referência" type="Sprite2D" parent="." unique_id=618875312]
+position = Vector2(200, 200)
+texture = ExtResource("1_2umt7")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=374884972]
+
+[node name="Player" parent="." unique_id=1021298550 instance=ExtResource("1_afhwv")]
+position = Vector2(58, 244)
