@@ -11,7 +11,7 @@ region = Rect2(160, 128, 32, 32)
 atlas = ExtResource("1_uvdjg")
 region = Rect2(208, 128, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_47noy"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfg7k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -33,16 +33,14 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_47noy"]
 radius = 28.160255
 
-[node name="Door" type="AnimatedSprite2D" unique_id=1518921500]
-sprite_frames = SubResource("SpriteFrames_47noy")
-animation = &"closed"
-autoplay = "closed"
+[node name="Door" type="Area2D" unique_id=1392944945]
+collision_mask = 2
 script = ExtResource("2_83dcw")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1455908085]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=571852800]
+sprite_frames = SubResource("SpriteFrames_lfg7k")
+animation = &"closed"
+autoplay = "closed"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=567500805]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1579426344]
 shape = SubResource("CircleShape2D_47noy")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

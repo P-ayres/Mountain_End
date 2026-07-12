@@ -1,10 +1,12 @@
-extends AnimatedSprite2D
+extends Area2D
+
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var is_in_range = false;
 
 func _process(_delta):
-	if(is_in_range && Input.is_action_just_pressed("ui_accept")):
-		play("open")
+	if(is_in_range and Input.is_action_just_pressed("ui_accept")):
+		animated_sprite_2d.play("open")
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	is_in_range = true;
