@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh4ps4t1lfo35"
-path="res://.godot/imported/Idle_front_view.png-39b677b569fb28c2b5bb949ae9b1e130.ctex"
+uid="uid://dyp3w4wuajbnj"
+path="res://.godot/imported/tiles_caverna.png-daac81b3d613d903ef79d2b9c1a72972.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Character/Idle/Idle_front_view.png"
-dest_files=["res://.godot/imported/Idle_front_view.png-39b677b569fb28c2b5bb949ae9b1e130.ctex"]
+source_file="res://assets/sprites/Tileset/tiles_caverna.png"
+dest_files=["res://.godot/imported/tiles_caverna.png-daac81b3d613d903ef79d2b9c1a72972.ctex"]
 
 [params]
 
