@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://458sumt2vwco"]
+
+[ext_resource type="Texture2D" uid="uid://c5ko8sd5qbac2" path="res://assets/sprites/Tileset/Tileset.png" id="1_uvdjg"]
+[ext_resource type="Script" uid="uid://f77vl7y77uh2" path="res://scripts/door.gd" id="2_83dcw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_la1wf"]
+atlas = ExtResource("1_uvdjg")
+region = Rect2(160, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18pbm"]
+atlas = ExtResource("1_uvdjg")
+region = Rect2(208, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47noy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_la1wf")
+}],
+"loop": 0,
+"name": &"closed",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18pbm")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_47noy"]
+radius = 28.160255
+
+[node name="Door" type="AnimatedSprite2D" unique_id=1518921500]
+sprite_frames = SubResource("SpriteFrames_47noy")
+animation = &"closed"
+autoplay = "closed"
+script = ExtResource("2_83dcw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1455908085]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=567500805]
+shape = SubResource("CircleShape2D_47noy")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
