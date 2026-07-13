@@ -38,7 +38,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yhylo")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"open_chest",
 "speed": 5.0
 }]
@@ -48,7 +48,7 @@ size = Vector2(24, 24)
 
 [node name="chest" type="AnimatedSprite2D" unique_id=8195782]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"closed"
+animation = &"open_chest"
 
 [node name="StaticBody" type="StaticBody2D" parent="." unique_id=630417557]
 

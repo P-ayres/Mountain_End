@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="2_0oxg1"]
 [ext_resource type="Texture2D" uid="uid://dpunwilqcgtd5" path="res://assets/sprites/Objects/cachoeira_layer.png" id="4_0oxg1"]
 [ext_resource type="PackedScene" uid="uid://cpealxo86d45k" path="res://scenes/chest.tscn" id="4_f4lyb"]
+[ext_resource type="Script" uid="uid://b0mx7hbgugp65" path="res://scripts/chest.gd" id="4_xx1uv"]
+[ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="5_4dgp5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4lyb"]
 texture = ExtResource("2_0oxg1")
@@ -236,3 +238,10 @@ texture = ExtResource("4_0oxg1")
 [node name="chest" parent="." unique_id=8195782 instance=ExtResource("4_f4lyb")]
 z_index = 1
 position = Vector2(276, 116)
+animation = &"open_chest"
+autoplay = "closed"
+script = ExtResource("4_xx1uv")
+
+[node name="Player" parent="." unique_id=1021298550 instance=ExtResource("5_4dgp5")]
+z_index = 1
+position = Vector2(253, 119)
