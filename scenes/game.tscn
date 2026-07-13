@@ -239,8 +239,3 @@ tile_set = SubResource("TileSet_lfg7k")
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("2_yqjtg")]
 position = Vector2(34, -9)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1280838536]
-position = Vector2(0, -13)
-zoom = Vector2(4, 4)
-position_smoothing_enabled = true
