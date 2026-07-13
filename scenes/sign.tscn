@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://73n8ab8ihqia"]
+
+[ext_resource type="Script" uid="uid://b6mqwutwxo4tc" path="res://scripts/sign.gd" id="1_8yyji"]
+[ext_resource type="Texture2D" uid="uid://bqtrn7t8j4xef" path="res://assets/sprites/world_tileset.png" id="1_kd50q"]
+[ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="2_8yyji"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge2pc"]
+atlas = ExtResource("1_kd50q")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47noy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge2pc")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfg7k"]
+size = Vector2(30, 30)
+
+[node name="Sign" type="Area2D" unique_id=1430650561]
+collision_mask = 2
+script = ExtResource("1_8yyji")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1541806380]
+sprite_frames = SubResource("SpriteFrames_47noy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930902808]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_lfg7k")
+
+[node name="InteractionPrompt" parent="." unique_id=1961884589 instance=ExtResource("2_8yyji")]
+offset_left = -4.0
+offset_top = -26.0
+offset_right = 5.0
+offset_bottom = -10.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
