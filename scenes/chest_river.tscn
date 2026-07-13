@@ -46,7 +46,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(24, 24)
 
-[node name="chest" type="AnimatedSprite2D" unique_id=8195782]
+[node name="chest_river" type="AnimatedSprite2D" unique_id=8195782]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"closed"
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyp3w4wuajbnj"
-path="res://.godot/imported/tiles_caverna.png-daac81b3d613d903ef79d2b9c1a72972.ctex"
+uid="uid://uxstl7i1lscr"
+path="res://.godot/imported/portas-Sheet.png-9a9f55e39d8ce697212f005565c1c0ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Tileset/tiles_caverna.png"
-dest_files=["res://.godot/imported/tiles_caverna.png-daac81b3d613d903ef79d2b9c1a72972.ctex"]
+source_file="res://assets/sprites/Objects/portas-Sheet.png"
+dest_files=["res://.godot/imported/portas-Sheet.png-9a9f55e39d8ce697212f005565c1c0ac.ctex"]
 
 [params]
 

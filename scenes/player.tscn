@@ -1,38 +1,17 @@
 [gd_scene format=3 uid="uid://tl02yxutky3c"]
 
 [ext_resource type="Script" uid="uid://cp5o7ckym81ki" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dh4ps4t1lfo35" path="res://assets/sprites/Character/Idle/Idle_front_view.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="2_qhqgy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
-atlas = ExtResource("2_g2els")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
-atlas = ExtResource("2_g2els")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
-atlas = ExtResource("2_g2els")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
-atlas = ExtResource("2_g2els")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_qhqgy")
+region = Rect2(208, 25, 16, 25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_47noy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qhqgy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dqkch")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qlg0r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tuyoq")
+"texture": SubResource("AtlasTexture_fjrip")
 }],
 "loop": 1,
 "name": &"default",
@@ -40,19 +19,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
-size = Vector2(7, 10)
+size = Vector2(9, 19)
 
 [node name="Player" type="CharacterBody2D" unique_id=1021298550]
+collision_layer = 2
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1608368464]
 position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_47noy")
-frame_progress = 0.11805324
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1852580272]
-position = Vector2(-0.5, -7)
+position = Vector2(0.5, -6.5)
 shape = SubResource("RectangleShape2D_lnu2h")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1416493008]
-zoom = Vector2(3, 3)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=941204244]
+position = Vector2(0, -13)
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
