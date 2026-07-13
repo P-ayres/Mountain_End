@@ -1,10 +1,25 @@
-extends AnimatedSprite2D
+extends Area2D
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var interaction_prompt: PanelContainer = $InteractionPrompt
 
-@onready var _animated_sprite = $AnimatedSprite2D
+var is_in_range: bool = false;
 
-func _process(_delta):
-	if Input.is_physical_key_pressed(KEY_F):
-		_animated_sprite.play("open")
-	else: 
-		return;
+var chest_opened := false;
+
+func _process(_delta: float) -> void:
+	if is_in_range and Input.is_action_just_pressed("interact") and not chest_opened:
+		chest_opened = true
+		animated_sprite_2d.play("open_chest")
+		
+
+func _on_body_entered(_body: Node2D) -> void:
+	print("entered range")
+	if not chest_opened:
+		is_in_range = true;
+		interaction_prompt.show_prompt()
+
+func _on_body_exited(_body: Node2D) -> void:
+	print("left range")
+	is_in_range = false;
+	interaction_prompt.hide_prompt()
