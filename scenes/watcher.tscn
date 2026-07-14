@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://vhd54kylrnbd"]
+
+[ext_resource type="Script" uid="uid://df8oss176qoxv" path="res://scenes/watcher.gd" id="1_3y8gi"]
+[ext_resource type="Texture2D" uid="uid://bts73jhgv5fsa" path="res://assets/sprites/Enemies/observador-Sheet.png" id="1_hbav8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y8gi"]
+atlas = ExtResource("1_hbav8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrvts"]
+atlas = ExtResource("1_hbav8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5rbt"]
+atlas = ExtResource("1_hbav8")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyf0u"]
+atlas = ExtResource("1_hbav8")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc1i2"]
+atlas = ExtResource("1_hbav8")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acp5x"]
+atlas = ExtResource("1_hbav8")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47noy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3y8gi")
+}],
+"loop": 0,
+"name": &"sleep",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrvts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5rbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyf0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc1i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acp5x")
+}],
+"loop": 0,
+"name": &"watching",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfg7k"]
+size = Vector2(30, 30)
+
+[node name="Watcher" type="Area2D" unique_id=1430650561]
+collision_mask = 2
+script = ExtResource("1_3y8gi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1541806380]
+sprite_frames = SubResource("SpriteFrames_47noy")
+animation = &"watching"
+autoplay = "sleep"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930902808]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_lfg7k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
