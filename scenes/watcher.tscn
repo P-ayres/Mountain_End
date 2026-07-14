@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vhd54kylrnbd"]
 
-[ext_resource type="Script" uid="uid://df8oss176qoxv" path="res://scenes/watcher.gd" id="1_3y8gi"]
+[ext_resource type="Script" uid="uid://df8oss176qoxv" path="res://scripts/watcher.gd" id="1_3y8gi"]
 [ext_resource type="Texture2D" uid="uid://bts73jhgv5fsa" path="res://assets/sprites/Enemies/observador-Sheet.png" id="1_hbav8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3y8gi"]
@@ -55,11 +55,11 @@ animations = [{
 }],
 "loop": 0,
 "name": &"watching",
-"speed": 5.0
+"speed": 2.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfg7k"]
-size = Vector2(30, 30)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8otvb"]
+size = Vector2(65.823044, 65.700325)
 
 [node name="Watcher" type="Area2D" unique_id=1430650561]
 collision_mask = 2
@@ -69,10 +69,14 @@ script = ExtResource("1_3y8gi")
 sprite_frames = SubResource("SpriteFrames_47noy")
 animation = &"watching"
 autoplay = "sleep"
+frame = 4
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930902808]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_lfg7k")
+position = Vector2(-0.00834468, 38.499454)
+rotation = -0.7865107
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_8otvb")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
