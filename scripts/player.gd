@@ -11,12 +11,10 @@ func use_map():
 		map_panel.visible=false
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("map"):
-		use_map()
-
-func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		GameSystem.pause_game()
+	if Input.is_action_just_pressed("map"):
+		use_map()
 
 func _physics_process(delta: float) -> void:
 	if GameSystem.current_state == GameSystem.GameState.PLAYING:
