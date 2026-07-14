@@ -37,3 +37,10 @@ shape = SubResource("RectangleShape2D_lnu2h")
 position = Vector2(0, -13)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
+
+[node name="map" type="Panel" parent="." unique_id=1829077867]
+visible = false
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 48.0
