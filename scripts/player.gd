@@ -2,6 +2,17 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
+@onready var map_panel = $map
+
+func use_map():
+	if map_panel.visible==false:
+		map_panel.visible=true
+	elif map_panel.visible==true:
+		map_panel.visible=false
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("map"):
+		use_map()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
