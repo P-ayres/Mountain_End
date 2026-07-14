@@ -1,25 +1,32 @@
-[gd_scene format=3 uid="uid://cpealxo86d45k"]
+[gd_scene format=3 uid="uid://d2mqxu2vlj0rr"]
 
-[ext_resource type="Script" uid="uid://cxi26nr1pthnu" path="res://scenes/chest.gd" id="1_gqd3d"]
-[ext_resource type="Texture2D" uid="uid://biuh2rra3g4i8" path="res://assets/sprites/Objects/Chest_1.png" id="2_gqd3d"]
+[ext_resource type="Script" uid="uid://cxi26nr1pthnu" path="res://scripts/chest.gd" id="1_gqd3d"]
+[ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="2_gqd3d"]
 [ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="3_yhylo"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gqd3d"]
-atlas = ExtResource("2_gqd3d")
-region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yue2o"]
 atlas = ExtResource("2_gqd3d")
-region = Rect2(16, 0, 16, 16)
+region = Rect2(160, 41, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhylo"]
+atlas = ExtResource("2_gqd3d")
+region = Rect2(192, 41, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w02o5"]
+atlas = ExtResource("2_gqd3d")
+region = Rect2(224, 41, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4x5om"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gqd3d")
+"texture": SubResource("AtlasTexture_yue2o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yue2o")
+"texture": SubResource("AtlasTexture_yhylo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w02o5")
 }],
 "loop": 0,
 "name": &"open_chest",
@@ -27,7 +34,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfg7k"]
-size = Vector2(22, 16)
+size = Vector2(27.75, 26.5)
 
 [node name="Chest" type="Area2D" unique_id=1430650561]
 collision_mask = 2
@@ -38,6 +45,7 @@ sprite_frames = SubResource("SpriteFrames_4x5om")
 animation = &"open_chest"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930902808]
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_lfg7k")
 
 [node name="InteractionPrompt" parent="." unique_id=1961884589 instance=ExtResource("3_yhylo")]
