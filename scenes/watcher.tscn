@@ -7,6 +7,10 @@
 atlas = ExtResource("1_hbav8")
 region = Rect2(0, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_80vau"]
+atlas = ExtResource("1_hbav8")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrvts"]
 atlas = ExtResource("1_hbav8")
 region = Rect2(16, 0, 16, 16)
@@ -39,6 +43,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_80vau")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_xrvts")
 }, {
 "duration": 1.0,
@@ -59,7 +66,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8otvb"]
-size = Vector2(65.823044, 65.700325)
+size = Vector2(70.070404, 69.93825)
 
 [node name="Watcher" type="Area2D" unique_id=1430650561]
 collision_mask = 2
@@ -69,11 +76,9 @@ script = ExtResource("1_3y8gi")
 sprite_frames = SubResource("SpriteFrames_47noy")
 animation = &"watching"
 autoplay = "sleep"
-frame = 4
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930902808]
-position = Vector2(-0.00834468, 38.499454)
+position = Vector2(-0.008345038, 41.499454)
 rotation = -0.7865107
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_8otvb")
