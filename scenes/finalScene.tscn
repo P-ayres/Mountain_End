@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://73n8ab8ihqia" path="res://scenes/sign.tscn" id="3_g71qv"]
 [ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="3_vfp6b"]
 [ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="4_vfp6b"]
-[ext_resource type="Script" uid="uid://cevlb6gml7uow" path="res://scenes/signFinal.gd" id="4_x88xh"]
+[ext_resource type="Script" uid="uid://cevlb6gml7uow" path="res://scripts/signFinal.gd" id="4_x88xh"]
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="5_0vw2w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfp6b"]
