@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="3_f4lyb"]
 [ext_resource type="Texture2D" uid="uid://dpunwilqcgtd5" path="res://assets/sprites/Objects/cachoeira_layer.png" id="4_0oxg1"]
 [ext_resource type="PackedScene" uid="uid://d2mqxu2vlj0rr" path="res://scenes/chest.tscn" id="4_f4lyb"]
-[ext_resource type="Script" uid="uid://svmsit83wtex" path="res://scenes/doorHiddentoearth.gd" id="4_xx1uv"]
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="5_4dgp5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xx1uv"]
@@ -357,6 +356,32 @@ texture = ExtResource("2_0oxg1")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_f4lyb")
 
+[sub_resource type="GDScript" id="GDScript_f4lyb"]
+script/source = "extends Area2D
+
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var interaction_prompt: PanelContainer = $InteractionPrompt
+
+var is_in_range = false;
+
+
+func _process(_delta):
+	animated_sprite_2d.hide()
+	if(is_in_range and Input.is_action_just_pressed(\"interact\")):
+		await get_tree().create_timer(0.3).timeout
+		get_tree().change_scene_to_file(\"res://scenes/earth.tscn\")
+
+func _on_body_entered(_body: Node2D) -> void:
+	print(\"entered range\")
+	is_in_range = true;
+	interaction_prompt.show_prompt()
+
+func _on_body_exited(_body: Node2D) -> void:
+	print(\"left range\")
+	is_in_range = false;
+	interaction_prompt.hide_prompt()
+"
+
 [node name="area_aquatica" type="Node2D" unique_id=875386851]
 
 [node name="Tiles" type="Node" parent="." unique_id=57025379]
@@ -386,7 +411,7 @@ position = Vector2(773, 112)
 
 [node name="hiddenDoor_earth" parent="Tiles" unique_id=2090127083 instance=ExtResource("3_f4lyb")]
 position = Vector2(799, 720)
-script = ExtResource("4_xx1uv")
+script = SubResource("GDScript_f4lyb")
 
 [node name="CachoeiraLayer" type="Sprite2D" parent="Tiles" unique_id=1959988855]
 modulate = Color(0.82, 0.2706, 0.2706, 1)
