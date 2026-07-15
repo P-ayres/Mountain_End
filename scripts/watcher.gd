@@ -5,8 +5,7 @@ extends Area2D
 var is_in_range: bool = false;
 
 func _process(_delta: float) -> void:
-	if(is_in_range):
-		print("AVISTADO")
+	pass
 
 func _on_body_entered(_body: Node2D) -> void:
 	print("entered range")

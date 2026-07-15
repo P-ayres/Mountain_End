@@ -59,7 +59,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8otvb"]
-size = Vector2(65.823044, 65.700325)
+size = Vector2(70.070404, 69.93825)
 
 [node name="Watcher" type="Area2D" unique_id=1430650561]
 collision_mask = 2
@@ -73,7 +73,7 @@ frame = 4
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930902808]
-position = Vector2(-0.00834468, 38.499454)
+position = Vector2(-0.008345038, 41.499454)
 rotation = -0.7865107
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_8otvb")
