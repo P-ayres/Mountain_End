@@ -16,4 +16,4 @@ func _on_body_entered(_body: Node2D) -> void:
 func _on_body_exited(_body: Node2D) -> void:
 	print("left watcher vision range")
 	is_in_range = false;
-	animated_sprite_2d.play("sleep")
+	animated_sprite_2d.play_backwards("watching")
