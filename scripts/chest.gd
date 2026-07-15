@@ -4,8 +4,9 @@ extends Area2D
 @onready var interaction_prompt: PanelContainer = $InteractionPrompt
 
 var is_in_range: bool = false;
-
 var chest_opened := false;
+@export var key_name = ""
+
 
 func _process(_delta: float) -> void:
 	if is_in_range and Input.is_action_just_pressed("interact") and not chest_opened:
