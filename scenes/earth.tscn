@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://uxstl7i1lscr" path="res://assets/sprites/Objects/portas-Sheet.png" id="4_78p35"]
 [ext_resource type="Script" uid="uid://dol2w878g16o3" path="res://scripts/greatDoor.gd" id="4_te4mb"]
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="5_3t2fh"]
-[ext_resource type="Script" uid="uid://dcelmoqx373wi" path="res://scenes/doorToLava.gd" id="5_8otvb"]
+[ext_resource type="Script" uid="uid://dcelmoqx373wi" path="res://scripts/doorToLava.gd" id="5_8otvb"]
 [ext_resource type="Script" uid="uid://d2xilkyrf46i2" path="res://scripts/door_river.gd" id="6_78p35"]
-[ext_resource type="Script" uid="uid://cfxgahlnvvunv" path="res://scenes/HiddenDoorToLava.gd" id="6_videg"]
+[ext_resource type="Script" uid="uid://cfxgahlnvvunv" path="res://scripts/HiddenDoorToLava.gd" id="6_videg"]
 [ext_resource type="Script" uid="uid://dgs4tsr00ptgi" path="res://scripts/hidden_doorRive.gd" id="6_yhjmp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t2fh"]
@@ -660,7 +660,7 @@ modulate = Color(1, 0.45999998, 0.45999998, 1)
 position = Vector2(800, 658)
 script = ExtResource("5_8otvb")
 
-[node name="HiddenDoorToLava" parent="TileMapLayer" unique_id=1392944945 instance=ExtResource("5_3t2fh")]
+[node name="HiddenDoorToLava" parent="TileMapLayer" unique_id=924622366 instance=ExtResource("5_3t2fh")]
 position = Vector2(816, 129)
 script = ExtResource("6_videg")
 
