@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cp5o7ckym81ki" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://ccswulwpndrfw" path="res://assets/sprites/Character/player24x24.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://bfeqcgfl132cn" path="res://assets/sprites/Objects/mapa_placeholder.png" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://daxash45exjax" path="res://assets/sprites/Objects/player_position_icon.png" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_g2els")
@@ -105,3 +108,30 @@ offset_left = -64.0
 offset_top = -64.0
 offset_right = 64.0
 offset_bottom = 48.0
+
+[node name="map_texture" type="TextureRect" parent="map" unique_id=1926046147]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 128.0
+offset_bottom = 80.0
+texture = ExtResource("3_qhqgy")
+expand_mode = 1
+
+[node name="player_position" type="TextureRect" parent="map/map_texture" unique_id=827584910]
+layout_mode = 0
+offset_right = 3.0
+offset_bottom = 3.0
+texture = ExtResource("4_dqkch")
+expand_mode = 1
+
+[node name="pos1" type="Marker2D" parent="map/map_texture" unique_id=1896198657]
+position = Vector2(56, 8)
+
+[node name="pos2" type="Marker2D" parent="map/map_texture" unique_id=198111161]
+position = Vector2(64, 32)
+
+[node name="pos3" type="Marker2D" parent="map/map_texture" unique_id=436583487]
+position = Vector2(104, 32)
+
+[node name="pos4" type="Marker2D" parent="map/map_texture" unique_id=2146676931]
+position = Vector2(32, 24)
