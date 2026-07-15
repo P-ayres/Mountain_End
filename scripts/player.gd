@@ -3,8 +3,25 @@ extends CharacterBody2D
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 @onready var map_panel = $map
+@onready var map_player_icon = $map/map_texture/player_position
+var map_position = GameSystem.player_position
 
 func use_map():
+#region Verificar sala e atualiza mapa
+	if $"..".name == "Game":
+		GameSystem.player_position=0
+		map_player_icon.set_position($map/map_texture/pos1.position)
+	elif $"..".name == "Earth":
+		GameSystem.player_position=1
+		map_player_icon.set_position($map/map_texture/pos2.position)
+	elif $"..".name == "Volcano":
+		GameSystem.player_position=2
+		map_player_icon.set_position($map/map_texture/pos3.position)
+	elif $"..".name == "area_aquatica":
+		GameSystem.player_position=3
+		map_player_icon.set_position($map/map_texture/pos4.position)
+#endregion
+		
 	if map_panel.visible==false:
 		map_panel.visible=true
 	elif map_panel.visible==true:
