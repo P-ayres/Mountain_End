@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://d2xilkyrf46i2" path="res://scripts/door_river.gd" id="6_78p35"]
 [ext_resource type="Script" uid="uid://cfxgahlnvvunv" path="res://scripts/HiddenDoorToLava.gd" id="6_videg"]
 [ext_resource type="Script" uid="uid://dgs4tsr00ptgi" path="res://scripts/hidden_doorRive.gd" id="6_yhjmp"]
+[ext_resource type="PackedScene" uid="uid://b0ygnuit7m2tu" path="res://scenes/worm.tscn" id="12_np46n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t2fh"]
 texture = ExtResource("2_2tfwh")
@@ -685,4 +686,8 @@ script = ExtResource("6_yhjmp")
 [node name="player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
 position = Vector2(143, 461)
 
+[node name="worm" parent="." unique_id=1726133864 instance=ExtResource("12_np46n")]
+position = Vector2(459, 436)
+
 [connection signal="timeout" from="FadingTimer" to="TileMapLayer/DoorToLava" method="_on_fading_timer_timeout"]
+

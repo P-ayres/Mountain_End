@@ -28,6 +28,11 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Godot Wild Jam 95"
 
+[global_group]
+
+Player="Grupo para o jogador"
+Enemies=""
+
 [input]
 
 ui_left={
@@ -95,6 +100,7 @@ map={
 
 2d_physics/layer_1="world"
 2d_physics/layer_2="interactions"
+2d_physics/layer_3="enemies"
 
 [physics]
 
