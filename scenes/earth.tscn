@@ -1,9 +1,11 @@
 [gd_scene format=4 uid="uid://0vedbqsddcwj"]
 
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="1_afhwv"]
+[ext_resource type="Script" uid="uid://c4s8h5jqxhtiy" path="res://scripts/earth.gd" id="1_nj2me"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="2_2tfwh"]
+[ext_resource type="PackedScene" uid="uid://dt5s35jwlddvy" path="res://scenes/fade.tscn" id="2_yvqq7"]
 [ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="3_8otvb"]
-[ext_resource type="PackedScene" uid="uid://d2mqxu2vlj0rr" path="res://scenes/chest.tscn" id="3_k5w1d"]
+[ext_resource type="PackedScene" uid="uid://cpealxo86d45k" path="res://scenes/chest.tscn" id="3_k5w1d"]
 [ext_resource type="Texture2D" uid="uid://uxstl7i1lscr" path="res://assets/sprites/Objects/portas-Sheet.png" id="4_78p35"]
 [ext_resource type="Script" uid="uid://dol2w878g16o3" path="res://scripts/greatDoor.gd" id="4_te4mb"]
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="5_3t2fh"]
@@ -617,6 +619,11 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_m7k1a")
 sources/1 = SubResource("TileSetAtlasSource_8ll37")
 
 [node name="Earth" type="Node2D" unique_id=469155997]
+script = ExtResource("1_nj2me")
+
+[node name="LoadingFade" parent="." unique_id=1856547104 instance=ExtResource("2_yvqq7")]
+
+[node name="FadingTimer" type="Timer" parent="." unique_id=112239300]
 
 [node name="BackgroundEnviroment" type="Parallax2D" parent="." unique_id=1998654215]
 
@@ -677,3 +684,5 @@ script = ExtResource("6_yhjmp")
 
 [node name="player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
 position = Vector2(143, 461)
+
+[connection signal="timeout" from="FadingTimer" to="TileMapLayer/DoorToLava" method="_on_fading_timer_timeout"]
