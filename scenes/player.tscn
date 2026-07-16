@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="2_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bfeqcgfl132cn" path="res://assets/sprites/Objects/mapa_placeholder.png" id="3_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://daxash45exjax" path="res://assets/sprites/Objects/player_position_icon.png" id="4_dqkch"]
+[ext_resource type="Texture2D" uid="uid://ccswulwpndrfw" path="res://assets/sprites/Character/player24x24.png" id="2_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_g2els")
@@ -27,6 +28,17 @@ atlas = ExtResource("2_g2els")
 region = Rect2(24, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_g2els")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("2_g2els")
+region = Rect2(24, 72, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 0, 24, 24)
+
 atlas = ExtResource("2_g2els")
 region = Rect2(24, 48, 24, 24)
 
