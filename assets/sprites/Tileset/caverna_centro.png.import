@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f53u42yt5oqs"
-path="res://.godot/imported/criatura_de_agua24x30.png-18975a831c6402586b83f556f71053cd.ctex"
+uid="uid://bvnr3thjbjbjl"
+path="res://.godot/imported/caverna_centro.png-0782bae93a6dcc5cc1e51930fe7215c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Enemies/criatura_de_agua24x30.png"
-dest_files=["res://.godot/imported/criatura_de_agua24x30.png-18975a831c6402586b83f556f71053cd.ctex"]
+source_file="res://assets/sprites/Tileset/caverna_centro.png"
+dest_files=["res://.godot/imported/caverna_centro.png-0782bae93a6dcc5cc1e51930fe7215c5.ctex"]
 
 [params]
 

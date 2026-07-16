@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f53u42yt5oqs"
-path="res://.godot/imported/criatura_de_agua24x30.png-18975a831c6402586b83f556f71053cd.ctex"
+uid="uid://daxash45exjax"
+path="res://.godot/imported/player_position_icon.png-e2bc8f96a8e63573caf94a6c16fc94ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Enemies/criatura_de_agua24x30.png"
-dest_files=["res://.godot/imported/criatura_de_agua24x30.png-18975a831c6402586b83f556f71053cd.ctex"]
+source_file="res://assets/sprites/Objects/player_position_icon.png"
+dest_files=["res://.godot/imported/player_position_icon.png-e2bc8f96a8e63573caf94a6c16fc94ff.ctex"]
 
 [params]
 

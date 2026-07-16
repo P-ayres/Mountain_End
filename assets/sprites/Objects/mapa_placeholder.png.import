@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvnr3thjbjbjl"
-path="res://.godot/imported/caverna_centro.png-f9585c20e33167a70562e3ba453988df.ctex"
+uid="uid://bfeqcgfl132cn"
+path="res://.godot/imported/mapa_placeholder.png-c160e628f572a82bbd22fb3ee9079900.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/caverna_centro.png"
-dest_files=["res://.godot/imported/caverna_centro.png-f9585c20e33167a70562e3ba453988df.ctex"]
+source_file="res://assets/sprites/Objects/mapa_placeholder.png"
+dest_files=["res://.godot/imported/mapa_placeholder.png-c160e628f572a82bbd22fb3ee9079900.ctex"]
 
 [params]
 
