@@ -2,12 +2,13 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
-var flipped = false
 
 @onready var map_panel = $map
-@onready var player_animation: AnimatedSprite2D = $AnimatedSprite2D
 @onready var map_player_icon = $map/map_texture/player_position
 var map_position = GameSystem.player_position
+
+@onready var player_animation: AnimatedSprite2D = $AnimatedSprite2D
+var flipped = false
 
 func use_map():
 #region Verificar sala e atualiza mapa
