@@ -651,6 +651,7 @@ tile_set = SubResource("TileSet_1iice")
 
 [node name="Chest" parent="TileMapLayer" unique_id=1430650561 instance=ExtResource("3_k5w1d")]
 position = Vector2(484, 443)
+chest_item = "red_key"
 
 [node name="Watcher" parent="TileMapLayer" unique_id=1991713534 instance=ExtResource("3_8otvb")]
 position = Vector2(401, 340)
@@ -659,6 +660,7 @@ position = Vector2(401, 340)
 modulate = Color(1, 0.45999998, 0.45999998, 1)
 position = Vector2(800, 658)
 script = ExtResource("5_8otvb")
+needed_key = "red_key"
 
 [node name="HiddenDoorToLava" parent="TileMapLayer" unique_id=924622366 instance=ExtResource("5_3t2fh")]
 position = Vector2(816, 129)
