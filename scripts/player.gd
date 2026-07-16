@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
+
 @onready var map_panel = $map
 @onready var map_player_icon = $map/map_texture/player_position
 var map_position = GameSystem.player_position
