@@ -8,6 +8,7 @@ extends Area2D
 @export var needed_key = ""
 
 var is_in_range = false;
+@export var needed_key=""
 
 func _process(_delta):
 	if(is_in_range and Input.is_action_just_pressed("interact") && GameSystem.item.has(needed_key)):

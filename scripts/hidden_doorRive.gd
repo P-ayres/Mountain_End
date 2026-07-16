@@ -4,11 +4,12 @@ extends Area2D
 @onready var interaction_prompt: PanelContainer = $InteractionPrompt
 
 var is_in_range = false;
-
+var room_position= Vector2(776.0, 720.0)
 
 func _process(_delta):
 	animated_sprite_2d.hide()
 	if(is_in_range and Input.is_action_just_pressed("interact")):
+		GameSystem.next_room_position = room_position
 		await get_tree().create_timer(0.3).timeout
 		get_tree().change_scene_to_file("res://scenes/area_aquatica.tscn")
 

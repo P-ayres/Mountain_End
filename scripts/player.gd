@@ -10,6 +10,11 @@ var map_position = GameSystem.player_position
 @onready var player_animation: AnimatedSprite2D = $AnimatedSprite2D
 var flipped = false
 
+func _ready() -> void:
+	if GameSystem.next_room_position!=Vector2.ZERO:
+		position = GameSystem.next_room_position
+		GameSystem.next_room_position=Vector2.ZERO
+
 func use_map():
 #region Verificar sala e atualiza mapa
 	if $"..".name == "Game":

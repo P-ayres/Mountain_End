@@ -646,6 +646,7 @@ sprite_frames = SubResource("SpriteFrames_7rejt")
 [node name="GreatDoorArea" parent="GreatDoor" unique_id=1392944945 instance=ExtResource("5_3t2fh")]
 position = Vector2(1, 30)
 script = ExtResource("4_te4mb")
+needed_key = ""
 
 [node name="Initial_door" type="AnimatedSprite2D" parent="." unique_id=2040000789]
 modulate = Color(0.7052, 0.7128533, 0.82, 1)
@@ -678,6 +679,7 @@ script = ExtResource("6_videg")
 modulate = Color(0.69099766, 0.2596625, 0.2596625, 1)
 position = Vector2(0, 80)
 script = ExtResource("6_78p35")
+needed_key = ""
 
 [node name="hideen_doorToRiver" parent="." unique_id=112189125 instance=ExtResource("5_3t2fh")]
 position = Vector2(-16, 705)

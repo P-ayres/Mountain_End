@@ -504,7 +504,6 @@ script/source = "extends Area2D
 
 var is_in_range = false;
 
-
 func _process(_delta):
 	animated_sprite_2d.hide()
 	if(is_in_range and Input.is_action_just_pressed(\"interact\")):
@@ -570,3 +569,9 @@ position = Vector2(291, 60)
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("5_4dgp5")]
 z_index = 1
 position = Vector2(766, 125)
+
+[node name="Marker_hidden_door" type="Marker2D" parent="." unique_id=1695655731]
+position = Vector2(776, 720)
+
+[node name="Marker_door" type="Marker2D" parent="." unique_id=243184571]
+position = Vector2(764, 117)

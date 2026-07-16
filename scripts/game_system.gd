@@ -12,6 +12,8 @@ enum GameState {
 } 
 var current_state: GameState = GameState.PLAYING
 
+var next_room_position = Vector2.ZERO
+
 func pause_game():
 	if current_state == GameState.PAUSED:
 		current_state = GameState.PLAYING
