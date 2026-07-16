@@ -1,9 +1,11 @@
 [gd_scene format=4 uid="uid://0vedbqsddcwj"]
 
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="1_afhwv"]
+[ext_resource type="Script" uid="uid://c4s8h5jqxhtiy" path="res://scripts/earth.gd" id="1_nj2me"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="2_2tfwh"]
+[ext_resource type="PackedScene" uid="uid://dt5s35jwlddvy" path="res://scenes/fade.tscn" id="2_yvqq7"]
 [ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="3_8otvb"]
-[ext_resource type="PackedScene" uid="uid://d2mqxu2vlj0rr" path="res://scenes/chest.tscn" id="3_k5w1d"]
+[ext_resource type="PackedScene" uid="uid://cpealxo86d45k" path="res://scenes/chest.tscn" id="3_k5w1d"]
 [ext_resource type="Texture2D" uid="uid://uxstl7i1lscr" path="res://assets/sprites/Objects/portas-Sheet.png" id="4_78p35"]
 [ext_resource type="Script" uid="uid://dol2w878g16o3" path="res://scripts/greatDoor.gd" id="4_te4mb"]
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="5_3t2fh"]
@@ -11,6 +13,7 @@
 [ext_resource type="Script" uid="uid://d2xilkyrf46i2" path="res://scripts/door_river.gd" id="6_78p35"]
 [ext_resource type="Script" uid="uid://cfxgahlnvvunv" path="res://scripts/HiddenDoorToLava.gd" id="6_videg"]
 [ext_resource type="Script" uid="uid://dgs4tsr00ptgi" path="res://scripts/hidden_doorRive.gd" id="6_yhjmp"]
+[ext_resource type="PackedScene" uid="uid://b0ygnuit7m2tu" path="res://scenes/worm.tscn" id="12_np46n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t2fh"]
 texture = ExtResource("2_2tfwh")
@@ -617,6 +620,11 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_m7k1a")
 sources/1 = SubResource("TileSetAtlasSource_8ll37")
 
 [node name="Earth" type="Node2D" unique_id=469155997]
+script = ExtResource("1_nj2me")
+
+[node name="LoadingFade" parent="." unique_id=1856547104 instance=ExtResource("2_yvqq7")]
+
+[node name="FadingTimer" type="Timer" parent="." unique_id=112239300]
 
 [node name="BackgroundEnviroment" type="Parallax2D" parent="." unique_id=1998654215]
 
@@ -652,6 +660,7 @@ tile_set = SubResource("TileSet_1iice")
 
 [node name="Chest" parent="TileMapLayer" unique_id=1430650561 instance=ExtResource("3_k5w1d")]
 position = Vector2(484, 443)
+chest_item = "red_key"
 
 [node name="Watcher" parent="TileMapLayer" unique_id=1991713534 instance=ExtResource("3_8otvb")]
 position = Vector2(401, 340)
@@ -660,7 +669,7 @@ position = Vector2(401, 340)
 modulate = Color(1, 0.45999998, 0.45999998, 1)
 position = Vector2(800, 658)
 script = ExtResource("5_8otvb")
-needed_key = ""
+needed_key = "red_key"
 
 [node name="HiddenDoorToLava" parent="TileMapLayer" unique_id=924622366 instance=ExtResource("5_3t2fh")]
 position = Vector2(816, 129)
@@ -678,3 +687,9 @@ script = ExtResource("6_yhjmp")
 
 [node name="player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
 position = Vector2(143, 461)
+
+[node name="worm" parent="." unique_id=1726133864 instance=ExtResource("12_np46n")]
+position = Vector2(459, 436)
+
+[connection signal="timeout" from="FadingTimer" to="TileMapLayer/DoorToLava" method="_on_fading_timer_timeout"]
+
