@@ -660,6 +660,7 @@ visibility_layer = 2
 position = Vector2(800, 658)
 needed_key = "red_key"
 scene = "uid://d0gp5ptng0j3l"
+next_scene_position = Vector2(0, 705)
 
 [node name="HiddenDoorToLava" parent="TileMapLayer" unique_id=1910362775 instance=ExtResource("5_3t2fh")]
 position = Vector2(816, 129)
@@ -671,6 +672,7 @@ modulate = Color(1, 0.45882353, 0.45882353, 1)
 position = Vector2(0, 80)
 needed_key = "blue_key"
 scene = "uid://drg1vyrvvu8eu"
+next_scene_position = Vector2(773, 112)
 
 [node name="HideenDoorToRiver" parent="TileMapLayer" unique_id=112189125 instance=ExtResource("5_3t2fh")]
 position = Vector2(-16, 705)
@@ -678,7 +680,8 @@ is_door_visible = false
 scene = "uid://drg1vyrvvu8eu"
 
 [node name="player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
-position = Vector2(143, 461)
+position = Vector2(553, 408)
+collision_mask = 1
 
 [node name="worm" parent="." unique_id=1726133864 instance=ExtResource("12_np46n")]
 position = Vector2(459, 436)

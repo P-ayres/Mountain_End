@@ -529,6 +529,7 @@ key_name = "red_key"
 modulate = Color(0.47235695, 0.41846442, 0.41846442, 1)
 position = Vector2(773, 112)
 scene = "uid://0vedbqsddcwj"
+next_scene_position = Vector2(0, 80)
 
 [node name="HiddenDoorToEarth" parent="Tiles" unique_id=2090127083 instance=ExtResource("3_f4lyb")]
 position = Vector2(799, 720)
@@ -546,7 +547,8 @@ position = Vector2(291, 60)
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("5_4dgp5")]
 z_index = 1
-position = Vector2(766, 125)
+position = Vector2(449, 123)
+collision_mask = 1
 
 [node name="Marker_hidden_door" type="Marker2D" parent="." unique_id=1695655731]
 position = Vector2(776, 720)
