@@ -1,14 +1,16 @@
 extends CharacterBody2D
 
+@onready var wormAnimation: AnimatedSprite2D = $Animated
+@onready var killzone: Area2D = $Area2D
+
 @export var speed := 250.0
 
 var following = false
 var midAttack = false  
 var canAttack = true    # evita múltiplos ataques simultâneos
 var killed = false
-
-@onready var wormAnimation: AnimatedSprite2D = $Animated
 var player: CharacterBody2D
+
 
 func _ready():
 	await get_tree().process_frame
@@ -56,8 +58,8 @@ func attack():
 	#controladores de ataque
 	canAttack = false
 	midAttack = true
-	killed = false  
-	
+	killed = false
+
 	var sensor = player.global_position.x - global_position.x
 	wormAnimation.flip_h = sensor < 0
 	await get_tree().create_timer(0.3).timeout
