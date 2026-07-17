@@ -535,6 +535,7 @@ next_scene_position = Vector2(0, 80)
 position = Vector2(799, 720)
 is_door_visible = false
 scene = "uid://0vedbqsddcwj"
+next_scene_position = Vector2(-3, 704)
 
 [node name="CachoeiraLayer" type="Sprite2D" parent="Tiles" unique_id=1959988855]
 modulate = Color(0.82, 0.2706, 0.2706, 1)
@@ -550,8 +551,8 @@ z_index = 1
 position = Vector2(449, 123)
 collision_mask = 1
 
-[node name="Marker_hidden_door" type="Marker2D" parent="." unique_id=1695655731]
-position = Vector2(776, 720)
-
 [node name="Marker_door" type="Marker2D" parent="." unique_id=243184571]
 position = Vector2(764, 117)
+
+[node name="Marker_hidden_door" type="Marker2D" parent="." unique_id=1695655731]
+position = Vector2(776, 720)

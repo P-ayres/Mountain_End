@@ -665,6 +665,7 @@ next_scene_position = Vector2(0, 705)
 [node name="HiddenDoorToLava" parent="TileMapLayer" unique_id=1910362775 instance=ExtResource("5_3t2fh")]
 position = Vector2(816, 129)
 is_door_visible = false
+needed_key = "red_key"
 scene = "uid://d0gp5ptng0j3l"
 
 [node name="DoorToRiver" parent="TileMapLayer" unique_id=489888707 instance=ExtResource("5_3t2fh")]
@@ -677,7 +678,9 @@ next_scene_position = Vector2(773, 112)
 [node name="HideenDoorToRiver" parent="TileMapLayer" unique_id=112189125 instance=ExtResource("5_3t2fh")]
 position = Vector2(-16, 705)
 is_door_visible = false
+needed_key = "blue_key"
 scene = "uid://drg1vyrvvu8eu"
+next_scene_position = Vector2(776, 720)
 
 [node name="worm" parent="TileMapLayer" unique_id=1726133864 instance=ExtResource("12_np46n")]
 position = Vector2(458, 435)
@@ -685,3 +688,15 @@ position = Vector2(458, 435)
 [node name="player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
 position = Vector2(123, 459)
 collision_mask = 1
+
+[node name="marker_blue_door" type="Marker2D" parent="." unique_id=372773192]
+position = Vector2(11, 84)
+
+[node name="hidden_marker_red_door" type="Marker2D" parent="." unique_id=49599396]
+position = Vector2(790, 130)
+
+[node name="marker_red_door" type="Marker2D" parent="." unique_id=1806695221]
+position = Vector2(782, 653)
+
+[node name="hidden_marker_blue_door" type="Marker2D" parent="." unique_id=1274918484]
+position = Vector2(-3, 704)
