@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://b0ygnuit7m2tu"]
 
 [ext_resource type="Script" uid="uid://drg6il8ahn0nb" path="res://scripts/worm.gd" id="1_fb06d"]
-[ext_resource type="Texture2D" uid="uid://52bcovn1wrug" path="res://assets/sprites/Enemies/criatura_de_terra20x30.png" id="2_lley5"]
+[ext_resource type="Texture2D" uid="uid://2wpr238pxuuo" path="res://assets/sprites/Enemies/criatura_de_terra20x30.png" id="2_lley5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he5f4"]
+atlas = ExtResource("2_lley5")
+region = Rect2(0, 0, 20, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttset"]
 atlas = ExtResource("2_lley5")
@@ -15,33 +19,24 @@ region = Rect2(20, 30, 20, 30)
 atlas = ExtResource("2_lley5")
 region = Rect2(40, 30, 20, 30)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb06d"]
+atlas = ExtResource("2_lley5")
+region = Rect2(20, 60, 20, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lley5"]
+atlas = ExtResource("2_lley5")
+region = Rect2(40, 60, 20, 30)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_i7fd0"]
 atlas = ExtResource("2_lley5")
 region = Rect2(0, 0, 20, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fb06d"]
-atlas = ExtResource("2_lley5")
-region = Rect2(40, 30, 20, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_he5f4"]
-atlas = ExtResource("2_lley5")
-region = Rect2(0, 60, 20, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t70ey"]
-atlas = ExtResource("2_lley5")
-region = Rect2(20, 60, 20, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0sx28"]
-atlas = ExtResource("2_lley5")
-region = Rect2(40, 60, 20, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fnyh2"]
-atlas = ExtResource("2_lley5")
-region = Rect2(60, 60, 20, 30)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5f4")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ttset")
 }, {
@@ -50,75 +45,101 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_aodjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb06d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lley5")
 }],
 "loop": 0,
-"name": &"apparition",
-"speed": 3.0
+"name": &"surge_attack",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i7fd0")
 }],
 "loop": 0,
-"name": &"floor",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fb06d")
-}],
-"loop": 0,
-"name": &"stop",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_he5f4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t70ey")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0sx28")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fnyh2")
-}],
-"loop": 1,
 "name": &"walk",
 "speed": 3.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
-radius = 7.0
-height = 26.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fb06d"]
+size = Vector2(7.0217447, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
-radius = 50.0
+radius = 400.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4x5om"]
+radius = 45.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lley5"]
+radius = 8.559803
+height = 17.119606
 
 [node name="worm" type="CharacterBody2D" unique_id=1726133864]
-collision_layer = 4
-collision_mask = 3
 script = ExtResource("1_fb06d")
 speed = 60.0
-dist_parar = 5.0
 
 [node name="Animated" type="AnimatedSprite2D" parent="." unique_id=1539894449]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"walk"
-autoplay = "floor"
-frame_progress = 0.91492915
+animation = &"surge_attack"
+autoplay = "walk"
+frame = 5
+frame_progress = 1.0
 
-[node name="Collisionw" type="CollisionShape2D" parent="." unique_id=775369390]
-position = Vector2(1, 0)
-shape = SubResource("CapsuleShape2D_yf5fn")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1861131137]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(2.0054638, 11.500209)
+rotation = 1.5817288
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_fb06d")
+disabled = true
 
 [node name="vision" type="Area2D" parent="." unique_id=285618869]
 collision_layer = 0
 collision_mask = 2
 
-[node name="Collision" type="CollisionShape2D" parent="vision" unique_id=1640496081]
+[node name="see" type="CollisionShape2D" parent="vision" unique_id=1640496081]
 shape = SubResource("CircleShape2D_g4v7s")
 
-[connection signal="body_entered" from="vision" to="." method="_on_vision_body_entered"]
+[node name="attack_area" type="Area2D" parent="." unique_id=1186488526]
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 2
+
+[node name="attack" type="CollisionShape2D" parent="attack_area" unique_id=1659036719]
+shape = SubResource("CircleShape2D_4x5om")
+
+[node name="catch_area" type="Area2D" parent="." unique_id=1177689535]
+collision_layer = 2
+collision_mask = 2
+
+[node name="catch" type="CollisionPolygon2D" parent="catch_area" unique_id=1691197404]
+light_mask = 2
+visibility_layer = 2
+polygon = PackedVector2Array(1, 2, 358, 257, 18, 256)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=991728725]
+position = Vector2(-1.9999998, -6.0000005)
+rotation = 1.3206832
+scale = Vector2(0.99999994, 0.99999994)
+collision_layer = 2
+collision_mask = 2
+
+[node name="worm_killzone" type="CollisionShape2D" parent="Area2D" unique_id=775369390]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0.47385782, 2.1852832)
+shape = SubResource("CapsuleShape2D_lley5")
+one_way_collision_margin = 0.0
+debug_color = Color(0.9149989, 8.105218e-05, 0.7161235, 0.41960785)
+
 [connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
+[connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
+[connection signal="body_entered" from="catch_area" to="." method="_on_catch_area_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

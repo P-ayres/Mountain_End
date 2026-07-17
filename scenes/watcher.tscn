@@ -65,9 +65,6 @@ animations = [{
 "speed": 2.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8otvb"]
-size = Vector2(70.070404, 69.93825)
-
 [node name="Watcher" type="Area2D" unique_id=1430650561]
 collision_mask = 2
 script = ExtResource("1_3y8gi")
@@ -77,11 +74,10 @@ sprite_frames = SubResource("SpriteFrames_47noy")
 animation = &"watching"
 autoplay = "sleep"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930902808]
-position = Vector2(-0.008345038, 41.499454)
-rotation = -0.7865107
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_8otvb")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1364693449]
+light_mask = 2
+visibility_layer = 2
+polygon = PackedVector2Array(-5, -3, 5, -3, 70, 71, -58, 71)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

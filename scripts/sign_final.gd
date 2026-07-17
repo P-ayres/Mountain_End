@@ -1,7 +1,6 @@
 extends Area2D
 
 @onready var interaction_prompt: PanelContainer = $InteractionPrompt
-# @onready var sign_img: Sprite2D = $Tutorial
 
 var is_in_range: bool = false;
 
