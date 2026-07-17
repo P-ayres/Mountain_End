@@ -17,7 +17,7 @@ func _ready() -> void:
 		GameSystem.next_room_position=Vector2.ZERO
 
 func use_map():
-# region Verificar sala e atualiza mapa
+#region Verificar sala e atualiza mapa
 	if $"..".name == "Game":
 		GameSystem.player_position=0
 		map_player_icon.set_position($map/map_texture/pos1.position)
@@ -30,7 +30,7 @@ func use_map():
 	elif $"..".name == "area_aquatica":
 		GameSystem.player_position=3
 		map_player_icon.set_position($map/map_texture/pos4.position)
-# endregion
+#endregion
 		
 	if map_panel.visible==false:
 		map_panel.visible=true
