@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="2_0oxg1"]
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="3_f4lyb"]
 [ext_resource type="Texture2D" uid="uid://dpunwilqcgtd5" path="res://assets/sprites/Objects/cachoeira_layer.png" id="4_0oxg1"]
-[ext_resource type="PackedScene" uid="uid://cpealxo86d45k" path="res://scenes/chest.tscn" id="4_f4lyb"]
+[ext_resource type="PackedScene" uid="uid://d2mqxu2vlj0rr" path="res://scenes/chest.tscn" id="4_f4lyb"]
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="5_4dgp5"]
 [ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="5_xx1uv"]
 
@@ -535,6 +535,7 @@ next_scene_position = Vector2(0, 80)
 position = Vector2(799, 720)
 is_door_visible = false
 scene = "uid://0vedbqsddcwj"
+next_scene_position = Vector2(-3, 704)
 
 [node name="CachoeiraLayer" type="Sprite2D" parent="Tiles" unique_id=1959988855]
 modulate = Color(0.82, 0.2706, 0.2706, 1)
@@ -550,8 +551,8 @@ z_index = 1
 position = Vector2(449, 123)
 collision_mask = 1
 
-[node name="Marker_hidden_door" type="Marker2D" parent="." unique_id=1695655731]
-position = Vector2(776, 720)
-
 [node name="Marker_door" type="Marker2D" parent="." unique_id=243184571]
 position = Vector2(764, 117)
+
+[node name="Marker_hidden_door" type="Marker2D" parent="." unique_id=1695655731]
+position = Vector2(776, 720)
