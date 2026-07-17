@@ -123,8 +123,9 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_g4v7s")
 
 [node name="activation_area" type="Area2D" parent="." unique_id=1186488526]
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
+gravity_space_override = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="activation_area" unique_id=1659036719]
 shape = SubResource("CircleShape2D_4x5om")
@@ -133,6 +134,7 @@ shape = SubResource("CircleShape2D_4x5om")
 navigation_layers = 2
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1176585565]
+exclude_parent = false
 
 [connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
 [connection signal="body_entered" from="activation_area" to="." method="_on_activation_area_body_entered"]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed := 120.0
-@export var velocidadeDeRotacao := 50.0
+@export var velocidadeDeRotacao := 20.0
 @export var gravidade := 800
 
 const distanciaMinima := 10.0
