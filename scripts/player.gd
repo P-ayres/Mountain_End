@@ -32,8 +32,10 @@ func use_map():
 #endregion
 		
 	if map_panel.visible==false:
+		SfxManager.play_sfx("OpeningMap")
 		map_panel.visible=true
 	elif map_panel.visible==true:
+		SfxManager.play_sfx("ClosingMap")
 		map_panel.visible=false
 
 func _process(_delta: float) -> void:
@@ -51,6 +53,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("move_up") and is_on_floor():
 			player_animation.play("jump")
 			velocity.y = JUMP_VELOCITY
+			SfxManager.play_sfx("Jump")
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
@@ -68,8 +71,10 @@ func _physics_process(delta: float) -> void:
 				flipped = true
 				player_animation.flip_h = true
 				player_animation.play("walk")
+			
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			player_animation.play("idle")
+			SfxManager.play_sfx("WalkingSound")
 
 		move_and_slide()

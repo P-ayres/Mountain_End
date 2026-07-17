@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ckqp64dcaj6g7"]
+
+[ext_resource type="Script" uid="uid://hjqxqxpkpxdh" path="res://scripts/music_manager.gd" id="1_jd6i5"]
+[ext_resource type="AudioStream" uid="uid://cgxnlr74se5tm" path="res://assets/music/cave_ambience.wav" id="2_yodp2"]
+[ext_resource type="AudioStream" uid="uid://csw1ikuof0ib0" path="res://assets/music/time_for_adventure.mp3" id="3_xcw26"]
+
+[node name="MusicManager" type="Node" unique_id=103155046 node_paths=PackedStringArray("clips")]
+script = ExtResource("1_jd6i5")
+clips = NodePath("Clips")
+
+[node name="Clips" type="Node" parent="." unique_id=544083471]
+
+[node name="CaveAmbience" type="AudioStreamPlayer" parent="Clips" unique_id=189159844]
+stream = ExtResource("2_yodp2")
+volume_db = -10.692
+pitch_scale = 0.93
+
+[node name="TimeForAdventure" type="AudioStreamPlayer" parent="Clips" unique_id=1616766502]
+stream = ExtResource("3_xcw26")
