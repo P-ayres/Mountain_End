@@ -5,13 +5,26 @@ const JUMP_VELOCITY = -300.0
 
 @onready var map_panel = $map
 @onready var map_player_icon = $map/map_texture/player_position
+@onready var player_animation: AnimatedSprite2D = $AnimatedSprite2D
+@onready var camera: Camera2D = $Camera2D
+
+
+var flipped = false
 var map_position = GameSystem.player_position
 
-@onready var player_animation: AnimatedSprite2D = $AnimatedSprite2D
-var flipped = false
+
+func _ready() -> void:
+	if GameSystem.next_room_position != Vector2.ZERO:
+		position = GameSystem.next_room_position
+		camera.reset_smoothing()
+		GameSystem.next_room_position = Vector2.ZERO
+		
+		# checkpoint da sala, qual porta e quais chaves tinha
+		GameSystem.current_room_spawn = position
+		GameSystem.current_room_item = GameSystem.item.duplicate()
 
 func use_map():
-#region Verificar sala e atualiza mapa
+	#region Verificar sala e atualiza mapa
 	if $"..".name == "Game":
 		GameSystem.player_position=0
 		map_player_icon.set_position($map/map_texture/pos1.position)
@@ -24,8 +37,8 @@ func use_map():
 	elif $"..".name == "area_aquatica":
 		GameSystem.player_position=3
 		map_player_icon.set_position($map/map_texture/pos4.position)
-#endregion
-		
+	#endregion
+
 	if map_panel.visible==false:
 		map_panel.visible=true
 	elif map_panel.visible==true:
