@@ -2,12 +2,12 @@ extends CharacterBody2D
 
 @export var speed := 250.0
 
-var seguindo = false
+var following = false
 var midAttack = false  
 var canAttack = true    # evita múltiplos ataques simultâneos
 var killed = false
 
-@onready var verme_anim: AnimatedSprite2D = $Animated
+@onready var wormAnimation: AnimatedSprite2D = $Animated
 var player: CharacterBody2D
 
 func _ready():
@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 
-	if not seguindo:
+	if not following:
 		velocity = lerp(velocity, Vector2.ZERO, 10.0 * delta)
 	else:
 		var direction = (player.global_position - global_position).normalized()
@@ -29,20 +29,20 @@ func _physics_process(delta: float) -> void:
 
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		seguindo = true
+		following = true
 		attack()
 
 func _on_vision_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		seguindo = false
+		following = false
 
 func _on_attack_area_body_exited(body: Node2D) -> void:
-	if body.is_in_group("Player") and not midAttack:
-		verme_anim.play("walk")
+	if body.is_in_group("Player"):
+		wormAnimation.play("walk")
 
 func _on_catch_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		seguindo = true
+		following = true
 		attack()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -59,21 +59,23 @@ func attack():
 	killed = false  
 	
 	var sensor = player.global_position.x - global_position.x
-	verme_anim.flip_h = sensor < 0
+	wormAnimation.flip_h = sensor < 0
 	await get_tree().create_timer(0.3).timeout
-	verme_anim.play("surge_attack")
+	wormAnimation.play("surge_attack")
 
 	#Motiroamento da área de dano
 	$Area2D.monitoring = true  
-	await verme_anim.animation_finished
+	await wormAnimation.animation_finished
 	$Area2D.monitoring = false
 	midAttack = false
 	canAttack = true
 
 	if killed:
+		GameSystem.pause_game()
 		print("you died!")
-		await get_tree().create_timer(0.3).timeout
 		SceneTransition.reload_scene()
+		await SceneTransition.animation_player.animation_finished
+		GameSystem.pause_game()
 
 	midAttack = false
 	canAttack = true
