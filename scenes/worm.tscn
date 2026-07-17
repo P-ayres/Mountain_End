@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://drg6il8ahn0nb" path="res://scripts/worm.gd" id="1_fb06d"]
 [ext_resource type="Texture2D" uid="uid://2wpr238pxuuo" path="res://assets/sprites/Enemies/criatura_de_terra20x30.png" id="2_lley5"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_he5f4"]
+atlas = ExtResource("2_lley5")
+region = Rect2(0, 0, 20, 30)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttset"]
 atlas = ExtResource("2_lley5")
 region = Rect2(0, 30, 20, 30)
@@ -15,33 +19,24 @@ region = Rect2(20, 30, 20, 30)
 atlas = ExtResource("2_lley5")
 region = Rect2(40, 30, 20, 30)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb06d"]
+atlas = ExtResource("2_lley5")
+region = Rect2(20, 60, 20, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lley5"]
+atlas = ExtResource("2_lley5")
+region = Rect2(40, 60, 20, 30)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_i7fd0"]
 atlas = ExtResource("2_lley5")
 region = Rect2(0, 0, 20, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fb06d"]
-atlas = ExtResource("2_lley5")
-region = Rect2(40, 30, 20, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_he5f4"]
-atlas = ExtResource("2_lley5")
-region = Rect2(0, 60, 20, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t70ey"]
-atlas = ExtResource("2_lley5")
-region = Rect2(20, 60, 20, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0sx28"]
-atlas = ExtResource("2_lley5")
-region = Rect2(40, 60, 20, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fnyh2"]
-atlas = ExtResource("2_lley5")
-region = Rect2(60, 60, 20, 30)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5f4")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ttset")
 }, {
@@ -50,9 +45,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_aodjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb06d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lley5")
 }],
-"loop": 0,
-"name": &"apparition",
+"loop": 1,
+"name": &"surge_attack",
 "speed": 3.0
 }, {
 "frames": [{
@@ -60,38 +61,13 @@ animations = [{
 "texture": SubResource("AtlasTexture_i7fd0")
 }],
 "loop": 0,
-"name": &"floor",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fb06d")
-}],
-"loop": 0,
-"name": &"stop",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_he5f4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t70ey")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0sx28")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fnyh2")
-}],
-"loop": 1,
 "name": &"walk",
 "speed": 3.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
 radius = 7.0
-height = 26.0
+height = 18.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 400.0
@@ -107,12 +83,13 @@ speed = 60.0
 
 [node name="Animated" type="AnimatedSprite2D" parent="." unique_id=1539894449]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"walk"
-autoplay = "floor"
-frame_progress = 0.91492915
+animation = &"surge_attack"
+autoplay = "walk"
+frame = 4
+frame_progress = 1.0
 
 [node name="Collisionw" type="CollisionShape2D" parent="." unique_id=775369390]
-position = Vector2(1, 0)
+position = Vector2(2, 6)
 shape = SubResource("CapsuleShape2D_yf5fn")
 
 [node name="vision" type="Area2D" parent="." unique_id=285618869]
@@ -122,12 +99,12 @@ collision_mask = 2
 [node name="Collision" type="CollisionShape2D" parent="vision" unique_id=1640496081]
 shape = SubResource("CircleShape2D_g4v7s")
 
-[node name="activation_area" type="Area2D" parent="." unique_id=1186488526]
+[node name="attack_area" type="Area2D" parent="." unique_id=1186488526]
 collision_layer = 2
 collision_mask = 2
 gravity_space_override = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="activation_area" unique_id=1659036719]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area" unique_id=1659036719]
 shape = SubResource("CircleShape2D_4x5om")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1364157189]
@@ -137,4 +114,5 @@ navigation_layers = 2
 exclude_parent = false
 
 [connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
-[connection signal="body_entered" from="activation_area" to="." method="_on_activation_area_body_entered"]
+[connection signal="body_entered" from="attack_area" to="." method="_on_activation_area_body_entered"]
+[connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
