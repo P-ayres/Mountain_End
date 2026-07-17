@@ -1,16 +1,17 @@
 extends Node
 
-var player_position = 0 #utilizar um inteiro para representar cada sala
-var monster_position = 0  
-var item = [] #chaves
-
 enum GameState {
 	PLAYING,
 	PAUSED,
 	GAME_OVER,
 	VICTORY
-} 
+}
+
+var player_position = 0 #utilizar um inteiro para representar cada sala
+var monster_position = 0  
+var item = [] #chaves
 var current_state: GameState = GameState.PLAYING
+
 
 func pause_game():
 	if current_state == GameState.PAUSED:

@@ -776,6 +776,7 @@ tile_set = SubResource("TileSet_lfg7k")
 [node name="Door" parent="." unique_id=1518921500 instance=ExtResource("3_lnu2h")]
 modulate = Color(0.33260515, 0.33260515, 0.33260515, 1)
 position = Vector2(153, 82)
+scene = "uid://0vedbqsddcwj"
 
 [node name="Sign" parent="." unique_id=1430650561 instance=ExtResource("4_lbhrr")]
 modulate = Color(0.6394879, 0.3342466, 0.20342886, 1)

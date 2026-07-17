@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameSystem="*uid://dhocte74q3ivc"
+SceneTransition="*uid://dt5s35jwlddvy"
 
 [display]
 
