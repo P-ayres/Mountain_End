@@ -657,12 +657,12 @@ tile_set = SubResource("TileSet_4x5om")
 
 [node name="DoorToEarth" parent="volcanoEnviroment/Enviroment" unique_id=1392944945 instance=ExtResource("4_j2sps")]
 position = Vector2(0, 705)
-scene = "res://scenes/earth.tscn"
+scene = "uid://0vedbqsddcwj"
 
 [node name="HiddenDoorLavaToEarth" parent="volcanoEnviroment/Enviroment" unique_id=295558413 instance=ExtResource("4_j2sps")]
 position = Vector2(-17, 82)
 is_door_visible = false
-scene = "res://scenes/earth.tscn"
+scene = "uid://0vedbqsddcwj"
 
 [node name="WatcherUp" parent="." unique_id=1714314674 instance=ExtResource("7_i8qla")]
 position = Vector2(784, -15)

@@ -547,3 +547,9 @@ position = Vector2(291, 60)
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("5_4dgp5")]
 z_index = 1
 position = Vector2(766, 125)
+
+[node name="Marker_hidden_door" type="Marker2D" parent="." unique_id=1695655731]
+position = Vector2(776, 720)
+
+[node name="Marker_door" type="Marker2D" parent="." unique_id=243184571]
+position = Vector2(764, 117)

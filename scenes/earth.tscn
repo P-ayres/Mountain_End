@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cpealxo86d45k" path="res://scenes/chest.tscn" id="3_k5w1d"]
 [ext_resource type="Texture2D" uid="uid://uxstl7i1lscr" path="res://assets/sprites/Objects/portas-Sheet.png" id="4_78p35"]
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="5_3t2fh"]
+[ext_resource type="PackedScene" uid="uid://b0ygnuit7m2tu" path="res://scenes/worm.tscn" id="12_np46n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t2fh"]
 texture = ExtResource("2_2tfwh")
@@ -678,3 +679,6 @@ scene = "uid://drg1vyrvvu8eu"
 
 [node name="player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
 position = Vector2(143, 461)
+
+[node name="worm" parent="." unique_id=1726133864 instance=ExtResource("12_np46n")]
+position = Vector2(459, 436)
