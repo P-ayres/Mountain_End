@@ -121,12 +121,14 @@ gravity_space_override = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area" unique_id=1659036719]
 shape = SubResource("CircleShape2D_4x5om")
 
-[node name="catch area" type="Area2D" parent="." unique_id=1177689535]
+[node name="catch_area" type="Area2D" parent="." unique_id=1177689535]
+collision_layer = 2
+collision_mask = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="catch area" unique_id=1691197404]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="catch_area" unique_id=1691197404]
 polygon = PackedVector2Array(1, 2, 358, 257, 18, 256)
 
 [connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
 [connection signal="body_entered" from="attack_area" to="." method="_on_activation_area_body_entered"]
 [connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
-[connection signal="body_entered" from="catch area" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="catch_area" to="." method="_on_catch_area_body_entered"]

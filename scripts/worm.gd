@@ -19,13 +19,7 @@ func _physics_process(delta: float) -> void:
 func _on_activation_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		seguindo = true
-		var sensor = player.global_position.x - global_position.x
-		vermeAnimation.flip_h = sensor < 0
-		await get_tree().create_timer(0.3).timeout
-		vermeAnimation.play("surge_attack")
-		em_animacao = true
-		await vermeAnimation.animation_finished
-		em_animacao = false
+		attack()
 
 
 
@@ -38,5 +32,18 @@ func _on_attack_area_body_exited(body: Node2D) -> void:
 		vermeAnimation.play("walk")
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass
+func _on_catch_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		seguindo = true
+		attack()
+	
+
+func attack():
+	var sensor = player.global_position.x - global_position.x
+	vermeAnimation.flip_h = sensor < 0
+	await get_tree().create_timer(0.3).timeout
+	vermeAnimation.play("surge_attack")
+	em_animacao = true
+	await vermeAnimation.animation_finished
+	em_animacao = false
+	
