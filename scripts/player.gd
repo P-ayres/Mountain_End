@@ -14,6 +14,7 @@ var map_position = GameSystem.player_position
 
 
 func _ready() -> void:
+	#GameSystem.item.append("black_key")
 	if GameSystem.next_room_position != Vector2.ZERO:
 		position = GameSystem.next_room_position
 		camera.reset_smoothing()
