@@ -1,23 +1,28 @@
 extends CharacterBody2D
 
 @export var speed := 120.0
-@export var dist_parar := 40.0
+@export var velocidadeDeRotacao := 50.0
+@export var gravidade := 800
+
+const distanciaMinima := 10.0
+
 var seguindo = false
 var primeira_vez_vendo = true
 var em_animacao = false
+
 @onready var vermeAnimation: AnimatedSprite2D = $Animated
+@onready var navegacaoVerme: NavigationAgent2D= $NavigationAgent2D
+@onready var verificaSuperficie: RayCast2D = $RayCast2D
 
 var player: CharacterBody2D
-
-var gravidade: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("Player")
-
+	if player:
+		navegacaoVerme.target_position = player.global_position
+	
 func _physics_process(delta):
-	if not is_on_floor():
-		velocity.y += gravidade * delta
 	
 	if player == null:
 		move_and_slide()
@@ -27,16 +32,31 @@ func _physics_process(delta):
 		return
 	
 	if seguindo:
-		var direcaoPlayer = player.global_position.x - global_position.x
-		var distancia = abs(direcaoPlayer)
-		
-		if distancia > dist_parar:
-			
-			var lado = sign(direcaoPlayer)
-			velocity.x = lado * speed
-			vermeAnimation.flip_h = direcaoPlayer > 0
+		if navegacaoVerme.target_position.distance_squared_to(player.global_position) > distanciaMinima * distanciaMinima:
+			navegacaoVerme.target_position = player.global_position
+
+		if not navegacaoVerme.is_navigation_finished():
+			var destino = navegacaoVerme.get_next_path_position()
+			var direcaoPlayer = global_position.direction_to(destino)
+			var cima = -global_transform.y
+			var direcaoParaCriatura = direcaoPlayer.slide(cima).normalized()
+			var enemyVelocity = direcaoParaCriatura * speed
+			var sensor = direcaoParaCriatura.dot(global_transform.x)
+			vermeAnimation.flip_h = sensor > 0
 			vermeAnimation.play("walk")
-			
+
+			var alvo = global_position - cima * velocidadeDeRotacao
+			verificaSuperficie.target_position = verificaSuperficie.to_local(alvo)
+			verificaSuperficie.force_raycast_update()
+			var orientacao = cima
+			if verificaSuperficie.is_colliding():
+				orientacao = verificaSuperficie.get_collision_normal()
+
+			var direcao = cima.lerp(orientacao, velocidadeDeRotacao * delta).normalized()
+			var lado = Vector2(direcao.y, -direcao.x)
+			global_transform = Transform2D(lado, -direcao, global_position)
+			velocity = enemyVelocity
+			velocity += -direcao * gravidade * delta
 		else:
 			velocity.x = move_toward(velocity.x, 0, speed)
 			if primeira_vez_vendo:
@@ -49,17 +69,17 @@ func _physics_process(delta):
 			vermeAnimation.play("floor")
 		else:
 			vermeAnimation.play("stop")
-	
+
 	move_and_slide()
 
 
-func _on_vision_body_entered(body: Node2D) -> void:
+func _on_activation_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		seguindo = true
 		
-		var direcaoPlayer = player.global_position.x - global_position.x
+		var sensor = player.global_position.x - global_position.x
 		if primeira_vez_vendo:
-			vermeAnimation.flip_h = direcaoPlayer > 0
+			vermeAnimation.flip_h = sensor < 0
 			vermeAnimation.play("apparition")
 			
 			em_animacao = true

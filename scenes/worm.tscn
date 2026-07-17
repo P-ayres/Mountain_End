@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0ygnuit7m2tu"]
 
 [ext_resource type="Script" uid="uid://drg6il8ahn0nb" path="res://scripts/worm.gd" id="1_fb06d"]
-[ext_resource type="Texture2D" uid="uid://52bcovn1wrug" path="res://assets/sprites/Enemies/criatura_de_terra20x30.png" id="2_lley5"]
+[ext_resource type="Texture2D" uid="uid://2wpr238pxuuo" path="res://assets/sprites/Enemies/criatura_de_terra20x30.png" id="2_lley5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttset"]
 atlas = ExtResource("2_lley5")
@@ -94,14 +94,16 @@ radius = 7.0
 height = 26.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
-radius = 50.0
+radius = 400.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4x5om"]
+radius = 45.0
 
 [node name="worm" type="CharacterBody2D" unique_id=1726133864]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_fb06d")
 speed = 60.0
-dist_parar = 5.0
 
 [node name="Animated" type="AnimatedSprite2D" parent="." unique_id=1539894449]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
@@ -120,5 +122,17 @@ collision_mask = 2
 [node name="Collision" type="CollisionShape2D" parent="vision" unique_id=1640496081]
 shape = SubResource("CircleShape2D_g4v7s")
 
-[connection signal="body_entered" from="vision" to="." method="_on_vision_body_entered"]
+[node name="activation_area" type="Area2D" parent="." unique_id=1186488526]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="activation_area" unique_id=1659036719]
+shape = SubResource("CircleShape2D_4x5om")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1364157189]
+navigation_layers = 2
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1176585565]
+
 [connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
+[connection signal="body_entered" from="activation_area" to="." method="_on_activation_area_body_entered"]
