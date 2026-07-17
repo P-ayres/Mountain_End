@@ -65,9 +65,12 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fb06d"]
+size = Vector2(7.0217447, 20)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
 radius = 7.0
-height = 18.0
+height = 19.963636
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 400.0
@@ -88,9 +91,20 @@ autoplay = "walk"
 frame = 4
 frame_progress = 1.0
 
-[node name="Collisionw" type="CollisionShape2D" parent="." unique_id=775369390]
-position = Vector2(2, 6)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1861131137]
+position = Vector2(2.0054638, 11.500209)
+rotation = 1.5817288
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_fb06d")
+
+[node name="WormKillzone" type="CollisionShape2D" parent="." unique_id=775369390]
+position = Vector2(-1, -6)
+rotation = 1.5104849
 shape = SubResource("CapsuleShape2D_yf5fn")
+disabled = true
+one_way_collision = true
+one_way_collision_margin = 0.0
+debug_color = Color(0.9149989, 8.105218e-05, 0.7161235, 0.41960785)
 
 [node name="vision" type="Area2D" parent="." unique_id=285618869]
 collision_layer = 0
@@ -107,12 +121,12 @@ gravity_space_override = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area" unique_id=1659036719]
 shape = SubResource("CircleShape2D_4x5om")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1364157189]
-navigation_layers = 2
+[node name="catch area" type="Area2D" parent="." unique_id=1177689535]
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1176585565]
-exclude_parent = false
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="catch area" unique_id=1691197404]
+polygon = PackedVector2Array(1, 2, 358, 257, 18, 256)
 
 [connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
 [connection signal="body_entered" from="attack_area" to="." method="_on_activation_area_body_entered"]
 [connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
+[connection signal="body_entered" from="catch area" to="." method="_on_area_2d_body_entered"]
