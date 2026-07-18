@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b10obeun8bgee" path="res://scripts/kill_zone.gd" id="1_l4ff3"]
 
-[node name="Kill Zone" type="Area2D" unique_id=1461249974]
+[node name="KillZone" type="Area2D" unique_id=1461249974]
 script = ExtResource("1_l4ff3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
