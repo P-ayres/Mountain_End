@@ -5,11 +5,12 @@ extends CharacterBody2D
 
 @export var speed := 250.0
 
-const ATTACK_FRAMES := [3, 4]	# frames com hitbox ativa
+enum State { IDLE, SURGING, CHASING, ATTACKING }
+const ATTACK_FRAMES := [3, 4]    # frames com hitbox ativa
 
-var following = false
-var canAttack = true	# evita múltiplos ataques simultâneos
+var state := State.IDLE
 var player: CharacterBody2D
+var is_player_in_attack_range := false
 
 
 func _ready():
@@ -21,63 +22,79 @@ func _physics_process(delta: float) -> void:
 	if player == null:
 		move_and_slide()
 		return
+		
+	var direction = (player.global_position - global_position).normalized()
 
-	if not following:
-		velocity = lerp(velocity, Vector2.ZERO, 10.0 * delta)
-	else:
-		var direction = (player.global_position - global_position).normalized()
-		velocity = lerp(velocity, direction * speed, 8.5 * delta)
+	match state:
+		State.IDLE, State.SURGING, State.ATTACKING:
+			velocity = lerp(velocity, Vector2.ZERO, 10.0 * delta)
+		State.CHASING:
+			velocity = lerp(velocity, direction * speed, 8.5 * delta)
+		State.ATTACKING:
+			velocity = lerp(velocity, direction * (speed * 0.4), 8.5 * delta)
+
+	# ataca de novo a cada frame em que o player estiver no alcance
+	if state == State.CHASING and is_player_in_attack_range:
+		attack()
 
 	move_and_slide()
 
-# Inicia a perseguição ao player
-func _on_attack_area_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		print("player entered on attack area, attack!")
-		following = true
-		attack()
+# --- Perseguição --------------------------------------------------
 
-# Troca a animação para "caminhar", ao sair da area de ataque
-func _on_attack_area_body_exited(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		print("player exited attack area, walk!")
-		sprite.play("walk")
-
-# Saiu do ccampo de visão, para de seguir o jogador
-func _on_vision_area_body_exited(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		print("player exited vision area, stay!")
-		following = false
-
-# Só monitora se colidiu nos frames de ataque
-func _on_animated_sprite_2d_frame_changed() -> void:
-	if not sprite:
+func start_chase() -> void:
+	# Já está perseguindo ou atacando
+	if state != State.IDLE:
 		return
 	
-	var em_janela_de_dano = sprite.animation == &"tail_attack" and sprite.frame in ATTACK_FRAMES
-	killzone.monitoring = em_janela_de_dano
+	state = State.SURGING
+	sprite.play("surge")
+	await sprite.animation_finished
+	
+	# Se nada interrompeu o surge, começa a caçar o player
+	if state == State.SURGING:
+		state = State.CHASING
+		sprite.play("walk")
+
+#func _on_vision_area_body_entered(body: Node2D) -> void:
+#	if body.is_in_group("Player"):
+#		start_chase()
 
 func _on_catch_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		print("player entered on catch area, attack!")
-		following = true
-		attack()
+		start_chase()
 
-func attack():
-	if not canAttack:
-		return
+func _on_vision_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		state = State.IDLE
+		sprite.play("idle")
 
-	canAttack = false
+# --- Ataque --------------------------------------------------------
 
-	var sensor = player.global_position.x - global_position.x
-	sprite.flip_h = sensor < 0
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		is_player_in_attack_range = true
 
-	await get_tree().create_timer(0.3).timeout
+func _on_attack_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		is_player_in_attack_range = false
+
+func attack() -> void:
+	state = State.ATTACKING
+	sprite.flip_h = player.global_position.x < global_position.x
+	
 	sprite.play("tail_attack")
-
 	await sprite.animation_finished
 	killzone.monitoring = false
 	
-	# 200ms sem poder atacar novamente
+	# Aguarda 0.2s antes de voltar a atacar
 	await get_tree().create_timer(0.2).timeout
-	canAttack = true		
+	
+	# Se o player não saiu da area de visão, continua caçando o player
+	if state == State.ATTACKING:
+		state = State.CHASING
+		sprite.play("walk")
+
+# Liga a hitbox só nos frames de golpe
+func _on_animated_sprite_2d_frame_changed() -> void:
+	var is_attack_frame := sprite.animation == &"tail_attack" and sprite.frame in ATTACK_FRAMES
+	killzone.monitoring = is_attack_frame
