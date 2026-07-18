@@ -34,6 +34,8 @@ pitch_scale = 0.66
 
 [node name="OpeningChest" type="AudioStreamPlayer" parent="Clips" unique_id=122679982]
 stream = ExtResource("5_ymotv")
+volume_db = -33.5
+pitch_scale = 1.25
 
 [node name="PowerUp" type="AudioStreamPlayer" parent="Clips" unique_id=1696920447]
 stream = ExtResource("6_sec7p")

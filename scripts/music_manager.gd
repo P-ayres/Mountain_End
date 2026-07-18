@@ -5,10 +5,16 @@ var active_music_stream: AudioStreamPlayer
 @export_group("Main")
 @export var clips: Node
 var last_scene: Node
+var last_scene_name := ""
 
 func _process(_delta):
-	if get_tree().current_scene != last_scene:
-		last_scene = get_tree().current_scene
+	var scene := get_tree().current_scene
+	
+	if scene == null:
+		return
+	
+	if scene.name != last_scene_name:
+		last_scene_name = scene.name
 		stop()
 		update_music()
 
@@ -17,10 +23,21 @@ func update_music():
 
 	if scene == null:
 		return
+		
+	if scene.name != last_scene_name:
+		last_scene.name = scene.name
+		stop()
+		update_music()
 
 	match scene.name:
 		"Game":
 			play_music("CaveAmbience")
+		"area_aquatica":
+			play_music("WaterLevelAmbience")
+			play_music("WaterLevelMusic", true)
+		"Volcano":
+			play_music("LavaLevelAmbience")
+			play_music("LavaLevelMusic", true)
 
 func play_music(audio_name: String, from_position: float = 0.0, skip_restart: bool = false) -> void:
 	if skip_restart and active_music_stream and active_music_stream.name == audio_name:
