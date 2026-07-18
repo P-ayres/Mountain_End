@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interaction_prompt: PanelContainer = $InteractionPrompt
+@onready var show_key: AnimatedSprite2D = $Key
 
 @export var key_name = ""
 
@@ -16,6 +17,7 @@ func _process(_delta: float) -> void:
 		print("itens: %s" % [", ".join(GameSystem.item)])
 		GameSystem.item.append(key_name)
 		print("itens: %s" % [", ".join(GameSystem.item)])
+		show_key.play(key_name)
 
 func _on_body_entered(_body: Node2D) -> void:
 	print("entered range")
