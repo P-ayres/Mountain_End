@@ -668,10 +668,10 @@ scene = "uid://0vedbqsddcwj"
 next_scene_position = Vector2(790, 130)
 
 [node name="WatcherUp" parent="." unique_id=1714314674 instance=ExtResource("7_i8qla")]
-position = Vector2(784, -15)
+position = Vector2(783, -16)
 
 [node name="WatcherVolcano" parent="." unique_id=571424644 instance=ExtResource("7_i8qla")]
-position = Vector2(682, 471.99997)
+position = Vector2(680, 458)
 rotation = -0.78016216
 
 [node name="LavaEel" parent="." unique_id=599884545 instance=ExtResource("8_i8qla")]

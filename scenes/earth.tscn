@@ -634,7 +634,7 @@ position = Vector2(484, 443)
 key_name = "blue_key"
 
 [node name="Watcher" parent="TileMapLayer" unique_id=1991713534 instance=ExtResource("3_8otvb")]
-position = Vector2(401, 340)
+position = Vector2(384, 335)
 
 [node name="DoorToLava" parent="TileMapLayer" unique_id=2032597832 instance=ExtResource("5_3t2fh")]
 modulate = Color(1, 0.45882353, 0.45882353, 1)
