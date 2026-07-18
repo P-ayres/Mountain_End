@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="4_vfp6b"]
 [ext_resource type="Script" uid="uid://cevlb6gml7uow" path="res://scripts/sign_final.gd" id="4_x88xh"]
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="5_0vw2w"]
+[ext_resource type="PackedScene" uid="uid://dxehvknm8bvo4" path="res://scenes/dialoguetrigger.tscn" id="8_x2ws3"]
+[ext_resource type="PackedScene" uid="uid://d25wlqqaaiho5" path="res://scenes/dialogue_ui.tscn" id="9_d32fx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfp6b"]
 texture = ExtResource("2_i2ktg")
@@ -831,3 +833,11 @@ frame_progress = 0.16424757
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("5_0vw2w")]
 position = Vector2(7, 111)
+SPEED = 30.0
+
+[node name="dialoguetrigger" parent="." unique_id=1217533880 instance=ExtResource("8_x2ws3")]
+position = Vector2(116, 105)
+dialogues = Array[String](["[center]Why don\"t you fear the ground?[/center]", "[center] Why you reject the sea's embrace? [/center]", "[center] Why are you afraid of swimming with me? [/center]", "[center] This was fun [/center]"])
+speakers = Array[String](["[center] Worm [/center]", "[center] Rogerio [/center]", "[center] Swimmer [/center]", "[center] The one above [/center]"])
+
+[node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("9_d32fx")]

@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bt3ttiisrgf13" path="res://assets/sprites/Objects/papiro_1.png" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://73n8ab8ihqia" path="res://scenes/sign.tscn" id="4_lbhrr"]
 [ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://dxehvknm8bvo4" path="res://scenes/dialoguetrigger.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://d25wlqqaaiho5" path="res://scenes/dialogue_ui.tscn" id="10_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
 texture = ExtResource("2_u5sy4")
@@ -780,7 +783,7 @@ scene = "uid://0vedbqsddcwj"
 
 [node name="Sign" parent="." unique_id=1430650561 instance=ExtResource("4_lbhrr")]
 modulate = Color(0.6394879, 0.3342466, 0.20342886, 1)
-position = Vector2(51, 90)
+position = Vector2(66, 89)
 
 [node name="Tutorial" type="Sprite2D" parent="Sign" unique_id=775504201]
 visible = false
@@ -809,3 +812,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("2_yqjtg")]
 position = Vector2(34, -169)
+
+[node name="dialoguetrigger" parent="." unique_id=1217533880 instance=ExtResource("9_0tnpc")]
+position = Vector2(108, 90)
+dialogues = Array[String](["[center] How unlucky, you fell into a pit while climbing the mountains, find a way out.[/center]", "[center]What?.... [/center]", "[center]Strange, my map changed [/center]", "[center]Come and play with us![/center]", "[center] What kind of place is this? [/center]", "[center]...[/center]"])
+speakers = Array[String](["[center]Watcher[center]", "[center]Fred (me?)[center]", "[center]Fred (me?)[center]", "[center] Worm | Rogerio | Swimmer [/center]", "", ""])
+
+[node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("10_kvpfn")]
+visible = true
+
+[node name="Watcher" parent="." unique_id=748642658 instance=ExtResource("10_vtaks")]
+visible = false
+position = Vector2(80, 14)

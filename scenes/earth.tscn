@@ -685,10 +685,6 @@ next_scene_position = Vector2(776, 720)
 [node name="worm" parent="TileMapLayer" unique_id=1726133864 instance=ExtResource("12_np46n")]
 position = Vector2(458, 435)
 
-[node name="player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
-position = Vector2(123, 459)
-collision_mask = 1
-
 [node name="marker_blue_door" type="Marker2D" parent="." unique_id=372773192]
 position = Vector2(11, 84)
 
@@ -700,3 +696,7 @@ position = Vector2(782, 653)
 
 [node name="hidden_marker_blue_door" type="Marker2D" parent="." unique_id=1274918484]
 position = Vector2(-3, 704)
+
+[node name="player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
+position = Vector2(123, 459)
+collision_mask = 1
