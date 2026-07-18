@@ -248,9 +248,9 @@ text = "[center]This game was bought to life by"
 metadata/_edit_use_anchors_ = true
 
 [node name="Names" type="RichTextLabel" parent="." unique_id=1132429045]
-offset_left = 11.0
-offset_top = 243.0
-offset_right = 1160.0
+offset_left = 2.0
+offset_top = 215.0
+offset_right = 1152.0
 offset_bottom = 521.0
 theme_override_fonts/normal_font = ExtResource("3_jc7ji")
 bbcode_enabled = true
@@ -260,10 +260,12 @@ Guilherme Schirmer da Costa
 
 Patrick Bueno Ayres
 
-Mariana Flores 
+
+Art by
+
+Mariana Flores Pintos
 
 
-Sound Desing by
+Sound Design by
 
 João Vitor"
-metadata/_edit_use_anchors_ = true

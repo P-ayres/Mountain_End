@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://458sumt2vwco"]
 
-[ext_resource type="Texture2D" uid="uid://c5ko8sd5qbac2" path="res://assets/sprites/Tileset/Tileset.png" id="1_uvdjg"]
 [ext_resource type="Script" uid="uid://f77vl7y77uh2" path="res://scripts/door.gd" id="2_83dcw"]
 [ext_resource type="Texture2D" uid="uid://b5xijbv881shj" path="res://assets/sprites/Objects/door_79x111.png" id="2_la1wf"]
 [ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="3_83dcw"]
+[ext_resource type="Texture2D" uid="uid://qhpdgxl8ckpe" path="res://assets/sprites/Objects/porta_pequena_32x32.png" id="3_la1wf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5w8r"]
 atlas = ExtResource("2_la1wf")
 region = Rect2(0, 0, 79, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_la1wf"]
-atlas = ExtResource("1_uvdjg")
-region = Rect2(160, 128, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_18pbm"]
+atlas = ExtResource("3_la1wf")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t58dd"]
 atlas = ExtResource("2_la1wf")
@@ -25,9 +25,13 @@ region = Rect2(158, 0, 79, 111)
 atlas = ExtResource("2_la1wf")
 region = Rect2(237, 0, 79, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_18pbm"]
-atlas = ExtResource("1_uvdjg")
-region = Rect2(208, 128, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg2b6"]
+atlas = ExtResource("3_la1wf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey00f"]
+atlas = ExtResource("3_la1wf")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lfg7k"]
 animations = [{
@@ -41,7 +45,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_la1wf")
+"texture": SubResource("AtlasTexture_18pbm")
 }],
 "loop": 0,
 "name": &"normal",
@@ -63,7 +67,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_18pbm")
+"texture": SubResource("AtlasTexture_pg2b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ey00f")
 }],
 "loop": 0,
 "name": &"open_normal",

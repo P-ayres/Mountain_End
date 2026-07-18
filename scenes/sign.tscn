@@ -1,22 +1,29 @@
 [gd_scene format=3 uid="uid://73n8ab8ihqia"]
 
 [ext_resource type="Script" uid="uid://b6mqwutwxo4tc" path="res://scripts/sign.gd" id="1_8yyji"]
-[ext_resource type="Texture2D" uid="uid://bqtrn7t8j4xef" path="res://assets/sprites/world_tileset.png" id="1_kd50q"]
 [ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="2_8yyji"]
+[ext_resource type="Texture2D" uid="uid://bijv0xf4ms681" path="res://assets/sprites/Objects/placas_16x16.png" id="2_ge2pc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ge2pc"]
-atlas = ExtResource("1_kd50q")
-region = Rect2(128, 48, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkam6"]
+atlas = ExtResource("2_ge2pc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnnkw"]
+atlas = ExtResource("2_ge2pc")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_47noy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ge2pc")
+"texture": SubResource("AtlasTexture_qkam6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnnkw")
 }],
 "loop": 1,
-"name": &"default",
-"speed": 0.0
+"name": &"start",
+"speed": 1.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfg7k"]
@@ -28,6 +35,9 @@ script = ExtResource("1_8yyji")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1541806380]
 sprite_frames = SubResource("SpriteFrames_47noy")
+animation = &"start"
+autoplay = "start"
+frame_progress = 0.58862716
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930902808]
 position = Vector2(0, 1)
