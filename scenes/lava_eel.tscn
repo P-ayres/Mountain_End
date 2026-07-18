@@ -76,7 +76,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"idle",
-"speed": 3.0
+"speed": 0.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -93,7 +93,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"surge",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -152,41 +152,55 @@ radius = 45.0
 radius = 7.0
 height = 28.0
 
-[node name="LavaEel" type="CharacterBody2D" unique_id=599884545]
+[node name="LavaEel" type="CharacterBody2D" unique_id=599884545 groups=["Enemies"]]
 script = ExtResource("1_xx1ey")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1240324378 groups=["Enemies"]]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1240324378]
 sprite_frames = SubResource("SpriteFrames_lklgx")
-animation = &"tail_attack"
+animation = &"surge"
 autoplay = "idle"
-frame = 6
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1951079425]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_47noy")
 
 [node name="VisionArea" type="Area2D" parent="." unique_id=1710573433]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArea" unique_id=2140887299]
 shape = SubResource("CircleShape2D_47noy")
 debug_color = Color(0.26796618, 0.513572, 0.967472, 0.41960785)
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=1738424595]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=369171667]
 shape = SubResource("CircleShape2D_lfg7k")
 debug_color = Color(1, 0.97400004, 0.22000003, 0.41960785)
 
 [node name="KillzoneArea" parent="." unique_id=1461249974 instance=ExtResource("3_410y4")]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillzoneArea" unique_id=888067808]
+light_mask = 0
+visibility_layer = 0
 position = Vector2(-2, 2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_jadh1")
 debug_color = Color(0.9834041, 0.12925038, 0, 0.41960785)
 
+[node name="CatchArea" type="Area2D" parent="." unique_id=376589434]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CatchArea" unique_id=1880916992]
+polygon = PackedVector2Array(-150, -144, 26, -206, 0, 1)
+
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="body_exited" from="VisionArea" to="." method="_on_vision_area_body_exited"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
+[connection signal="body_entered" from="CatchArea" to="." method="_on_catch_area_body_entered"]
