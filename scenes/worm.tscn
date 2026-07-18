@@ -81,13 +81,12 @@ height = 17.119606
 [node name="worm" type="CharacterBody2D" unique_id=1726133864]
 script = ExtResource("1_fb06d")
 speed = 60.0
+metadata/_edit_vertical_guides_ = [400.0, -400.0]
 
 [node name="Animated" type="AnimatedSprite2D" parent="." unique_id=1539894449]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"surge_attack"
+animation = &"walk"
 autoplay = "walk"
-frame = 5
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1861131137]
 light_mask = 2
@@ -112,6 +111,7 @@ gravity_space_override = 2
 
 [node name="attack" type="CollisionShape2D" parent="attack_area" unique_id=1659036719]
 shape = SubResource("CircleShape2D_4x5om")
+debug_color = Color(0.51716954, 0.56795704, 0.27659273, 0.41960785)
 
 [node name="catch_area" type="Area2D" parent="." unique_id=1177689535]
 collision_layer = 2

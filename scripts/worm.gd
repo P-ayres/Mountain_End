@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var speed := 250.0
 
 var following = false
-var midAttack = false  
+var midAttack = false
 var canAttack = true    # evita múltiplos ataques simultâneos
 var killed = false
 var player: CharacterBody2D
@@ -66,9 +66,9 @@ func attack():
 	wormAnimation.play("surge_attack")
 
 	#Motiroamento da área de dano
-	$Area2D.monitoring = true  
+	killzone.monitoring = true
 	await wormAnimation.animation_finished
-	$Area2D.monitoring = false
+	killzone.monitoring = false
 	midAttack = false
 	canAttack = true
 
@@ -78,6 +78,4 @@ func attack():
 		SceneTransition.reload_scene()
 		await SceneTransition.animation_player.animation_finished
 		GameSystem.pause_game()
-
-	midAttack = false
-	canAttack = true
+		
