@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d2mqxu2vlj0rr" path="res://scenes/chest.tscn" id="3_k5w1d"]
 [ext_resource type="Texture2D" uid="uid://uxstl7i1lscr" path="res://assets/sprites/Objects/portas-Sheet.png" id="4_78p35"]
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="5_3t2fh"]
+[ext_resource type="PackedScene" uid="uid://d25wlqqaaiho5" path="res://scenes/dialogue_ui.tscn" id="8_videg"]
+[ext_resource type="PackedScene" uid="uid://dxehvknm8bvo4" path="res://scenes/dialoguetrigger.tscn" id="9_te4mb"]
 [ext_resource type="PackedScene" uid="uid://b0ygnuit7m2tu" path="res://scenes/worm.tscn" id="12_np46n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t2fh"]
@@ -697,6 +699,17 @@ position = Vector2(782, 653)
 [node name="hidden_marker_blue_door" type="Marker2D" parent="." unique_id=1274918484]
 position = Vector2(-3, 704)
 
-[node name="player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
+[node name="Player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
 position = Vector2(123, 459)
 collision_mask = 1
+
+[node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("8_videg")]
+offset_left = 123.0
+offset_top = 459.0
+offset_right = 123.0
+offset_bottom = 459.0
+
+[node name="dialoguetrigger" parent="." unique_id=1217533880 instance=ExtResource("9_te4mb")]
+position = Vector2(133, 456)
+dialogues = Array[String](["[center] Fear the ground [/center]", "[center] What kind of place is this? [/center]"])
+speakers = Array[String](["[center] Worm [/center]", "[center] Fred [/center]"])
