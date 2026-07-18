@@ -1,6 +1,7 @@
 extends Area2D
 
 
-func _on_body_entered(_body: Node2D) -> void:
-	print("you died!")
-	SceneTransition.reload_scene();
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		print("you died!")
+		SceneTransition.reload_scene();
