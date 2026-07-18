@@ -814,9 +814,9 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(34, -169)
 
 [node name="dialoguetrigger" parent="." unique_id=1217533880 instance=ExtResource("9_0tnpc")]
-position = Vector2(108, 90)
-dialogues = Array[String](["[center] How unlucky, you fell into a pit while climbing the mountains, find a way out.[/center]", "[center]What?.... [/center]", "[center]Strange, my map changed [/center]", "[center]Come and play with us![/center]", "[center]...[/center]"])
-speakers = Array[String](["[center]Watcher[center]", "[center]Fred (me?)[center]", "[center]Fred (me?)[center]", "[center] Worm | Rogerio | Swimmer [/center]", ""])
+position = Vector2(110, 51)
+dialogues = Array[String](["[center] How unlucky, you fell into a pit while climbing the mountains, find a way out.[/center]", "[center]What?.... [/center]", "[center]Strange, my map changed [/center]", "[center]Come and play with us![/center]", "[center]What kind of place is this?[/center]", "[center] .... [/center]"])
+speakers = Array[String](["[center]Watcher[center]", "[center]Fred (me?)[center]", "[center]Fred (me?)[center]", "[center] Worm | Rogerio | Swimmer [/center]", "[center] Fred [/center]", ""])
 
 [node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("10_kvpfn")]
 visible = true

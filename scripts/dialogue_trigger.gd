@@ -26,7 +26,7 @@ func start_dialogue(body):
 	
 
 func end_dialogue():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	GameSystem.pause_game()
 	dialogue_ui.visible = false
 

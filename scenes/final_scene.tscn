@@ -836,7 +836,7 @@ position = Vector2(7, 111)
 SPEED = 30.0
 
 [node name="dialoguetrigger" parent="." unique_id=1217533880 instance=ExtResource("8_x2ws3")]
-position = Vector2(116, 105)
+position = Vector2(118, 72)
 dialogues = Array[String](["[center]Why don't you fear the ground?[/center]", "[center] Why you reject the sea's embrace? [/center]", "[center] Why are you afraid of swimming with me? [/center]", "[center] This was fun [/center]"])
 speakers = Array[String](["[center] Worm [/center]", "[center] Rogerio [/center]", "[center] Swimmer [/center]", "[center] The one above [/center]"])
 

@@ -5,6 +5,8 @@ extends Area2D
 
 @export var is_door_visible: bool = true
 @export var needed_key = ""
+@export var door_type = "normal"
+@export var door_animation = "open_normal"
 
 @export_file("*.tscn") var scene = ""
 @export var next_scene_position: Vector2 = Vector2.ZERO
@@ -14,6 +16,7 @@ var is_interractable = true
 
 
 func _ready():
+	animated_sprite_2d.play(door_type)
 	animated_sprite_2d.visible = is_door_visible
 
 func _process(_delta):
@@ -26,7 +29,7 @@ func _process(_delta):
 			GameSystem.next_room_position = next_scene_position
 
 		is_interractable = false
-		animated_sprite_2d.play("open")
+		animated_sprite_2d.play(door_animation)
 		await get_tree().create_timer(0.2).timeout
 		SceneTransition.change_scene(scene)
 
