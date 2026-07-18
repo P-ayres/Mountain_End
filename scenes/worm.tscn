@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://b0ygnuit7m2tu"]
 
-[ext_resource type="Script" uid="uid://drg6il8ahn0nb" path="res://scripts/worm.gd" id="1_fb06d"]
 [ext_resource type="Texture2D" uid="uid://2wpr238pxuuo" path="res://assets/sprites/Enemies/criatura_de_terra20x30.png" id="2_lley5"]
+
+[sub_resource type="GDScript" id="GDScript_s6o1i"]
+script/source = "extends \"res://scripts/worm.gd\"
+
+
+
+func _physics_process(_delta: float) -> void:
+	pass
+	move_and_slide()
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_he5f4"]
 atlas = ExtResource("2_lley5")
@@ -79,15 +88,13 @@ radius = 8.559803
 height = 17.119606
 
 [node name="worm" type="CharacterBody2D" unique_id=1726133864]
-script = ExtResource("1_fb06d")
+script = SubResource("GDScript_s6o1i")
 speed = 60.0
 
 [node name="Animated" type="AnimatedSprite2D" parent="." unique_id=1539894449]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"surge_attack"
 autoplay = "walk"
-frame = 5
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1861131137]
 light_mask = 2
