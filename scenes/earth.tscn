@@ -648,6 +648,7 @@ next_scene_position = Vector2(0, 705)
 position = Vector2(816, 129)
 is_door_visible = false
 needed_key = "red_key"
+door_sound = "HiddenDoor"
 scene = "uid://d0gp5ptng0j3l"
 
 [node name="DoorToRiver" parent="TileMapLayer" unique_id=489888707 instance=ExtResource("5_3t2fh")]
@@ -661,6 +662,7 @@ next_scene_position = Vector2(773, 112)
 position = Vector2(-16, 705)
 is_door_visible = false
 needed_key = "blue_key"
+door_sound = "HiddenDoor"
 scene = "uid://drg1vyrvvu8eu"
 next_scene_position = Vector2(776, 720)
 

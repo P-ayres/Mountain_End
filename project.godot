@@ -11,14 +11,17 @@ config_version=5
 [application]
 
 config/name="Mountain End"
+config/description="Jogo de plataform em que o objetivo é escapar de um caverna estranha."
 run/main_scene="uid://ddklhnabxnwnp"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cfvs1xeq35irh"
 
 [autoload]
 
 GameSystem="*uid://dhocte74q3ivc"
 SceneTransition="*uid://dt5s35jwlddvy"
+MusicManager="*uid://ckqp64dcaj6g7"
+SfxManager="*uid://bccaq5g6hui5"
 
 [display]
 

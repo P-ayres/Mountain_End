@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED = 130.0
+@export var SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 
 @onready var map_panel = $map
@@ -42,8 +42,10 @@ func use_map():
 	#endregion
 
 	if map_panel.visible==false:
+		SfxManager.play_sfx("OpeningMap")
 		map_panel.visible=true
 	elif map_panel.visible==true:
+		SfxManager.play_sfx("ClosingMap")
 		map_panel.visible=false
 
 func _process(_delta: float) -> void:
@@ -79,6 +81,7 @@ func _physics_process(delta: float) -> void:
 				flipped = true
 				player_animation.flip_h = true
 				player_animation.play("walk")
+			
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			player_animation.play("idle")

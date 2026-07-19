@@ -4,5 +4,6 @@ extends Node2D
 
 func _process(_delta: float) -> void:
 	if Input.is_anything_pressed():
+		SfxManager.stop()
 		SceneTransition.change_scene(scene)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

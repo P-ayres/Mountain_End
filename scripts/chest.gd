@@ -14,6 +14,7 @@ func _process(_delta: float) -> void:
 	if is_in_range and Input.is_action_just_pressed("interact") and not chest_opened:
 		chest_opened = true
 		animated_sprite_2d.play("open_chest")
+		SfxManager.play_sfx("Chest")
 		print("itens: %s" % [", ".join(GameSystem.item)])
 		GameSystem.item.append(key_name)
 		print("itens: %s" % [", ".join(GameSystem.item)])
