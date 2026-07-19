@@ -68,6 +68,7 @@ func _physics_process(delta: float) -> void:
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var direction := Input.get_axis("move_left", "move_right")
 		var dead_zone = 0.2
+
 		if direction:
 			velocity.x = direction * SPEED
 			if direction > dead_zone:
@@ -86,3 +87,7 @@ func _physics_process(delta: float) -> void:
 			player_animation.play("idle")
 
 		move_and_slide()
+
+	# Game is paused, pause animation
+	elif player_animation.is_playing():
+		player_animation.pause()
