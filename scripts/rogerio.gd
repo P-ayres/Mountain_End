@@ -2,15 +2,19 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var killzone: Area2D = $KillzoneArea
+@onready var killzone_shape: CollisionShape2D = $KillzoneArea/CollisionShape2D
 
 @export var speed := 250.0
 
-enum State { IDLE, SURGING, CHASING, ATTACKING }
-const ATTACK_FRAMES := [3, 4]    # frames com hitbox ativa
+enum State { IDLE, CHASING, BURROWING, TUNNELING, SURGING, ATTACKING }
+const ATTACK_FRAMES := [1, 2]    # frames com hitbox ativa
 
 var state := State.IDLE
 var player: CharacterBody2D
 var is_player_in_attack_range := false
+var is_player_in_chase_range := false	# retângulo (frente/perto)
+var is_player_behind := false			# cone (emboscada)
+var killzone_offset_x := 0.0			# posição original da hitbox, p/ espelhar
 
 
 func _ready():
@@ -22,21 +26,21 @@ func _physics_process(delta: float) -> void:
 	if player == null:
 		move_and_slide()
 		return
-		
+	
 	var direction = (player.global_position - global_position).normalized()
-
+	
 	match state:
-		State.IDLE, State.SURGING, State.ATTACKING:
+		State.IDLE, State.SURGING:
 			velocity = lerp(velocity, Vector2.ZERO, 10.0 * delta)
 		State.CHASING:
 			velocity = lerp(velocity, direction * speed, 8.5 * delta)
 		State.ATTACKING:
 			velocity = lerp(velocity, direction * (speed * 0.4), 8.5 * delta)
-
+	
 	# ataca de novo a cada frame em que o player estiver no alcance
 	if state == State.CHASING and is_player_in_attack_range:
 		attack()
-
+	
 	move_and_slide()
 
 # --- Perseguição --------------------------------------------------
@@ -55,15 +59,16 @@ func start_chase() -> void:
 		state = State.CHASING
 		sprite.play("walk")
 
-#func _on_vision_area_body_entered(body: Node2D) -> void:
-#	if body.is_in_group("Player"):
-#		start_chase()
-
-func _on_catch_area_body_entered(body: Node2D) -> void:
+func _on_chase_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		start_chase()
 
 func _on_vision_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		state = State.IDLE
+		sprite.play("idle")
+
+func _on_ambush_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		state = State.IDLE
 		sprite.play("idle")

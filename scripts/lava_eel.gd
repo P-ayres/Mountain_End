@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	var direction = (player.global_position - global_position).normalized()
 
 	match state:
-		State.IDLE, State.SURGING, State.ATTACKING:
+		State.IDLE, State.SURGING:
 			velocity = lerp(velocity, Vector2.ZERO, 10.0 * delta)
 		State.CHASING:
 			velocity = lerp(velocity, direction * speed, 8.5 * delta)

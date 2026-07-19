@@ -4,18 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://f53u42yt5oqs" path="res://assets/sprites/Enemies/criatura_de_agua24x30.png" id="1_514vy"]
 [ext_resource type="PackedScene" uid="uid://bwt26scsmeemf" path="res://scenes/kill_zone.tscn" id="3_5bwlj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_514vy"]
-atlas = ExtResource("1_514vy")
-region = Rect2(0, 30, 24, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r7njt"]
-atlas = ExtResource("1_514vy")
-region = Rect2(24, 30, 24, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qrg6h"]
-atlas = ExtResource("1_514vy")
-region = Rect2(48, 30, 24, 30)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_bdkw3"]
 atlas = ExtResource("1_514vy")
 region = Rect2(24, 90, 24, 30)
@@ -31,6 +19,18 @@ region = Rect2(72, 90, 24, 30)
 [sub_resource type="AtlasTexture" id="AtlasTexture_gs3u0"]
 atlas = ExtResource("1_514vy")
 region = Rect2(96, 90, 24, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_514vy"]
+atlas = ExtResource("1_514vy")
+region = Rect2(0, 30, 24, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7njt"]
+atlas = ExtResource("1_514vy")
+region = Rect2(24, 30, 24, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrg6h"]
+atlas = ExtResource("1_514vy")
+region = Rect2(48, 30, 24, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5j5h2"]
 atlas = ExtResource("1_514vy")
@@ -68,15 +68,6 @@ region = Rect2(0, 0, 24, 30)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_514vy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r7njt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qrg6h")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_bdkw3")
 }, {
 "duration": 1.0,
@@ -88,9 +79,23 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gs3u0")
 }],
-"loop": 2,
-"name": &"surge_attack",
-"speed": 6.0
+"loop": 0,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_514vy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7njt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrg6h")
+}],
+"loop": 0,
+"name": &"surge",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -134,19 +139,25 @@ size = Vector2(20, 5)
 radius = 500.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4x5om"]
-radius = 45.0
+radius = 17.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47noy"]
+size = Vector2(78, 52)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_514vy"]
 
 [node name="Rogério" type="CharacterBody2D" unique_id=77657425]
 script = ExtResource("1_0r87e")
+metadata/_edit_vertical_guides_ = [-390.0, -390.0]
+metadata/_edit_horizontal_guides_ = [-120.0, 120.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=796320222]
 position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_7rejt")
-animation = &"surge_attack"
+animation = &"attack"
 autoplay = "waiting"
-frame_progress = 0.016296929
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=25401228]
 light_mask = 2
@@ -156,38 +167,54 @@ shape = SubResource("RectangleShape2D_4x5om")
 disabled = true
 
 [node name="VisionArea" type="Area2D" parent="." unique_id=1165670019]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArea" unique_id=1705533009]
 shape = SubResource("CircleShape2D_7rejt")
 
-[node name="attack_area" type="Area2D" parent="." unique_id=1965429774]
+[node name="AttackArea" type="Area2D" parent="." unique_id=1965429774]
 light_mask = 2
 visibility_layer = 2
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area" unique_id=1149129398]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1149129398]
 shape = SubResource("CircleShape2D_4x5om")
 
 [node name="ChaseArea" type="Area2D" parent="." unique_id=501539668]
 light_mask = 2
 visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ChaseArea" unique_id=1676734060]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseArea" unique_id=34918645]
+shape = SubResource("RectangleShape2D_47noy")
+debug_color = Color(0.8204019, 0.3966344, 0.19680524, 0.41960785)
+
+[node name="AmbushArea" type="Area2D" parent="." unique_id=1842341]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AmbushArea" unique_id=449600582]
 light_mask = 2
 visibility_layer = 2
-polygon = PackedVector2Array(0, 0, -391, -224, -386, 137)
+polygon = PackedVector2Array(-39, 26, -39, -26, -390, -120, -390, 120)
 
-[node name="KillZoneArea" parent="." unique_id=1461249974 instance=ExtResource("3_5bwlj")]
+[node name="KillzoneArea" parent="." unique_id=1461249974 instance=ExtResource("3_5bwlj")]
+collision_layer = 2
+collision_mask = 2
 
-[node name="axe_killzone" type="CollisionShape2D" parent="KillZoneArea" unique_id=1828121139]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillzoneArea" unique_id=1828121139]
 light_mask = 3
 visibility_layer = 3
 position = Vector2(3, -4)
 shape = SubResource("CircleShape2D_514vy")
 debug_color = Color(0.67377853, 0.38152438, 0.85380393, 0.41960785)
 
-[connection signal="body_exited" from="VisionArea" to="." method="_on_vision_body_exited"]
-[connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
-[connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
-[connection signal="body_entered" from="ChaseArea" to="." method="_on_catch_area_body_entered"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="body_exited" from="VisionArea" to="." method="_on_vision_area_body_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
+[connection signal="body_entered" from="ChaseArea" to="." method="_on_chase_area_body_entered"]
+[connection signal="body_entered" from="AmbushArea" to="." method="_on_ambush_area_body_entered"]
