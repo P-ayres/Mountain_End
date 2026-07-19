@@ -86,7 +86,7 @@ script = ExtResource("2_83dcw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=571852800]
 sprite_frames = SubResource("SpriteFrames_lfg7k")
-animation = &"huge"
+animation = &"open_normal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1579426344]
 position = Vector2(0, 12)

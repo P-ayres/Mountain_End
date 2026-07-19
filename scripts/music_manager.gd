@@ -30,8 +30,10 @@ func update_music():
 		update_music()
 
 	match scene.name:
+		"main_menu":
+			play_music("MainMenu")
 		"Game":
-			play_music("StartMusic")
+			play_music("CaveAmbience")
 		"Earth":
 			play_music("CaveAmbience")
 		"area_aquatica":

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://hjqxqxpkpxdh" path="res://scripts/music_manager.gd" id="1_jd6i5"]
 [ext_resource type="AudioStream" uid="uid://cgxnlr74se5tm" path="res://assets/music/cave_ambience.wav" id="2_yodp2"]
-[ext_resource type="AudioStream" uid="uid://d0rm6n6i05fmd" path="res://assets/music/water_level_music.wav" id="4_jbem4"]
 [ext_resource type="AudioStream" uid="uid://c5txbp7ex0iab" path="res://assets/music/water_level_ambience.wav" id="5_hu6vc"]
+[ext_resource type="AudioStream" uid="uid://2fuk3ry10n7c" path="res://assets/music/loneliness-void.mp3" id="6_hu6vc"]
 [ext_resource type="AudioStream" uid="uid://b6j4y1uehpaui" path="res://assets/music/wind.mp3" id="6_jbem4"]
 [ext_resource type="AudioStream" uid="uid://6g288w4skygt" path="res://assets/music/lava_level_ambience.wav" id="6_p07gy"]
 
@@ -16,11 +16,6 @@ clips = NodePath("Clips")
 [node name="CaveAmbience" type="AudioStreamPlayer" parent="Clips" unique_id=189159844]
 stream = ExtResource("2_yodp2")
 volume_db = -10.0
-pitch_scale = 0.93
-
-[node name="StartMusic" type="AudioStreamPlayer" parent="Clips" unique_id=770055094]
-stream = ExtResource("4_jbem4")
-volume_db = -25.0
 
 [node name="WaterLevelAmbience" type="AudioStreamPlayer" parent="Clips" unique_id=1107893395]
 stream = ExtResource("5_hu6vc")
@@ -33,3 +28,7 @@ volume_db = -10.0
 [node name="Wind" type="AudioStreamPlayer" parent="Clips" unique_id=1148235468]
 stream = ExtResource("6_jbem4")
 volume_db = -10.0
+parameters/looping = true
+
+[node name="MainMenu" type="AudioStreamPlayer" parent="Clips" unique_id=1758120213]
+stream = ExtResource("6_hu6vc")
