@@ -19,7 +19,7 @@ func _ready() -> void:
 func start_dialogue(body):
 	if body == player and !started:
 		started = true
-		player.SPEED = 0
+		GameSystem.pause_game()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		dialogue_ui.visible = true
 		continue_dialogue()
@@ -27,7 +27,7 @@ func start_dialogue(body):
 
 func end_dialogue():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	player.SPEED = 130.0
+	GameSystem.pause_game()
 	dialogue_ui.visible = false
 
 func continue_dialogue():

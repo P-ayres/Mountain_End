@@ -31,13 +31,15 @@ func update_music():
 
 	match scene.name:
 		"Game":
+			play_music("StartMusic")
+		"Earth":
 			play_music("CaveAmbience")
 		"area_aquatica":
 			play_music("WaterLevelAmbience")
-			play_music("WaterLevelMusic", true)
 		"Volcano":
 			play_music("LavaLevelAmbience")
-			play_music("LavaLevelMusic", true)
+		"FinalScene":
+			play_music("EndMusic")
 
 func play_music(audio_name: String, from_position: float = 0.0, skip_restart: bool = false) -> void:
 	if skip_restart and active_music_stream and active_music_stream.name == audio_name:

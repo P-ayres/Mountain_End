@@ -15,21 +15,21 @@ clips = NodePath("Clips")
 
 [node name="CaveAmbience" type="AudioStreamPlayer" parent="Clips" unique_id=189159844]
 stream = ExtResource("2_yodp2")
-volume_db = -10.692
+volume_db = -10.0
 pitch_scale = 0.93
 
-[node name="WaterLevelMusic" type="AudioStreamPlayer" parent="Clips" unique_id=770055094]
+[node name="StartMusic" type="AudioStreamPlayer" parent="Clips" unique_id=770055094]
 stream = ExtResource("4_jbem4")
-volume_db = -38.315
+volume_db = -20.0
 
 [node name="WaterLevelAmbience" type="AudioStreamPlayer" parent="Clips" unique_id=1107893395]
 stream = ExtResource("5_hu6vc")
-volume_db = -27.193
+volume_db = -20.0
 
 [node name="LavaLevelAmbience" type="AudioStreamPlayer" parent="Clips" unique_id=32938221]
 stream = ExtResource("6_p07gy")
 volume_db = -10.0
 
-[node name="LavaLevelMusic" type="AudioStreamPlayer" parent="Clips" unique_id=1706391848]
+[node name="EndMusic" type="AudioStreamPlayer" parent="Clips" unique_id=1706391848]
 stream = ExtResource("7_hu6vc")
-volume_db = -24.632
+volume_db = -10.0
