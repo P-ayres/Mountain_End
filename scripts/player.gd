@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED = 130.0
+@export var SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 
 @onready var map_panel = $map

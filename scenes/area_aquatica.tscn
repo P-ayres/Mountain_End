@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="2_0oxg1"]
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="3_f4lyb"]
 [ext_resource type="Texture2D" uid="uid://dpunwilqcgtd5" path="res://assets/sprites/Objects/cachoeira_layer.png" id="4_0oxg1"]
-[ext_resource type="PackedScene" uid="uid://cpealxo86d45k" path="res://scenes/chest.tscn" id="4_f4lyb"]
+[ext_resource type="PackedScene" uid="uid://d2mqxu2vlj0rr" path="res://scenes/chest.tscn" id="4_f4lyb"]
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="5_4dgp5"]
 [ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="5_xx1uv"]
 [ext_resource type="PackedScene" uid="uid://cdvbd0p66k6kv" path="res://scenes/rogerio.tscn" id="6_4dgp5"]
@@ -547,16 +547,16 @@ z_index = 2
 position = Vector2(330, 104)
 texture = ExtResource("4_0oxg1")
 
-[node name="Watcher" parent="Tiles" unique_id=2098329084 instance=ExtResource("5_xx1uv")]
-position = Vector2(283, 53)
-
 [node name="rogerio" parent="Node2D" unique_id=77657425 instance=ExtResource("6_4dgp5")]
-position = Vector2(382, 115)
+position = Vector2(306, 114)
 speed = 60.0
+
+[node name="Tiles#Watcher" parent="." unique_id=2098329084 instance=ExtResource("5_xx1uv")]
+position = Vector2(283, 53)
 
 [node name="player" parent="." unique_id=1021298550 instance=ExtResource("5_4dgp5")]
 z_index = 1
-position = Vector2(62, 248)
+position = Vector2(435, 117)
 collision_mask = 1
 
 [node name="Marker_door" type="Marker2D" parent="." unique_id=243184571]
