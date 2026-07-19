@@ -7,6 +7,8 @@ var scene = "scenes/end_screen.tscn"
 
 func _ready() -> void:
 	animatted_end.play("FINAL")
+	await get_tree().create_timer(9).timeout
+	SfxManager.play_sfx("Kill")
 
 func _process(_delta: float) -> void:
 	await animatted_end.animation_finished
