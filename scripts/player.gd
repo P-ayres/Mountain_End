@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 130.0
+@export var SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 
 @onready var map_panel = $map
@@ -14,6 +14,7 @@ var map_position = GameSystem.player_position
 
 
 func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	#GameSystem.item.append("black_key")
 	if GameSystem.next_room_position != Vector2.ZERO:
 		position = GameSystem.next_room_position

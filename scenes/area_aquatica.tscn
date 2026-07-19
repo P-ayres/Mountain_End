@@ -547,8 +547,8 @@ z_index = 2
 position = Vector2(330, 104)
 texture = ExtResource("4_0oxg1")
 
-[node name="Watcher" parent="Node2D" unique_id=2098329084 instance=ExtResource("5_xx1uv")]
-position = Vector2(291, 60)
+[node name="Watcher" parent="Tiles" unique_id=2098329084 instance=ExtResource("5_xx1uv")]
+position = Vector2(283, 53)
 
 [node name="rogerio" parent="Node2D" unique_id=77657425 instance=ExtResource("6_4dgp5")]
 position = Vector2(382, 115)
