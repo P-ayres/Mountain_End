@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://v2ah4766a1rc"]
 
-[ext_resource type="Script" uid="uid://buc3pyx75fjyi" path="res://scenes/catch_mouse.gd" id="1_kvpfn"]
+[ext_resource type="Script" uid="uid://buc3pyx75fjyi" path="res://scripts/catch_mouse.gd" id="1_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="2_gee14"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="2_yqjtg"]
