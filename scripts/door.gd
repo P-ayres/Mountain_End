@@ -7,6 +7,7 @@ extends Area2D
 @export var needed_key = ""
 @export var door_type = "normal"
 @export var door_animation = "open_normal"
+@export var door_sound = "Door"
 
 @export_file("*.tscn") var scene = ""
 @export var next_scene_position: Vector2 = Vector2.ZERO
@@ -21,14 +22,15 @@ func _ready():
 
 func _process(_delta):
 	if(is_in_range and is_interractable and Input.is_action_just_pressed("interact") && (!needed_key or GameSystem.item.has(needed_key))):
-		SfxManager.play_sfx("Door")
+		SfxManager.play_sfx(door_sound, 0.8)
+		animated_sprite_2d.play(door_animation)
 		if scene.is_empty():
 			push_warning("porta sem destino!")
 			return
-
+		
 		if next_scene_position != Vector2.ZERO:
 			GameSystem.next_room_position = next_scene_position
-
+		
 		is_interractable = false
 		await get_tree().create_timer(0.2).timeout
 		SceneTransition.change_scene(scene)

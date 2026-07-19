@@ -665,6 +665,7 @@ next_scene_position = Vector2(782, 653)
 [node name="HiddenDoorLavaToEarth" parent="volcanoEnviroment/Enviroment" unique_id=295558413 instance=ExtResource("4_j2sps")]
 position = Vector2(-17, 82)
 is_door_visible = false
+door_sound = "HiddenDoor"
 scene = "uid://0vedbqsddcwj"
 next_scene_position = Vector2(790, 130)
 

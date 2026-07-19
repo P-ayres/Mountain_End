@@ -532,6 +532,7 @@ key_name = "red_key"
 [node name="HiddenDoorToEarth" parent="Node2D" unique_id=2090127083 instance=ExtResource("3_f4lyb")]
 position = Vector2(799, 720)
 is_door_visible = false
+door_sound = "HiddenDoor"
 scene = "uid://0vedbqsddcwj"
 next_scene_position = Vector2(-3, 704)
 
