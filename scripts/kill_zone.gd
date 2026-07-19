@@ -1,13 +1,8 @@
 extends Area2D
 
-@onready var timer: Timer = $Timer
-@onready var fade: AnimationPlayer = $Fade/AnimationPlayer
 
-
-func _on_body_entered(_body: Node2D) -> void:
-	print("you died!")
-	fade.play("fade_in")
-	timer.start()
-
-func _on_timer_timeout() -> void:
-	get_tree().reload_current_scene()
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		SfxManager.play_sfx("Kill")
+		print("you died!")
+		SceneTransition.reload_scene();

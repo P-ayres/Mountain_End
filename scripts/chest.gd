@@ -2,21 +2,22 @@ extends Area2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interaction_prompt: PanelContainer = $InteractionPrompt
+@onready var show_key: AnimatedSprite2D = $Key
 
-var is_in_range: bool = false
+@export var key_name = ""
 
-var chest_opened := false
+var is_in_range: bool = false;
+var chest_opened := false;
 
-@export var chest_item = "" 
 
 func _process(_delta: float) -> void:
 	if is_in_range and Input.is_action_just_pressed("interact") and not chest_opened:
 		chest_opened = true
 		animated_sprite_2d.play("open_chest")
-		SfxManager.play_sfx("OpeningChest")
-		GameSystem.item.append(chest_item)
-		chest_item = null
-		
+		print("itens: %s" % [", ".join(GameSystem.item)])
+		GameSystem.item.append(key_name)
+		print("itens: %s" % [", ".join(GameSystem.item)])
+		show_key.play(key_name)
 
 func _on_body_entered(_body: Node2D) -> void:
 	print("entered range")

@@ -1,14 +1,8 @@
 [gd_scene format=3 uid="uid://bccaq5g6hui5"]
 
-[ext_resource type="AudioStream" uid="uid://dmjjxw227pp6g" path="res://assets/sounds/coin.wav" id="1_df6my"]
 [ext_resource type="Script" uid="uid://c6aexr1x5nc1j" path="res://scripts/sfx_manager.gd" id="1_xl5ak"]
 [ext_resource type="AudioStream" uid="uid://bi1udalytdawn" path="res://assets/sounds/explosion.wav" id="2_xl5ak"]
-[ext_resource type="AudioStream" uid="uid://b5ibskrxh1ag7" path="res://assets/sounds/hurt.wav" id="3_4unml"]
-[ext_resource type="AudioStream" uid="uid://csfr7h4das86j" path="res://assets/sounds/jump.wav" id="4_sglhd"]
 [ext_resource type="AudioStream" uid="uid://bl0m2a3ta067r" path="res://assets/sounds/opening_chest.wav" id="5_ymotv"]
-[ext_resource type="AudioStream" uid="uid://bhmldpyrpbjgf" path="res://assets/sounds/power_up.wav" id="6_sec7p"]
-[ext_resource type="AudioStream" uid="uid://cgax4pwha6jib" path="res://assets/sounds/tap.wav" id="7_2qqed"]
-[ext_resource type="AudioStream" uid="uid://duucflrxxp5fy" path="res://assets/sounds/walking_sound.wav" id="8_ale0q"]
 [ext_resource type="AudioStream" uid="uid://5s4vo42cv8er" path="res://assets/sounds/closing_map.wav" id="10_sglhd"]
 [ext_resource type="AudioStream" uid="uid://bu47ft5cyfoiy" path="res://assets/sounds/opening_map.wav" id="11_ymotv"]
 
@@ -18,35 +12,12 @@ clips = NodePath("Clips")
 
 [node name="Clips" type="Node" parent="." unique_id=1621592550]
 
-[node name="Coin" type="AudioStreamPlayer" parent="Clips" unique_id=233417065]
-stream = ExtResource("1_df6my")
-
-[node name="Explosion" type="AudioStreamPlayer" parent="Clips" unique_id=1544107740]
+[node name="Kill" type="AudioStreamPlayer" parent="Clips" unique_id=1544107740]
 stream = ExtResource("2_xl5ak")
 
-[node name="Hurt" type="AudioStreamPlayer" parent="Clips" unique_id=1185456890]
-stream = ExtResource("3_4unml")
-
-[node name="Jump" type="AudioStreamPlayer" parent="Clips" unique_id=1974333750]
-stream = ExtResource("4_sglhd")
-volume_db = -34.019
-pitch_scale = 0.66
-
-[node name="OpeningChest" type="AudioStreamPlayer" parent="Clips" unique_id=122679982]
+[node name="Door" type="AudioStreamPlayer" parent="Clips" unique_id=122679982]
 stream = ExtResource("5_ymotv")
-volume_db = -33.5
-pitch_scale = 1.25
-
-[node name="PowerUp" type="AudioStreamPlayer" parent="Clips" unique_id=1696920447]
-stream = ExtResource("6_sec7p")
-
-[node name="Tap" type="AudioStreamPlayer" parent="Clips" unique_id=1281385821]
-stream = ExtResource("7_2qqed")
-
-[node name="WalkingSound" type="AudioStreamPlayer" parent="Clips" unique_id=1981206774]
-stream = ExtResource("8_ale0q")
-volume_db = -25.719
-pitch_scale = 1.13
+volume_db = -8.0
 
 [node name="ClosingMap" type="AudioStreamPlayer" parent="Clips" unique_id=1714199794]
 stream = ExtResource("10_sglhd")

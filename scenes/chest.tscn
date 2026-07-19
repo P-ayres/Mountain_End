@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cxi26nr1pthnu" path="res://scripts/chest.gd" id="1_gqd3d"]
 [ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="2_gqd3d"]
 [ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="3_yhylo"]
+[ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="4_yue2o"]
+[ext_resource type="Texture2D" uid="uid://bmqqlge32sqyh" path="res://assets/sprites/Tileset/tiles_lava.png" id="5_yhylo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yue2o"]
 atlas = ExtResource("2_gqd3d")
@@ -36,6 +38,147 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfg7k"]
 size = Vector2(27.75, 26.5)
 
+[sub_resource type="Animation" id="Animation_yhylo"]
+resource_name = "blue_key"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w02o5"]
+_data = {
+&"blue_key": SubResource("Animation_yhylo")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg5gm"]
+atlas = ExtResource("2_gqd3d")
+region = Rect2(112, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilhio"]
+atlas = ExtResource("4_yue2o")
+region = Rect2(224, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8me8i"]
+atlas = ExtResource("5_yhylo")
+region = Rect2(112, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfymr"]
+atlas = ExtResource("4_yue2o")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rejt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg5gm")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg5gm")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg5gm")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg5gm")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg5gm")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"black_key",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilhio")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8me8i")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8me8i")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8me8i")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8me8i")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"blue_key",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfymr")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfymr")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfymr")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfymr")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfymr")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"red_key",
+"speed": 5.0
+}]
+
 [node name="Chest" type="Area2D" unique_id=1430650561]
 collision_mask = 2
 script = ExtResource("1_gqd3d")
@@ -55,6 +198,12 @@ offset_right = 5.0
 offset_bottom = -10.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=523959440]
+libraries/ = SubResource("AnimationLibrary_w02o5")
+
+[node name="Key" type="AnimatedSprite2D" parent="." unique_id=390736795]
+position = Vector2(3, -13)
+sprite_frames = SubResource("SpriteFrames_7rejt")
+animation = &"blue_key"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

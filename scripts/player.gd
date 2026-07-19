@@ -1,22 +1,32 @@
 extends CharacterBody2D
 
-const SPEED = 130.0
+@export var SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 
 @onready var map_panel = $map
 @onready var map_player_icon = $map/map_texture/player_position
+@onready var player_animation: AnimatedSprite2D = $AnimatedSprite2D
+@onready var camera: Camera2D = $Camera2D
+
+
+var flipped = false
 var map_position = GameSystem.player_position
 
-@onready var player_animation: AnimatedSprite2D = $AnimatedSprite2D
-var flipped = false
 
 func _ready() -> void:
-	if GameSystem.next_room_position!=Vector2.ZERO:
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	#GameSystem.item.append("black_key")
+	if GameSystem.next_room_position != Vector2.ZERO:
 		position = GameSystem.next_room_position
-		GameSystem.next_room_position=Vector2.ZERO
+		camera.reset_smoothing()
+		GameSystem.next_room_position = Vector2.ZERO
+		
+		# checkpoint da sala, qual porta e quais chaves tinha
+		GameSystem.current_room_spawn = position
+		GameSystem.current_room_item = GameSystem.item.duplicate()
 
 func use_map():
-#region Verificar sala e atualiza mapa
+	#region Verificar sala e atualiza mapa
 	if $"..".name == "Game":
 		GameSystem.player_position=0
 		map_player_icon.set_position($map/map_texture/pos1.position)
@@ -29,8 +39,8 @@ func use_map():
 	elif $"..".name == "area_aquatica":
 		GameSystem.player_position=3
 		map_player_icon.set_position($map/map_texture/pos4.position)
-#endregion
-		
+	#endregion
+
 	if map_panel.visible==false:
 		SfxManager.play_sfx("OpeningMap")
 		map_panel.visible=true
@@ -53,7 +63,6 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("move_up") and is_on_floor():
 			player_animation.play("jump")
 			velocity.y = JUMP_VELOCITY
-			SfxManager.play_sfx("Jump")
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
@@ -75,6 +84,5 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			player_animation.play("idle")
-			SfxManager.play_sfx("WalkingSound")
 
 		move_and_slide()

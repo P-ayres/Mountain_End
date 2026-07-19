@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://hjqxqxpkpxdh" path="res://scripts/music_manager.gd" id="1_jd6i5"]
 [ext_resource type="AudioStream" uid="uid://cgxnlr74se5tm" path="res://assets/music/cave_ambience.wav" id="2_yodp2"]
-[ext_resource type="AudioStream" uid="uid://csw1ikuof0ib0" path="res://assets/music/time_for_adventure.mp3" id="3_xcw26"]
 [ext_resource type="AudioStream" uid="uid://d0rm6n6i05fmd" path="res://assets/music/water_level_music.wav" id="4_jbem4"]
 [ext_resource type="AudioStream" uid="uid://c5txbp7ex0iab" path="res://assets/music/water_level_ambience.wav" id="5_hu6vc"]
 [ext_resource type="AudioStream" uid="uid://6g288w4skygt" path="res://assets/music/lava_level_ambience.wav" id="6_p07gy"]
@@ -18,9 +17,6 @@ clips = NodePath("Clips")
 stream = ExtResource("2_yodp2")
 volume_db = -10.692
 pitch_scale = 0.93
-
-[node name="TimeForAdventure" type="AudioStreamPlayer" parent="Clips" unique_id=1616766502]
-stream = ExtResource("3_xcw26")
 
 [node name="WaterLevelMusic" type="AudioStreamPlayer" parent="Clips" unique_id=770055094]
 stream = ExtResource("4_jbem4")

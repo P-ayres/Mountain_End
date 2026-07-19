@@ -1,16 +1,8 @@
 [gd_scene format=3 uid="uid://bwt26scsmeemf"]
 
 [ext_resource type="Script" uid="uid://b10obeun8bgee" path="res://scripts/kill_zone.gd" id="1_l4ff3"]
-[ext_resource type="PackedScene" uid="uid://dt5s35jwlddvy" path="res://scenes/fade.tscn" id="2_koymq"]
 
-[node name="Kill Zone" type="Area2D" unique_id=1461249974]
+[node name="KillZone" type="Area2D" unique_id=1461249974]
 script = ExtResource("1_l4ff3")
 
-[node name="Timer" type="Timer" parent="." unique_id=2038049041]
-one_shot = true
-
-[node name="Fade" parent="." unique_id=1856547104 instance=ExtResource("2_koymq")]
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

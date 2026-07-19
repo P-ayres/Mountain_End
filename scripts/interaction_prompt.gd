@@ -1,8 +1,9 @@
 extends PanelContainer
 
+@onready var label: Label = $MarginContainer/Label
+
 @export var prompt_text: String = ""
 
-@onready var label: Label = $MarginContainer/Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
