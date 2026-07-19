@@ -4,8 +4,8 @@
 [ext_resource type="AudioStream" uid="uid://cgxnlr74se5tm" path="res://assets/music/cave_ambience.wav" id="2_yodp2"]
 [ext_resource type="AudioStream" uid="uid://d0rm6n6i05fmd" path="res://assets/music/water_level_music.wav" id="4_jbem4"]
 [ext_resource type="AudioStream" uid="uid://c5txbp7ex0iab" path="res://assets/music/water_level_ambience.wav" id="5_hu6vc"]
+[ext_resource type="AudioStream" uid="uid://b6j4y1uehpaui" path="res://assets/music/wind.mp3" id="6_jbem4"]
 [ext_resource type="AudioStream" uid="uid://6g288w4skygt" path="res://assets/music/lava_level_ambience.wav" id="6_p07gy"]
-[ext_resource type="AudioStream" uid="uid://n0ciwu6742im" path="res://assets/music/lava_level_music.wav" id="7_hu6vc"]
 
 [node name="MusicManager" type="Node" unique_id=103155046 node_paths=PackedStringArray("clips")]
 script = ExtResource("1_jd6i5")
@@ -30,6 +30,6 @@ volume_db = -20.0
 stream = ExtResource("6_p07gy")
 volume_db = -10.0
 
-[node name="EndMusic" type="AudioStreamPlayer" parent="Clips" unique_id=1706391848]
-stream = ExtResource("7_hu6vc")
+[node name="Wind" type="AudioStreamPlayer" parent="Clips" unique_id=1148235468]
+stream = ExtResource("6_jbem4")
 volume_db = -10.0

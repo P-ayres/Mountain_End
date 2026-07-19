@@ -39,7 +39,7 @@ func update_music():
 		"Volcano":
 			play_music("LavaLevelAmbience")
 		"FinalScene":
-			play_music("EndMusic")
+			play_music("Wind")
 
 func play_music(audio_name: String, from_position: float = 0.0, skip_restart: bool = false) -> void:
 	if skip_restart and active_music_stream and active_music_stream.name == audio_name:
