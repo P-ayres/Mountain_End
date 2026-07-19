@@ -217,4 +217,6 @@ debug_color = Color(0.67377853, 0.38152438, 0.85380393, 0.41960785)
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
 [connection signal="body_entered" from="ChaseArea" to="." method="_on_chase_area_body_entered"]
+[connection signal="body_exited" from="ChaseArea" to="." method="_on_chase_area_body_exited"]
 [connection signal="body_entered" from="AmbushArea" to="." method="_on_ambush_area_body_entered"]
+[connection signal="body_exited" from="AmbushArea" to="." method="_on_ambush_area_body_exited"]

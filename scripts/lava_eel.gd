@@ -96,5 +96,8 @@ func attack() -> void:
 
 # Liga a hitbox só nos frames de golpe
 func _on_animated_sprite_2d_frame_changed() -> void:
+	if not sprite:
+		return
+	
 	var is_attack_frame := sprite.animation == &"tail_attack" and sprite.frame in ATTACK_FRAMES
 	killzone.monitoring = is_attack_frame
