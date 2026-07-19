@@ -1,6 +1,6 @@
 extends Node2D
 
-@export_file var scene = "scenes/game.tscn"
+var scene = "scenes/game.tscn"
 
 func _on_start_pressed() -> void:
 	SceneTransition.change_scene(scene)
