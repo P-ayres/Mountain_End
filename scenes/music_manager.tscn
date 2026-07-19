@@ -15,7 +15,6 @@ clips = NodePath("Clips")
 
 [node name="CaveAmbience" type="AudioStreamPlayer" parent="Clips" unique_id=189159844]
 stream = ExtResource("2_yodp2")
-volume_db = -10.0
 
 [node name="WaterLevelAmbience" type="AudioStreamPlayer" parent="Clips" unique_id=1107893395]
 stream = ExtResource("5_hu6vc")
