@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c6aexr1x5nc1j" path="res://scripts/sfx_manager.gd" id="1_xl5ak"]
 [ext_resource type="AudioStream" uid="uid://bi1udalytdawn" path="res://assets/sounds/explosion.wav" id="2_xl5ak"]
 [ext_resource type="AudioStream" uid="uid://bl0m2a3ta067r" path="res://assets/sounds/opening_chest.wav" id="5_ymotv"]
+[ext_resource type="AudioStream" uid="uid://duucflrxxp5fy" path="res://assets/sounds/walking_sound.wav" id="6_byfxn"]
 [ext_resource type="AudioStream" uid="uid://5s4vo42cv8er" path="res://assets/sounds/closing_map.wav" id="10_sglhd"]
 [ext_resource type="AudioStream" uid="uid://bu47ft5cyfoiy" path="res://assets/sounds/opening_map.wav" id="11_ymotv"]
 
@@ -21,9 +22,13 @@ volume_db = -8.0
 
 [node name="ClosingMap" type="AudioStreamPlayer" parent="Clips" unique_id=1714199794]
 stream = ExtResource("10_sglhd")
-volume_db = -10.19
+volume_db = -5.0
 
 [node name="OpeningMap" type="AudioStreamPlayer" parent="Clips" unique_id=550826651]
 stream = ExtResource("11_ymotv")
-volume_db = -10.035
+volume_db = -5.0
 pitch_scale = 1.16
+
+[node name="StrangeTap" type="AudioStreamPlayer" parent="Clips" unique_id=595070228]
+stream = ExtResource("6_byfxn")
+volume_db = -5.0

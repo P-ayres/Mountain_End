@@ -13,4 +13,4 @@ func play_sfx(audio_name: String, from_position: float = 0.0, skip_restart: bool
 	active_sfx_stream.play(from_position)
 
 func stop():
-	active_sfx_stream.play()
+	active_sfx_stream.stop()

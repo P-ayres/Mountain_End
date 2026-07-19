@@ -20,7 +20,7 @@ pitch_scale = 0.93
 
 [node name="StartMusic" type="AudioStreamPlayer" parent="Clips" unique_id=770055094]
 stream = ExtResource("4_jbem4")
-volume_db = -20.0
+volume_db = -25.0
 
 [node name="WaterLevelAmbience" type="AudioStreamPlayer" parent="Clips" unique_id=1107893395]
 stream = ExtResource("5_hu6vc")
