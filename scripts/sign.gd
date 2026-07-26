@@ -5,6 +5,9 @@ extends Area2D
 
 var is_in_range: bool = false;
 
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 func _process(_delta: float) -> void:
 	if(is_in_range and Input.is_action_just_pressed("interact")):
 		sign_img.visible = true

@@ -66,9 +66,10 @@ func attack():
 	wormAnimation.play("surge_attack")
 
 	#Motiroamento da área de dano
-	killzone.monitoring = true
+	killzone.set_deferred("monitoring", true)
+
 	await wormAnimation.animation_finished
-	killzone.monitoring = false
+	killzone.set_deferred("monitoring", false)
 	midAttack = false
 	canAttack = true
 
@@ -76,6 +77,6 @@ func attack():
 		GameSystem.pause_game()
 		print("you died!")
 		SceneTransition.reload_scene()
-		await SceneTransition.animation_player.animation_finished
-		GameSystem.pause_game()
+		#await SceneTransition.animation_player.animation_finished
+		#GameSystem.pause_game()
 		

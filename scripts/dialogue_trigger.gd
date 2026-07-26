@@ -14,6 +14,7 @@ var started = false
 
 func _ready() -> void:
 	dialogue_ui.get_node("continue").connect("pressed", Callable(self, "continue_dialogue"))
+	dialogue_ui.process_mode = Node.PROCESS_MODE_ALWAYS
 	dialogue_ui.visible = false
 
 func start_dialogue(body):

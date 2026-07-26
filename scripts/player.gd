@@ -49,13 +49,13 @@ func use_map():
 		map_panel.visible=false
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
-		GameSystem.pause_game()
+	#if Input.is_action_just_pressed("ui_cancel"):
+		#GameSystem.pause_game()
 	if Input.is_action_just_pressed("map"):
 		use_map()
 
 func _physics_process(delta: float) -> void:
-	if GameSystem.current_state == GameSystem.GameState.PLAYING:
+	#if GameSystem.current_state == GameSystem.GameState.PLAYING:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 
@@ -88,6 +88,6 @@ func _physics_process(delta: float) -> void:
 
 		move_and_slide()
 
-	# Game is paused, pause animation
-	elif player_animation.is_playing():
-		player_animation.pause()
+	## Game is paused, pause animation
+	#elif player_animation.is_playing():
+		#player_animation.pause()

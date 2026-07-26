@@ -14,7 +14,7 @@ var is_player_in_attack_range := false
 
 
 func _ready():
-	killzone.monitoring = false
+	killzone.set_deferred("monitoring", false)
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("Player")
 
@@ -84,7 +84,7 @@ func attack() -> void:
 	
 	sprite.play("tail_attack")
 	await sprite.animation_finished
-	killzone.monitoring = false
+	killzone.set_deferred("monitoring", false)
 	
 	# Aguarda 0.2s antes de voltar a atacar
 	await get_tree().create_timer(0.2).timeout
@@ -100,4 +100,4 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 		return
 	
 	var is_attack_frame := sprite.animation == &"tail_attack" and sprite.frame in ATTACK_FRAMES
-	killzone.monitoring = is_attack_frame
+	killzone.set_deferred("monitoring", is_attack_frame)
