@@ -15,7 +15,13 @@ var started = false
 func _ready() -> void:
 	dialogue_ui.get_node("continue").connect("pressed", Callable(self, "continue_dialogue"))
 	dialogue_ui.visible = false
-
+	
+func _input(keyboardKey):
+	if dialogue_ui.visible and keyboardKey is InputEventKey and keyboardKey.pressed:
+		if Input.is_action_just_pressed("interact") or Input.is_action_just_pressed("ui_accept"):
+			continue_dialogue()
+			get_viewport().set_input_as_handled()
+			
 func start_dialogue(body):
 	if body == player and !started:
 		started = true

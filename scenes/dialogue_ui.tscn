@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d25wlqqaaiho5"]
 
 [ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="1_dwk8m"]
+[ext_resource type="FontFile" uid="uid://re38ryxf8nfj" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_6q285"]
 
 [node name="dialogue_ui" type="Control" unique_id=1092085197]
 visible = false
@@ -51,9 +52,21 @@ bbcode_enabled = true
 text = "[center]Voice in your head:[/center]"
 
 [node name="continue" type="Button" parent="canvas" unique_id=442278106]
-offset_left = 499.0
-offset_top = 584.0
-offset_right = 660.0
-offset_bottom = 629.0
+offset_left = 500.0
+offset_top = 573.0
+offset_right = 661.0
+offset_bottom = 618.0
 theme_override_fonts/font = ExtResource("1_dwk8m")
 text = "What?"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="canvas" unique_id=1897670524]
+offset_left = 3.0
+offset_top = 633.0
+offset_right = 1155.0
+offset_bottom = 652.0
+theme_override_colors/default_color = Color(0.29041672, 0.29041672, 0.29041672, 1)
+theme_override_fonts/normal_font = ExtResource("2_6q285")
+theme_override_fonts/bold_font = ExtResource("1_dwk8m")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[center] [F or SPACE to continue]"
