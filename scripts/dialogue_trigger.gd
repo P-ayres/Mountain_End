@@ -18,7 +18,7 @@ func _ready() -> void:
 	
 func _input(keyboardKey):
 	if dialogue_ui.visible and keyboardKey is InputEventKey and keyboardKey.pressed:
-		if not keyboardKey.is_echo() and keyboardKey.key_label in [KEY_SPACE, KEY_F]:
+		if Input.is_action_just_pressed("interact") or Input.is_action_just_pressed("ui_accept"):
 			continue_dialogue()
 			get_viewport().set_input_as_handled()
 			
