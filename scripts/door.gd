@@ -16,6 +16,7 @@ extends Area2D
 var is_in_range: bool = false
 var is_interractable = true
 
+
 func _ready():
 	animated_sprite_2d.play(door_type)
 	animated_sprite_2d.visible = is_door_visible
