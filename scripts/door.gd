@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interaction_prompt: PanelContainer = $InteractionPrompt
+@onready var noInteration: PanelContainer = $NotInteractionPrompt
 
 @export var is_door_visible: bool = true
 @export var needed_key = ""
@@ -34,6 +35,14 @@ func _process(_delta):
 		is_interractable = false
 		await get_tree().create_timer(0.2).timeout
 		SceneTransition.change_scene(scene)
+	elif(is_in_range and Input.is_action_just_pressed("interact") and is_door_visible):
+		interaction_prompt.hide_prompt()
+		noInteration.show_message("Appears to be Locked")
+		SfxManager.play_sfx("LockedDoor")
+	elif(is_in_range and Input.is_action_just_pressed("interact") and !is_door_visible):
+		interaction_prompt.hide_prompt()
+		SfxManager.play_sfx("WallWind")
+		noInteration.show_message("Looks like there's a fissure in this wall")
 
 func _on_body_entered(_body: Node2D) -> void:
 	print("entered range")

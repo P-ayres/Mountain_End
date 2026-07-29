@@ -8,6 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://dfpkndp2iqx2v" path="res://assets/sounds/door-open.mp3" id="8_df6my"]
 [ext_resource type="AudioStream" uid="uid://dikvrp5hwgu4w" path="res://assets/music/footstep-stone.mp3" id="9_xl5ak"]
 [ext_resource type="AudioStream" uid="uid://5s4vo42cv8er" path="res://assets/sounds/closing_map.wav" id="10_sglhd"]
+[ext_resource type="AudioStream" uid="uid://qjp2lfleaxaq" path="res://assets/sounds/lockedDoor.mp3" id="10_ymotv"]
+[ext_resource type="AudioStream" uid="uid://ctn4vtl1236bq" path="res://assets/sounds/wind-howling.mp3" id="11_sec7p"]
 [ext_resource type="AudioStream" uid="uid://bu47ft5cyfoiy" path="res://assets/sounds/opening_map.wav" id="11_ymotv"]
 
 [node name="SfxManager" type="Node" unique_id=1878641415 node_paths=PackedStringArray("clips")]
@@ -44,3 +46,11 @@ stream = ExtResource("8_df6my")
 
 [node name="HiddenDoor" type="AudioStreamPlayer" parent="Clips" unique_id=250273227]
 stream = ExtResource("9_xl5ak")
+
+[node name="LockedDoor" type="AudioStreamPlayer" parent="Clips" unique_id=1703620397]
+stream = ExtResource("10_ymotv")
+volume_db = 10.0
+
+[node name="WallWind" type="AudioStreamPlayer" parent="Clips" unique_id=2046977159]
+stream = ExtResource("11_sec7p")
+volume_db = 10.0
