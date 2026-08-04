@@ -550,7 +550,7 @@ texture = ExtResource("4_0oxg1")
 
 [node name="rogerio" parent="Node2D" unique_id=77657425 instance=ExtResource("6_4dgp5")]
 position = Vector2(306, 114)
-speed = 60.0
+speed = 90.0
 
 [node name="Watcher" parent="." unique_id=2098329084 instance=ExtResource("5_xx1uv")]
 position = Vector2(283, 53)
