@@ -46,3 +46,6 @@ offset_right = 620.0
 offset_bottom = 326.0
 theme_override_fonts/font = ExtResource("2_m0klm")
 text = "Exit"
+
+[connection signal="pressed" from="Canvas/Resume" to="." method="toggle_pause"]
+[connection signal="pressed" from="Canvas/Exit" to="." method="quit_game"]
