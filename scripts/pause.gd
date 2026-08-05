@@ -2,19 +2,19 @@ extends Control
 
 @onready var pause_panel = $Canvas
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pause_panel.get_node("Resume").connect("pressed", Callable(self, "toggle_hud"))
+	pause_panel.get_node("Exit").connect("pressed", Callable(self, "quit_game"))
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func toggle_hud():
+func toggle_pause():
 	if pause_panel.visible==false:
 		pause_panel.visible=true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		GameSystem.pause_game()
 	elif pause_panel.visible==true:
 		pause_panel.visible=false
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+		GameSystem.pause_game()
+
+func quit_game():
+	get_tree().quit()
