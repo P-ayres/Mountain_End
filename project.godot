@@ -22,6 +22,7 @@ GameSystem="*uid://dhocte74q3ivc"
 SceneTransition="*uid://dt5s35jwlddvy"
 MusicManager="*uid://ckqp64dcaj6g7"
 SfxManager="*uid://bccaq5g6hui5"
+Pause="*uid://bid0y1ud1u8m3"
 
 [display]
 
