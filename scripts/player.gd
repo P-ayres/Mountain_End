@@ -55,7 +55,7 @@ func _process(_delta: float) -> void:
 		use_map()
 
 func _physics_process(delta: float) -> void:
-	if GameSystem.current_state == GameSystem.GameState.PLAYING:
+	if GameSystem.current_state == GameSystem.GameState.PLAYING and SPEED != 0:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bid0y1ud1u8m3"]
+
+[ext_resource type="Script" uid="uid://0cmtqxxglj3i" path="res://scripts/pause.gd" id="1_f1d2v"]
+
+[node name="Pause" type="Panel" unique_id=1500504069]
+offset_left = -134.0
+offset_top = -86.0
+offset_right = 132.0
+offset_bottom = 59.0
+script = ExtResource("1_f1d2v")
