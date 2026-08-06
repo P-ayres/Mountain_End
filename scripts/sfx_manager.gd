@@ -12,5 +12,9 @@ func play_sfx(audio_name: String, from_position: float = 0.0, skip_restart: bool
 	active_sfx_stream = clips.get_node(audio_name)
 	active_sfx_stream.play(from_position)
 
-func stop():
-	active_sfx_stream.stop()
+func stop() -> void:
+	if active_sfx_stream != null:
+		for child in clips.get_children():
+			if child is AudioStreamPlayer:
+				child.stop()
+		active_sfx_stream = null
