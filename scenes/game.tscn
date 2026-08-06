@@ -570,10 +570,11 @@ scale = Vector2(2.3125002, 2.3125002)
 texture = ExtResource("4_iywne")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sign/Tutorial" unique_id=71268544]
-offset_left = -27.675682
-offset_top = -13.837814
+anchors_preset = -1
+offset_left = -27.675676
+offset_top = -13.837836
 offset_right = 264.21616
-offset_bottom = 124.54054
+offset_bottom = 115.89187
 scale = Vector2(0.2, 0.2)
 theme = SubResource("Theme_iywne")
 theme_override_colors/default_color = Color(0.24, 0.24, 0.24, 1)
@@ -584,7 +585,26 @@ Press [A] / [D] to walk
 Press [Space] to jump
 Press [F] to interact
 Press [M] to open map
-Press [Esc] to close this or  pause game"
+Press [Esc] to pause game"
+metadata/_edit_use_anchors_ = true
+
+[node name="close" type="RichTextLabel" parent="Sign/Tutorial" unique_id=248017697]
+modulate = Color(1.1672988, 1.1253914, 1.1260898, 0.4509804)
+anchors_preset = -1
+anchor_left = 0.109999895
+anchor_top = 0.94600004
+anchor_right = 0.109999895
+anchor_bottom = 0.94600004
+offset_left = -30.823776
+offset_top = -17.299028
+offset_right = 209.17615
+offset_bottom = -4.3260517
+scale = Vector2(0.2, 0.2)
+theme = SubResource("Theme_iywne")
+theme_override_colors/default_color = Color(0.24, 0.24, 0.24, 1)
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[center] [F] to close this [/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("2_yqjtg")]

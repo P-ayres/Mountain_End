@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bid0y1ud1u8m3"]
+
+[ext_resource type="Script" uid="uid://uj1i7qkiwpn7" path="res://scripts/pause.gd" id="1_f1d2v"]
+[ext_resource type="Texture2D" uid="uid://cp5qm1wlch0qc" path="res://assets/sprites/Objects/papiro_2.png" id="1_r8yp4"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="2_m0klm"]
+
+[node name="Pause" type="Control" unique_id=658263292]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f1d2v")
+
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=992957462]
+visible = false
+
+[node name="hover" type="Panel" parent="Canvas" unique_id=164067118]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 1173.0
+offset_bottom = 662.0
+
+[node name="TextureRect" type="TextureRect" parent="Canvas" unique_id=1393514491]
+modulate = Color(0.47225577, 0.47225577, 0.47225577, 1)
+offset_left = 506.0
+offset_top = 186.0
+offset_right = 679.0
+offset_bottom = 397.0
+layout_direction = 4
+texture = ExtResource("1_r8yp4")
+
+[node name="Resume" type="Button" parent="Canvas" unique_id=239464529]
+offset_left = 546.0
+offset_top = 243.0
+offset_right = 642.0
+offset_bottom = 274.0
+theme_override_fonts/font = ExtResource("2_m0klm")
+text = "Resume"
+
+[node name="Exit" type="Button" parent="Canvas" unique_id=818885487]
+offset_left = 562.0
+offset_top = 295.0
+offset_right = 620.0
+offset_bottom = 326.0
+theme_override_fonts/font = ExtResource("2_m0klm")
+text = "Exit"
+
+[connection signal="pressed" from="Canvas/Resume" to="." method="toggle_pause"]
+[connection signal="pressed" from="Canvas/Exit" to="." method="quit_game"]

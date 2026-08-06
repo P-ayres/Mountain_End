@@ -25,16 +25,10 @@ func _input(keyboardKey):
 func start_dialogue(body):
 	if body == player and !started:
 		started = true
-		GameSystem.pause_game()
+		player.SPEED = 0
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		dialogue_ui.visible = true
 		continue_dialogue()
-	
-
-func end_dialogue():
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	GameSystem.pause_game()
-	dialogue_ui.visible = false
 
 func continue_dialogue():
 	current_dialogue += 1
@@ -43,3 +37,8 @@ func continue_dialogue():
 		speaker.text = speakers[current_dialogue]
 	else:
 		end_dialogue()
+		
+func end_dialogue():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	player.SPEED = 100
+	dialogue_ui.visible = false

@@ -25,37 +25,14 @@ func _ready() -> void:
 		GameSystem.current_room_spawn = position
 		GameSystem.current_room_item = GameSystem.item.duplicate()
 
-func use_map():
-	#region Verificar sala e atualiza mapa
-	if $"..".name == "Game":
-		GameSystem.player_position=0
-		map_player_icon.set_position($map/map_texture/pos1.position)
-	elif $"..".name == "Earth":
-		GameSystem.player_position=1
-		map_player_icon.set_position($map/map_texture/pos2.position)
-	elif $"..".name == "Volcano":
-		GameSystem.player_position=2
-		map_player_icon.set_position($map/map_texture/pos3.position)
-	elif $"..".name == "area_aquatica":
-		GameSystem.player_position=3
-		map_player_icon.set_position($map/map_texture/pos4.position)
-	#endregion
-
-	if map_panel.visible==false:
-		SfxManager.play_sfx("OpeningMap")
-		map_panel.visible=true
-	elif map_panel.visible==true:
-		SfxManager.play_sfx("ClosingMap")
-		map_panel.visible=false
-
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
-		GameSystem.pause_game()
+		Pause.toggle_pause()
 	if Input.is_action_just_pressed("map"):
 		use_map()
 
 func _physics_process(delta: float) -> void:
-	if GameSystem.current_state == GameSystem.GameState.PLAYING:
+	if GameSystem.current_state == GameSystem.GameState.PLAYING and SPEED != 0:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 
@@ -91,3 +68,26 @@ func _physics_process(delta: float) -> void:
 	# Game is paused, pause animation
 	elif player_animation.is_playing():
 		player_animation.pause()
+
+func use_map():
+	#region Verificar sala e atualiza mapa
+	if $"..".name == "Game":
+		GameSystem.player_position=0
+		map_player_icon.set_position($map/map_texture/pos1.position)
+	elif $"..".name == "Earth":
+		GameSystem.player_position=1
+		map_player_icon.set_position($map/map_texture/pos2.position)
+	elif $"..".name == "Volcano":
+		GameSystem.player_position=2
+		map_player_icon.set_position($map/map_texture/pos3.position)
+	elif $"..".name == "area_aquatica":
+		GameSystem.player_position=3
+		map_player_icon.set_position($map/map_texture/pos4.position)
+	#endregion
+
+	if map_panel.visible==false:
+		SfxManager.play_sfx("OpeningMap")
+		map_panel.visible=true
+	elif map_panel.visible==true:
+		SfxManager.play_sfx("ClosingMap")
+		map_panel.visible=false
