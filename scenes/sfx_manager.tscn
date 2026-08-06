@@ -36,7 +36,7 @@ pitch_scale = 1.16
 
 [node name="StrangeTap" type="AudioStreamPlayer" parent="Clips" unique_id=595070228]
 stream = ExtResource("6_byfxn")
-volume_db = -5.0
+volume_db = 10.0
 
 [node name="WildCard" type="AudioStreamPlayer" parent="Clips" unique_id=573653076]
 stream = ExtResource("7_h2k0q")

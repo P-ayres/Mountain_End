@@ -24,3 +24,6 @@ func pause_game():
 
 	elif current_state == GameState.PLAYING:
 		current_state = GameState.PAUSED
+
+func reset_game():
+	item = []

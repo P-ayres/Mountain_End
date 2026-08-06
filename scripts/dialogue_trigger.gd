@@ -4,6 +4,7 @@ extends Node2D
 @onready var speaker: RichTextLabel = get_tree().current_scene.get_node("dialogue_ui/canvas/speaker")
 @onready var dialogue_text: RichTextLabel = get_tree().current_scene.get_node("dialogue_ui/canvas/dialogue_text")
 @onready var player: CharacterBody2D = get_tree().current_scene.get_node("Player")
+@onready var actual_speed = player.SPEED
 
 @export var dialogues: Array[String]
 @export var speakers: Array[String]
@@ -40,5 +41,5 @@ func continue_dialogue():
 		
 func end_dialogue():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	player.SPEED = 100
+	player.SPEED = actual_speed
 	dialogue_ui.visible = false
