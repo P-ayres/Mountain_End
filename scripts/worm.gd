@@ -76,10 +76,7 @@ func attack():
 	canAttack = true
 
 	if killed:
-		GameSystem.pause_game()
+		SfxManager.play_sfx("Kill")
 		print("you died!")
-		SfxManager.play_sfx("Kill") 
-		SceneTransition.reload_scene()
-		await SceneTransition.animation_player.animation_finished
-		GameSystem.pause_game()
+		SceneTransition.change_scene("reset")
 		

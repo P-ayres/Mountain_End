@@ -10,9 +10,16 @@ func change_scene(scene):
 		return
 	
 	is_in_transition = true
+	GameSystem.pause_game()
 	animation_player.play("fade_in")
 	await animation_player.animation_finished
-	get_tree().change_scene_to_file(scene)
+
+	if scene == "reset":
+		reload_scene()
+	else:
+		get_tree().change_scene_to_file(scene)	
+
+	GameSystem.pause_game()
 	animation_player.play("fade_out")
 	await animation_player.animation_finished
 	is_in_transition = false
@@ -27,4 +34,4 @@ func reload_scene():
 	GameSystem.item = GameSystem.current_room_item
 	
 	print("itens (after reload): %s" % [", ".join(GameSystem.item)])
-	change_scene(get_tree().current_scene.scene_file_path)
+	get_tree().change_scene_to_file(get_tree().current_scene.scene_file_path)
