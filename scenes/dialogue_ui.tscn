@@ -22,26 +22,33 @@ anchor_bottom = 1.0
 offset_top = -173.0
 grow_horizontal = 2
 grow_vertical = 0
+size_flags_horizontal = 3
 color = Color(0, 0, 0, 1)
 
 [node name="dialogue_text" type="RichTextLabel" parent="canvas" unique_id=1675296672]
-offset_left = 3.0
-offset_top = 536.0
-offset_right = 1148.0
-offset_bottom = 573.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85600007
+anchor_right = 0.5
+anchor_bottom = 0.85600007
+offset_left = -573.0
+offset_top = -18.68805
+offset_right = 572.0
+offset_bottom = 18.31195
 theme_override_fonts/normal_font = ExtResource("1_dwk8m")
 bbcode_enabled = true
 text = "[center]You fell into a pit while climbing the mountains, find a way out:[/center]"
 
 [node name="speaker" type="RichTextLabel" parent="canvas" unique_id=1237759523 node_paths=PackedStringArray("shortcut_context")]
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 1.0
-offset_top = 167.0
-offset_right = -1.0
-offset_bottom = 206.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.758
+anchor_right = 0.5
+anchor_bottom = 0.758
+offset_left = -575.0
+offset_top = -0.184021
+offset_right = 575.0
+offset_bottom = 38.81598
 grow_horizontal = 2
 grow_vertical = 2
 layout_direction = 3
@@ -52,18 +59,28 @@ bbcode_enabled = true
 text = "[center]Voice in your head:[/center]"
 
 [node name="continue" type="Button" parent="canvas" unique_id=442278106]
-offset_left = 500.0
-offset_top = 573.0
-offset_right = 661.0
-offset_bottom = 618.0
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.919
+anchor_right = 0.504
+anchor_bottom = 0.919
+offset_left = -80.60803
+offset_top = -22.512024
+offset_right = 80.39197
+offset_bottom = 22.487976
 theme_override_fonts/font = ExtResource("1_dwk8m")
 text = "What?"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="canvas" unique_id=1897670524]
-offset_left = 3.0
-offset_top = 633.0
-offset_right = 1155.0
-offset_bottom = 652.0
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.99200004
+anchor_right = 0.503
+anchor_bottom = 0.99200004
+offset_left = -576.45605
+offset_top = -9.81604
+offset_right = 575.54395
+offset_bottom = 9.18396
 theme_override_colors/default_color = Color(0.29041672, 0.29041672, 0.29041672, 1)
 theme_override_fonts/normal_font = ExtResource("2_6q285")
 theme_override_fonts/bold_font = ExtResource("1_dwk8m")
