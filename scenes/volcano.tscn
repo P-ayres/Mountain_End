@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="7_i8qla"]
 [ext_resource type="PackedScene" uid="uid://bg422w3jqvn3e" path="res://scenes/lava_eel.tscn" id="8_i8qla"]
 [ext_resource type="PackedScene" uid="uid://065gpwfl5x5x" path="res://scenes/painting.tscn" id="9_fajfj"]
+[ext_resource type="PackedScene" uid="uid://dxehvknm8bvo4" path="res://scenes/dialoguetrigger.tscn" id="10_yrfeb"]
+[ext_resource type="PackedScene" uid="uid://d25wlqqaaiho5" path="res://scenes/dialogue_ui.tscn" id="11_3n2n1"]
 [ext_resource type="PackedScene" uid="uid://bwt26scsmeemf" path="res://scenes/kill_zone.tscn" id="11_yrfeb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2sps"]
@@ -699,3 +701,9 @@ polygon = PackedVector2Array(397, 24, 397, -8, 365, -8, 365, -24, 333, -24, 333,
 
 [node name="Painting" parent="." unique_id=636749260 instance=ExtResource("9_fajfj")]
 position = Vector2(815, 41)
+
+[node name="dialoguetrigger" parent="Painting" unique_id=1217533880 instance=ExtResource("10_yrfeb")]
+dialogues = Array[String](["gfd"])
+speakers = Array[String](["gdf"])
+
+[node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("11_3n2n1")]

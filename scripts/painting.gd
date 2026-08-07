@@ -3,12 +3,14 @@ extends Area2D
 @onready var interaction_prompt: PanelContainer = $InteractionPrompt
 @onready var painting: Panel = $PaintingFrame
 @onready var item: AnimatedSprite2D = $AnimatedSprite2D
+@onready var dialogue: Area2D = $dialoguetrigger/trigger
 
 var player: CharacterBody2D
 var is_in_range: bool = false;
 var collected: bool = false;
 
 func _ready() -> void:
+	dialogue.monitoring = false
 	player = get_tree().get_first_node_in_group("Player")
 
 
@@ -38,4 +40,5 @@ func show_painting():
 	elif painting.visible and Input.is_action_just_pressed("interact"):
 		GameSystem.pause_game()
 		painting.visible = false
-		item.visible =false
+		item.visible = false
+		dialogue.monitoring = true
