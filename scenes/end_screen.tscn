@@ -409,6 +409,7 @@ tile_map_data = PackedByteArray("AABHACgAAAADAAsAAAAAACgAAAABAAsAAAABACgAAAAJAAs
 tile_set = SubResource("TileSet_7rejt")
 
 [node name="GoodEnd" type="CanvasLayer" parent="." unique_id=1321066711]
+layer = -1
 visible = false
 
 [node name="Background" type="TileMapLayer" parent="GoodEnd" unique_id=458508015]
