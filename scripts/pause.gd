@@ -2,15 +2,15 @@ extends Control
 
 @onready var pause_panel = $Canvas
 
-func _process(_delta: float) -> void:
-	if pause_panel.visible==true and Input.mouse_mode == Input.MOUSE_MODE_HIDDEN:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+var playing = GameSystem.GameState.PLAYING;
+var paused = GameSystem.GameState.PAUSED;
 
 func toggle_pause():
-	if pause_panel.visible==false:
+	if pause_panel.visible==false and GameSystem.current_state == playing:
 		pause_panel.visible=true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		GameSystem.pause_game()
-	elif pause_panel.visible==true:
+	elif pause_panel.visible==true and GameSystem.current_state == paused:
 		pause_panel.visible=false
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		GameSystem.pause_game()
