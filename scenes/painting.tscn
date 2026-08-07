@@ -164,6 +164,7 @@ collision_mask = 2
 script = ExtResource("1_8u3ay")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=646030762]
+rotation = -0.6340293
 sprite_frames = SubResource("SpriteFrames_c01yy")
 animation = &"collect"
 autoplay = "start"
