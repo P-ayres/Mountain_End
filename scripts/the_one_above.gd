@@ -6,11 +6,18 @@ var ended = false
 var scene = "scenes/end_screen.tscn"
 
 func _ready() -> void:
-	animatted_end.play("FINAL")
-	await get_tree().create_timer(6.5).timeout
-	SfxManager.play_sfx("WildCard")
-	await get_tree().create_timer(3).timeout
-	SfxManager.play_sfx("Kill")
+	if GameSystem.item.has("divine_painting"):
+		animatted_end.play("FINAL_2")
+		await get_tree().create_timer(6.5).timeout
+		SfxManager.play_sfx("WildCard")
+		await get_tree().create_timer(2).timeout
+		SfxManager.play_sfx("Thunder")
+	else: 
+		animatted_end.play("FINAL")
+		await get_tree().create_timer(6.5).timeout
+		SfxManager.play_sfx("WildCard")
+		await get_tree().create_timer(3).timeout
+		SfxManager.play_sfx("Kill")
 
 func _process(_delta: float) -> void:
 	await animatted_end.animation_finished

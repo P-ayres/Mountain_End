@@ -31,6 +31,7 @@ func _on_body_exited(_body: Node2D) -> void:
 func show_painting():
 	if !painting.visible and !collected:
 		GameSystem.item.append("divine_painting")
+		print(GameSystem.item)
 		collected = true
 		painting.visible = true
 		GameSystem.pause_game()
