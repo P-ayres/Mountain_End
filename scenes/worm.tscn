@@ -142,4 +142,3 @@ debug_color = Color(0.9149989, 8.105218e-05, 0.7161235, 0.41960785)
 [connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
 [connection signal="body_entered" from="catch_area" to="." method="_on_catch_area_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -27,3 +27,4 @@ func pause_game():
 
 func reset_game():
 	item = []
+	current_room_spawn = Vector2.ZERO
