@@ -3,7 +3,7 @@ extends Node2D
 @onready var animatted_end: AnimatedSprite2D = $TheOneAbove
 
 var ended = false
-var scene = "scenes/end_screen.tscn"
+var scene = ""
 
 func _ready() -> void:
 	if GameSystem.item.has("divine_painting"):
@@ -12,12 +12,14 @@ func _ready() -> void:
 		SfxManager.play_sfx("WildCard")
 		await get_tree().create_timer(2).timeout
 		SfxManager.play_sfx("Thunder")
+		scene = "scenes/florest.tscn"
 	else: 
 		animatted_end.play("FINAL")
 		await get_tree().create_timer(6.5).timeout
 		SfxManager.play_sfx("WildCard")
 		await get_tree().create_timer(3).timeout
 		SfxManager.play_sfx("Kill")
+		scene = "scenes/end_screen.tscn"
 
 func _process(_delta: float) -> void:
 	await animatted_end.animation_finished

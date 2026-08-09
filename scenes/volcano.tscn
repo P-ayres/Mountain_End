@@ -703,7 +703,7 @@ polygon = PackedVector2Array(397, 24, 397, -8, 365, -8, 365, -24, 333, -24, 333,
 position = Vector2(815, 41)
 
 [node name="dialoguetrigger" parent="Painting" unique_id=1217533880 instance=ExtResource("10_yrfeb")]
-dialogues = Array[String](["gfd"])
-speakers = Array[String](["gdf"])
+dialogues = Array[String](["[center]dialogo"])
+speakers = Array[String](["[center]dialogo"])
 
 [node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("11_3n2n1")]
