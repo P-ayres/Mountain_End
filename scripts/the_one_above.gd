@@ -13,7 +13,7 @@ func _ready() -> void:
 		await get_tree().create_timer(2).timeout
 		SfxManager.play_sfx("Thunder")
 		scene = "scenes/florest.tscn"
-	else: 
+	else:
 		animatted_end.play("FINAL")
 		await get_tree().create_timer(6.5).timeout
 		SfxManager.play_sfx("WildCard")

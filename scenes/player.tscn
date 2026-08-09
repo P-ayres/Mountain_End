@@ -9,10 +9,6 @@
 atlas = ExtResource("2_g2els")
 region = Rect2(0, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
-atlas = ExtResource("2_g2els")
-region = Rect2(0, 0, 24, 24)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("2_g2els")
 region = Rect2(0, 24, 24, 24)
@@ -42,21 +38,13 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qhqgy")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g2els")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dqkch")
 }],
 "loop": 1,
-"name": &"jump",
-"speed": 5.0
+"name": &"idle",
+"speed": 0.6
 }, {
 "frames": [{
 "duration": 1.0,
@@ -76,7 +64,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk",
-"speed": 5.0
+"speed": 4.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
@@ -100,7 +88,6 @@ shape = SubResource("RectangleShape2D_lnu2h")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=941204244]
 position = Vector2(0, -13)
 zoom = Vector2(4, 4)
-position_smoothing_enabled = true
 
 [node name="map" type="Panel" parent="." unique_id=1829077867]
 visible = false

@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if(is_in_range and Input.is_action_just_pressed("interact")):
 		await get_tree().create_timer(0.2).timeout
-		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
+		GameSystem.finish_game()
 
 func _on_body_entered(_body: Node2D) -> void:
 	print("entered range")
