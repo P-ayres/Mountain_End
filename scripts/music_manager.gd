@@ -31,7 +31,7 @@ func update_music():
 
 	match scene.name:
 		"main_menu":
-			play_music("MainMenu")
+			play_music("Lonelly")
 		"Game":
 			play_music("CaveAmbience")
 		"Earth":
@@ -40,6 +40,9 @@ func update_music():
 			play_music("WaterLevelAmbience")
 		"Volcano":
 			play_music("LavaLevelAmbience")
+		#Decidir música deefinitiva para esta fase deepois
+		"Florest":
+			play_music("Lonelly")
 		"FinalScene":
 			play_music("Wind")
 
