@@ -13,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="canvas" type="CanvasLayer" parent="." unique_id=1417871294]
+visible = false
 
 [node name="bg" type="ColorRect" parent="canvas" unique_id=1396322199]
 anchors_preset = 12
