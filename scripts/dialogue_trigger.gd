@@ -12,12 +12,16 @@ extends Node2D
 
 var current_dialogue = -1
 var started = false
+var is_active = false
 
 func _ready() -> void:
 	dialogue_ui.get_node("continue").connect("pressed", Callable(self, "continue_dialogue"))
 	dialogue_ui.visible = false
 	
 func _input(keyboardKey):
+	if !is_active:
+		return
+
 	if dialogue_ui.visible and keyboardKey is InputEventKey and keyboardKey.pressed:
 		if Input.is_action_just_pressed("interact") or Input.is_action_just_pressed("ui_accept"):
 			continue_dialogue()
@@ -25,6 +29,7 @@ func _input(keyboardKey):
 			
 func start_dialogue(body):
 	if body == player and !started:
+		is_active = true
 		started = true
 		player.SPEED = 0
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -32,6 +37,9 @@ func start_dialogue(body):
 		continue_dialogue()
 
 func continue_dialogue():
+	if !is_active:
+		return
+
 	current_dialogue += 1
 	if current_dialogue < dialogues.size():
 		dialogue_text.text = dialogues[current_dialogue]
@@ -40,6 +48,7 @@ func continue_dialogue():
 		end_dialogue()
 		
 func end_dialogue():
+	is_active = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	player.SPEED = actual_speed
 	dialogue_ui.visible = false

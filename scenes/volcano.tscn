@@ -706,13 +706,13 @@ polygon = PackedVector2Array(397, 24, 397, -8, 365, -8, 365, -24, 333, -24, 333,
 position = Vector2(815, 41)
 
 [node name="painting_dialogue" parent="Painting" unique_id=1217533880 instance=ExtResource("10_yrfeb")]
-dialogues = Array[String](["[center]dialogo"])
-speakers = Array[String](["[center]dialogo"])
+dialogues = Array[String](["[center]There's a relaxing energy coming from this painting", "[center] Don't be afraid", "[center]Too late buddy", "[center]Hope to find a way out soon..."])
+speakers = Array[String](["[center]Fred", "[center] ???", "[center]Fred", "[center]Fred"])
 
 [node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("11_3n2n1")]
 
 [node name="area_dialogue" parent="." unique_id=1916173676 instance=ExtResource("10_yrfeb")]
 position = Vector2(9, 307)
 scale = Vector2(-4.744229, 8.487467)
-dialogues = Array[String](["[center]Come swin with me!", "[center]Nahh, that's too hot for me"])
+dialogues = Array[String](["[center]Come swin with me!", "[center]Nahh, this place is too hot for me"])
 speakers = Array[String](["[center]Swimmer", "[center]Fred"])
