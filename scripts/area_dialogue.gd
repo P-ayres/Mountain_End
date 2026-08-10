@@ -6,6 +6,7 @@ extends Node2D
 
 func _ready() -> void:
 	dialogue.monitoring = false
+	await get_tree().create_timer(0.2).timeout
 	if !GameSystem.dialogue_check.has(enemy_saw):
 		dialogue.monitoring = true
 		GameSystem.dialogue_check.append(enemy_saw)

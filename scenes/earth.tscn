@@ -695,5 +695,6 @@ collision_mask = 1
 [node name="area_dialogue" parent="." unique_id=1217533880 instance=ExtResource("9_te4mb")]
 position = Vector2(125.99999, 452)
 rotation = -1.5817019
+scale = Vector2(1, 2.3590465)
 dialogues = Array[String](["[center]Fear the ground", "[center] Man... i wish i had a weapon now"])
 speakers = Array[String](["[center]Worm", "[center]Fred"])
