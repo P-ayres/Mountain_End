@@ -3,6 +3,7 @@ extends Area2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interaction_prompt: PanelContainer = $InteractionPrompt
 @onready var noInteration: PanelContainer = $NotInteractionPrompt
+@onready var player: CharacterBody2D = get_tree().current_scene.get_node("Player")
 
 @export var is_door_visible: bool = true
 @export var needed_key = ""
@@ -23,6 +24,10 @@ func _ready():
 
 func _process(_delta):
 	if(is_in_range and is_interractable and Input.is_action_just_pressed("interact") && (!needed_key or GameSystem.item.has(needed_key))):
+		if player.SPEED == 0:
+			print("Porta bloqueada por outra inteeeração")
+			return
+			
 		SfxManager.play_sfx(door_sound, 0.8)
 		animated_sprite_2d.play(door_animation)
 		if scene.is_empty():

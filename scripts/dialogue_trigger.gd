@@ -50,5 +50,6 @@ func continue_dialogue():
 func end_dialogue():
 	is_active = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	await get_tree().create_timer(0.1).timeout
 	player.SPEED = actual_speed
 	dialogue_ui.visible = false
