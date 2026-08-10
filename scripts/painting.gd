@@ -3,7 +3,7 @@ extends Area2D
 @onready var interaction_prompt: PanelContainer = $InteractionPrompt
 @onready var painting: Panel = $PaintingFrame
 @onready var item: AnimatedSprite2D = $AnimatedSprite2D
-@onready var dialogue: Area2D = $dialoguetrigger/trigger
+@onready var dialogue: Area2D = $painting_dialogue/trigger
 
 var player: CharacterBody2D
 var is_in_range: bool = false;

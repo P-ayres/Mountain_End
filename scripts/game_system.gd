@@ -15,6 +15,7 @@ var next_room_position = Vector2.ZERO
 
 var current_room_spawn = Vector2.ZERO
 var current_room_item = []
+var dialogue_check = []
 
 
 func pause_game():
@@ -26,6 +27,7 @@ func pause_game():
 
 func reset_game():
 	item = []
+	dialogue_check = []
 	current_room_spawn = Vector2.ZERO
 	
 func finish_game():

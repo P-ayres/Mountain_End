@@ -1,11 +1,14 @@
 [gd_scene format=4 uid="uid://0vedbqsddcwj"]
 
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="1_afhwv"]
+[ext_resource type="Script" uid="uid://nhlmy2o0m64l" path="res://scripts/area_dialogue.gd" id="1_te4mb"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="2_2tfwh"]
 [ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="3_8otvb"]
 [ext_resource type="PackedScene" uid="uid://d2mqxu2vlj0rr" path="res://scenes/chest.tscn" id="3_k5w1d"]
 [ext_resource type="Texture2D" uid="uid://uxstl7i1lscr" path="res://assets/sprites/Objects/portas-Sheet.png" id="4_78p35"]
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="5_3t2fh"]
+[ext_resource type="PackedScene" uid="uid://d25wlqqaaiho5" path="res://scenes/dialogue_ui.tscn" id="8_videg"]
+[ext_resource type="PackedScene" uid="uid://dxehvknm8bvo4" path="res://scenes/dialoguetrigger.tscn" id="9_te4mb"]
 [ext_resource type="PackedScene" uid="uid://b0ygnuit7m2tu" path="res://scenes/worm.tscn" id="12_np46n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t2fh"]
@@ -598,11 +601,13 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_m7k1a")
 sources/1 = SubResource("TileSetAtlasSource_8ll37")
 
 [node name="Earth" type="Node2D" unique_id=469155997]
+script = ExtResource("1_te4mb")
+enemy_saw = "Worm"
 
 [node name="BackgroundEnviroment" type="Parallax2D" parent="." unique_id=1998654215]
 
 [node name="buraco" type="TileMapLayer" parent="BackgroundEnviroment" unique_id=238445316]
-tile_map_data = PackedByteArray("AAASAA8AAAAJAAcAAAASABAAAAAJAAcAAAASABEAAAAJAAcAAAASABIAAAAJAAcAAAASABMAAAAJAAcAAAASABQAAAAJAAcAAAASABUAAAAJAAcAAAASABYAAAAJAAcAAAATAA8AAAAJAAcAAAATABAAAAAJAAcAAAATABEAAAAJAAcAAAATABIAAAAJAAcAAAATABMAAAAJAAcAAAATABQAAAAJAAcAAAATABUAAAAJAAcAAAATABYAAAAJAAcAAAAUAA8AAAAJAAcAAAAUABAAAAAJAAcAAAAUABEAAAAJAAcAAAAUABIAAAAJAAcAAAAUABMAAAAJAAcAAAAUABQAAAAJAAcAAAAUABUAAAAJAAcAAAAUABYAAAAJAAcAAAAVAA8AAAAJAAcAAAAVABAAAAAJAAcAAAAVABEAAAAJAAcAAAAVABIAAAAJAAcAAAAVABMAAAAJAAcAAAAVABQAAAAJAAcAAAAVABUAAAAJAAcAAAAVABYAAAAJAAcAAAAWAA8AAAAJAAcAAAAWABAAAAAJAAcAAAAWABEAAAAJAAcAAAAWABIAAAAJAAcAAAAWABMAAAAJAAcAAAAWABQAAAAJAAcAAAAWABUAAAAJAAcAAAAWABYAAAAJAAcAAAAXAA8AAAAJAAcAAAAXABAAAAAJAAcAAAAXABEAAAAJAAcAAAAXABIAAAAJAAcAAAAXABMAAAAJAAcAAAAXABQAAAAJAAcAAAAXABUAAAAJAAcAAAAXABYAAAAJAAcAAAAYAA8AAAAJAAcAAAAYABAAAAAJAAcAAAAYABEAAAAJAAcAAAAYABIAAAAJAAcAAAAYABMAAAAJAAcAAAAYABQAAAAJAAcAAAAYABUAAAAJAAcAAAAYABYAAAAJAAcAAAAZAA8AAAAJAAcAAAAZABAAAAAJAAcAAAAZABEAAAAJAAcAAAAZABIAAAAJAAcAAAAZABMAAAAJAAcAAAAZABQAAAAJAAcAAAAZABUAAAAJAAcAAAAZABYAAAAJAAcAAAAaAA8AAAAJAAcAAAAaABAAAAAJAAcAAAAaABEAAAAJAAcAAAAaABIAAAAJAAcAAAAaABMAAAAJAAcAAAAaABQAAAAJAAcAAAAaABUAAAAJAAcAAAAaABYAAAAJAAcAAAAbAA8AAAAJAAcAAAAbABAAAAAJAAcAAAAbABEAAAAJAAcAAAAbABIAAAAJAAcAAAAbABMAAAAJAAcAAAAbABQAAAAJAAcAAAAbABUAAAAJAAcAAAAbABYAAAAJAAcAAAAcAA8AAAAJAAcAAAAcABAAAAAJAAcAAAAcABEAAAAJAAcAAAAcABIAAAAJAAcAAAAcABMAAAAJAAcAAAAcABQAAAAJAAcAAAAcABUAAAAJAAcAAAAcABYAAAAJAAcAAAA=")
+tile_map_data = PackedByteArray("AAAVABEAAAAJAAcAAAAVABIAAAAJAAcAAAAVABMAAAAJAAcAAAAVABQAAAAJAAcAAAAVABUAAAAJAAcAAAAWABEAAAAJAAcAAAAWABIAAAAJAAcAAAAWABMAAAAJAAcAAAAWABQAAAAJAAcAAAAWABUAAAAJAAcAAAAXABEAAAAJAAcAAAAXABIAAAAJAAcAAAAXABMAAAAJAAcAAAAXABQAAAAJAAcAAAAXABUAAAAJAAcAAAAYABEAAAAJAAcAAAAYABIAAAAJAAcAAAAYABMAAAAJAAcAAAAYABQAAAAJAAcAAAAYABUAAAAJAAcAAAAZABEAAAAJAAcAAAAZABIAAAAJAAcAAAAZABMAAAAJAAcAAAAZABQAAAAJAAcAAAAZABUAAAAJAAcAAAAaABEAAAAJAAcAAAAaABIAAAAJAAcAAAAaABMAAAAJAAcAAAAaABQAAAAJAAcAAAAaABUAAAAJAAcAAAAYABYAAAAJAAcAAAAXABYAAAAJAAcAAAAZABYAAAAJAAcAAAAWABYAAAAJAAcAAAA=")
 tile_set = SubResource("TileSet_4x5om")
 
 [node name="Backgorund" type="TileMapLayer" parent="BackgroundEnviroment" unique_id=916907942]
@@ -684,3 +689,11 @@ position = Vector2(-3, 704)
 [node name="Player" parent="." unique_id=77528535 instance=ExtResource("1_afhwv")]
 position = Vector2(126, 460)
 collision_mask = 1
+
+[node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("8_videg")]
+
+[node name="area_dialogue" parent="." unique_id=1217533880 instance=ExtResource("9_te4mb")]
+position = Vector2(125.99999, 452)
+rotation = -1.5817019
+dialogues = Array[String](["[center]Fear the ground", "[center] Man... i wish i had a weapon now"])
+speakers = Array[String](["[center]Worm", "[center]Fred"])

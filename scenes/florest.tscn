@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dbrv4x23kajcg"]
 
-[ext_resource type="Script" uid="uid://c4bwmdcp4fdpn" path="res://scenes/florest.gd" id="1_fjnv5"]
+[ext_resource type="Script" uid="uid://c4bwmdcp4fdpn" path="res://scripts/florest.gd" id="1_fjnv5"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="1_oxau5"]
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="2_yse1t"]
 [ext_resource type="PackedScene" uid="uid://73n8ab8ihqia" path="res://scenes/sign.tscn" id="3_lqi2m"]

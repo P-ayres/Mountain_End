@@ -26,6 +26,9 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 		
+	elif player.SPEED == 0:
+		return
+	
 	var direction = (player.global_position - global_position).normalized()
 
 	match state:
