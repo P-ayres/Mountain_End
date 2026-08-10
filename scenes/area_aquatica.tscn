@@ -562,19 +562,19 @@ position = Vector2(283, 53)
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("5_4dgp5")]
 z_index = 1
-position = Vector2(769, 712)
+position = Vector2(419, 123)
 collision_mask = 1
 
 [node name="Marker_door" type="Marker2D" parent="." unique_id=243184571]
-position = Vector2(764, 117)
+position = Vector2(774, 117)
 
 [node name="Marker_hidden_door" type="Marker2D" parent="." unique_id=1695655731]
-position = Vector2(776, 720)
+position = Vector2(774, 726)
 
 [node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("9_ikkqq")]
 
 [node name="area_dialogue" parent="." unique_id=1217533880 instance=ExtResource("10_3t4bq")]
-position = Vector2(771, 406)
+position = Vector2(776, 408)
 scale = Vector2(1, 5.52)
 dialogues = Array[String](["[center]Feel the sea's embrace", "[center] Sea? we're in a cave", "[center]There's a waterfall ahead"])
 speakers = Array[String](["[center]Rogerio", "[center]Fred", "[center]Fred"])
