@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bimrftean0q04"]
+
+[ext_resource type="Texture2D" uid="uid://daxash45exjax" path="res://assets/sprites/Objects/player_position_icon.png" id="1_wmchb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r3pj"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(48, 16, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqh4w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r3pj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4x5om"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqh4w"]
+size = Vector2(4, 3)
+
+[node name="Leaf" type="AnimatableBody2D" unique_id=1742013475]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Leaf1" type="AnimatableBody2D" parent="." unique_id=1457558473]
+position = Vector2(-29, -1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf1" unique_id=1659705539]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf1" unique_id=440402262]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="Leaf2" type="AnimatableBody2D" parent="." unique_id=201677937]
+position = Vector2(-5, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf2" unique_id=950239687]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf2" unique_id=2041413912]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="Leaf3" type="AnimatableBody2D" parent="." unique_id=1031552243]
+position = Vector2(12, -3)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf3" unique_id=123525439]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf3" unique_id=1727330658]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="Leaf4" type="AnimatableBody2D" parent="." unique_id=1977866808]
+position = Vector2(29, 4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf4" unique_id=737468380]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf4" unique_id=57809555]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="Leaf5" type="AnimatableBody2D" parent="." unique_id=1932328937]
+position = Vector2(46, -5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf5" unique_id=1893080838]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf5" unique_id=1200954818]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=446977275]
+light_mask = 0
+visibility_layer = 0
+shape = SubResource("RectangleShape2D_wqh4w")
+disabled = true
