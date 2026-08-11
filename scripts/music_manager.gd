@@ -40,9 +40,8 @@ func update_music():
 			play_music("WaterLevelAmbience")
 		"Volcano":
 			play_music("LavaLevelAmbience")
-		#Decidir música deefinitiva para esta fase deepois
 		"Florest":
-			play_music("Lonelly")
+			play_music("Freedom")
 		"FinalScene":
 			play_music("Wind")
 
