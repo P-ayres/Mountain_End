@@ -1,20 +1,69 @@
 [gd_scene format=3 uid="uid://bimrftean0q04"]
 
-[ext_resource type="Texture2D" uid="uid://daxash45exjax" path="res://assets/sprites/Objects/player_position_icon.png" id="1_wmchb"]
+[ext_resource type="Texture2D" uid="uid://c2a8u6t2c7rh4" path="res://assets/sprites/Objects/folha.png" id="1_wmchb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r3pj"]
 atlas = ExtResource("1_wmchb")
-region = Rect2(48, 16, 8, 8)
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6846"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2xad"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng345"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_linbw"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kugsn"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vnv2"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36b5v"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(64, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wqh4w"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4r3pj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6846")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2xad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng345")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_linbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kugsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vnv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36b5v")
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4x5om"]
@@ -166,6 +215,8 @@ position = Vector2(-29, -1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf1" unique_id=1659705539]
 sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
+frame_progress = 0.4737601
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf1" unique_id=440402262]
 shape = SubResource("RectangleShape2D_4x5om")
@@ -176,6 +227,8 @@ position = Vector2(-5, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf2" unique_id=950239687]
 sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
+frame_progress = 0.9414484
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf2" unique_id=2041413912]
 shape = SubResource("RectangleShape2D_4x5om")
@@ -186,6 +239,7 @@ position = Vector2(12, -3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf3" unique_id=123525439]
 sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf3" unique_id=1727330658]
 shape = SubResource("RectangleShape2D_4x5om")
@@ -196,6 +250,7 @@ position = Vector2(29, 4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf4" unique_id=737468380]
 sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf4" unique_id=57809555]
 shape = SubResource("RectangleShape2D_4x5om")
@@ -206,6 +261,7 @@ position = Vector2(46, -5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf5" unique_id=1893080838]
 sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf5" unique_id=1200954818]
 shape = SubResource("RectangleShape2D_4x5om")
