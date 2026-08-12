@@ -207,6 +207,7 @@ _data = {
 }
 
 [node name="Leaf" type="AnimatableBody2D" unique_id=1742013475]
+modulate = Color(0.72043425, 0.72043425, 0.72043425, 1)
 collision_layer = 0
 collision_mask = 0
 
@@ -216,7 +217,7 @@ position = Vector2(-29, -1)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf1" unique_id=1659705539]
 sprite_frames = SubResource("SpriteFrames_wqh4w")
 autoplay = "default"
-frame_progress = 0.4737601
+frame_progress = 0.21230958
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf1" unique_id=440402262]
 shape = SubResource("RectangleShape2D_4x5om")
@@ -228,7 +229,7 @@ position = Vector2(-5, 2)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf2" unique_id=950239687]
 sprite_frames = SubResource("SpriteFrames_wqh4w")
 autoplay = "default"
-frame_progress = 0.9414484
+frame_progress = 0.6799976
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf2" unique_id=2041413912]
 shape = SubResource("RectangleShape2D_4x5om")
