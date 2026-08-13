@@ -696,121 +696,9 @@ texture = ExtResource("3_jghty")
 [sub_resource type="TileSet" id="TileSet_ktom5"]
 sources/0 = SubResource("TileSetAtlasSource_18wto")
 
-[sub_resource type="Animation" id="Animation_ah75g"]
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5184139, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(225, 460), Vector2(236, 505.00003), Vector2(225, 571)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Leaf2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5184139, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(294, 441), Vector2(305, 486), Vector2(294, 552)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Leaf3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.5184139, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(335, 464), Vector2(346, 509.00003), Vector2(335, 575)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Leaf4:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.5184139, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(410, 443), Vector2(421, 488), Vector2(410, 554)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Leaf5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.5184139, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(497, 454), Vector2(508, 499), Vector2(497, 565)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Leaf6:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.5184139, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(597, 442), Vector2(608, 487), Vector2(597, 553)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Leaf7:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 1.5184139, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(700, 446), Vector2(711, 491), Vector2(700, 557)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../Leaf8:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 1.5184139, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(897, 409), Vector2(908, 454), Vector2(897, 520)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("../Leaf9:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 1.5184139, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(800, 430), Vector2(811, 475), Vector2(800, 541)]
-}
-
 [sub_resource type="Animation" id="Animation_jghty"]
 resource_name = "falling"
-length = 3.0333333
+length = 4.0333333
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -819,10 +707,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.55, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(200, 395), Vector2(205, 457), Vector2(235, 530)]
+"values": [Vector2(372, 338), Vector2(286, 524)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -831,10 +719,10 @@ tracks/1/path = NodePath("../Leaf2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.55, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(269, 376), Vector2(274, 438), Vector2(304, 511)]
+"values": [Vector2(409, 331), Vector2(394, 509)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -843,10 +731,10 @@ tracks/2/path = NodePath("../Leaf3:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.55, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(310, 399), Vector2(315, 461), Vector2(345, 534)]
+"values": [Vector2(465, 328), Vector2(623, 511)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -855,10 +743,10 @@ tracks/3/path = NodePath("../Leaf4:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.55, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(385, 378), Vector2(390, 440), Vector2(420, 513)]
+"values": [Vector2(529, 327), Vector2(778, 497)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -867,64 +755,81 @@ tracks/4/path = NodePath("../Leaf5:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.55, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(472, 389), Vector2(477, 451), Vector2(507, 524)]
+"values": [Vector2(579, 327), Vector2(933, 479)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Leaf6:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.55, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+
+[sub_resource type="Animation" id="Animation_18wto"]
+resource_name = "fallingOverlay"
+length = 4.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(572, 377), Vector2(577, 439), Vector2(607, 512)]
+"values": [Vector2(372, 338), Vector2(286, 524)]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Leaf7:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 1.55, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Leaf2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(675, 381), Vector2(680, 443), Vector2(710, 516)]
+"values": [Vector2(409, 331), Vector2(394, 509)]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../Leaf8:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 1.55, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Leaf3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(872, 344), Vector2(877, 406), Vector2(907, 479)]
+"values": [Vector2(465, 328), Vector2(623, 511)]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("../Leaf9:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 1.55, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Leaf4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(775, 365), Vector2(780, 427), Vector2(810, 500)]
+"values": [Vector2(529, 327), Vector2(778, 497)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Leaf5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(579, 327), Vector2(933, 479)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ktom5"]
 _data = {
-&"RESET": SubResource("Animation_ah75g"),
-&"falling": SubResource("Animation_jghty")
+&"falling": SubResource("Animation_jghty"),
+&"fallingOverlay": SubResource("Animation_18wto")
 }
 
 [node name="Florest" type="Node2D" unique_id=696075997]
@@ -960,6 +865,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAHAA4AAAAAAAEAAAAHAA4AAAAAAAIAAAAHAA4
 tile_set = SubResource("TileSet_ktom5")
 
 [node name="BackgrounLeafGroups" type="Sprite2D" parent="flores_enviroment/Leafs/leafGroup/background" unique_id=1834528027]
+visible = false
 modulate = Color(1.0845727, 1.0845727, 1.0845727, 1)
 position = Vector2(220, 358)
 texture = ExtResource("4_ktom5")
@@ -985,35 +891,23 @@ position = Vector2(611, -17)
 texture = ExtResource("4_ktom5")
 
 [node name="Leaf1" parent="flores_enviroment/Leafs/leafGroup" unique_id=1565485706 instance=ExtResource("3_ah75g")]
-position = Vector2(225, 460)
+position = Vector2(286.43558, 523.0579)
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="flores_enviroment/Leafs/leafGroup/Leaf1" unique_id=1838727011]
 libraries/ = SubResource("AnimationLibrary_ktom5")
 autoplay = &"falling"
 
-[node name="Leaf2" parent="flores_enviroment/Leafs/leafGroup" unique_id=1742013475 instance=ExtResource("3_ah75g")]
-position = Vector2(294, 441)
+[node name="Leaf2" parent="flores_enviroment/Leafs/leafGroup" unique_id=856848520 instance=ExtResource("3_ah75g")]
+position = Vector2(409, 331)
 
-[node name="Leaf3" parent="flores_enviroment/Leafs/leafGroup" unique_id=1724015745 instance=ExtResource("3_ah75g")]
-position = Vector2(335, 464)
+[node name="Leaf3" parent="flores_enviroment/Leafs/leafGroup" unique_id=1515960343 instance=ExtResource("3_ah75g")]
+position = Vector2(465, 328)
 
-[node name="Leaf4" parent="flores_enviroment/Leafs/leafGroup" unique_id=856848520 instance=ExtResource("3_ah75g")]
-position = Vector2(410, 443)
+[node name="Leaf4" parent="flores_enviroment/Leafs/leafGroup" unique_id=734338005 instance=ExtResource("3_ah75g")]
+position = Vector2(529, 327)
 
-[node name="Leaf5" parent="flores_enviroment/Leafs/leafGroup" unique_id=1515960343 instance=ExtResource("3_ah75g")]
-position = Vector2(497, 454)
-
-[node name="Leaf6" parent="flores_enviroment/Leafs/leafGroup" unique_id=734338005 instance=ExtResource("3_ah75g")]
-position = Vector2(597, 442)
-
-[node name="Leaf7" parent="flores_enviroment/Leafs/leafGroup" unique_id=631530657 instance=ExtResource("3_ah75g")]
-position = Vector2(700, 446)
-
-[node name="Leaf8" parent="flores_enviroment/Leafs/leafGroup" unique_id=1719961387 instance=ExtResource("3_ah75g")]
-position = Vector2(897, 409)
-
-[node name="Leaf9" parent="flores_enviroment/Leafs/leafGroup" unique_id=816521065 instance=ExtResource("3_ah75g")]
-position = Vector2(800, 430)
+[node name="Leaf5" parent="flores_enviroment/Leafs/leafGroup" unique_id=1742013475 instance=ExtResource("3_ah75g")]
+position = Vector2(579, 327)
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("2_yse1t")]
 position = Vector2(7, 620)
@@ -1030,10 +924,10 @@ offset_bottom = -10.0
 prompt_text = "Leave"
 
 [node name="Ttile" type="RichTextLabel" parent="." unique_id=267691222]
-offset_left = 103.0
-offset_top = 469.0
-offset_right = 311.0
-offset_bottom = 481.0
+offset_left = 372.0
+offset_top = 338.0
+offset_right = 580.0
+offset_bottom = 350.0
 theme_override_fonts/normal_font = ExtResource("6_gqe5s")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
