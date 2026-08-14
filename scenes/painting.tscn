@@ -1,33 +1,37 @@
 [gd_scene format=4 uid="uid://065gpwfl5x5x"]
 
 [ext_resource type="Script" uid="uid://bubdx3pg7yxbr" path="res://scripts/painting.gd" id="1_8u3ay"]
-[ext_resource type="Texture2D" uid="uid://daxash45exjax" path="res://assets/sprites/Objects/player_position_icon.png" id="1_ddhaa"]
+[ext_resource type="Texture2D" uid="uid://bc0dtitma8l1e" path="res://assets/sprites/Objects/painting_item.png" id="2_bp4ab"]
 [ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="3_v5cps"]
 [ext_resource type="Texture2D" uid="uid://bvnr3thjbjbjl" path="res://assets/sprites/Tileset/caverna_centro.png" id="4_c01yy"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="5_v5cps"]
 [ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="6_b7yep"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8u3ay"]
-atlas = ExtResource("1_ddhaa")
-region = Rect2(60, 16, 2, 8)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pf7n"]
+atlas = ExtResource("2_bp4ab")
+region = Rect2(0, 0, 2, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7yep"]
+atlas = ExtResource("2_bp4ab")
+region = Rect2(0, 0, 2, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c01yy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8u3ay")
+"texture": SubResource("AtlasTexture_3pf7n")
 }, {
 "duration": 1.0,
 "texture": null
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8u3ay")
+"texture": SubResource("AtlasTexture_3pf7n")
 }, {
 "duration": 1.0,
 "texture": null
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8u3ay")
+"texture": SubResource("AtlasTexture_3pf7n")
 }, {
 "duration": 1.0,
 "texture": null
@@ -38,7 +42,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8u3ay")
+"texture": SubResource("AtlasTexture_b7yep")
 }],
 "loop": 0,
 "name": &"start",
@@ -166,7 +170,7 @@ script = ExtResource("1_8u3ay")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=646030762]
 rotation = -0.6340293
 sprite_frames = SubResource("SpriteFrames_c01yy")
-animation = &"collect"
+animation = &"start"
 autoplay = "start"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1384724823]
