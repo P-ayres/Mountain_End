@@ -1,0 +1,278 @@
+[gd_scene format=3 uid="uid://bimrftean0q04"]
+
+[ext_resource type="Texture2D" uid="uid://c2a8u6t2c7rh4" path="res://assets/sprites/Objects/folha.png" id="1_wmchb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r3pj"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6846"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2xad"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng345"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_linbw"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kugsn"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vnv2"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36b5v"]
+atlas = ExtResource("1_wmchb")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqh4w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r3pj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6846")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2xad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng345")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_linbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kugsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vnv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36b5v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4x5om"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqh4w"]
+size = Vector2(4, 3)
+
+[sub_resource type="Animation" id="Animation_wmchb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Leaf1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-29, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Leaf2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Leaf3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(12, -3)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Leaf4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(29, 4)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Leaf5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(46, -5)]
+}
+
+[sub_resource type="Animation" id="Animation_4r3pj"]
+resource_name = "fall"
+length = 4.0666666
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Leaf1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.07, 2.02, 3, 4.0666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-29, -1), Vector2(-26, 4), Vector2(-32, 12), Vector2(-19, 22), Vector2(-54, 34)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Leaf2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.09, 2.06, 3, 4.0666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -12), Vector2(-12, 17), Vector2(-11, 22), Vector2(-27, 31), Vector2(-21, 39)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Leaf3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.06, 2.05, 3, 4.0666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-3, 0), Vector2(1, 3), Vector2(8, 16), Vector2(15, 29), Vector2(20, 32)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Leaf4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.06, 2, 3, 4.0666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(9, -9), Vector2(17, -1), Vector2(24, 10), Vector2(13, 16), Vector2(2, 48)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Leaf5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.04, 2.04, 3, 4.0666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(5, 9), Vector2(47, 12), Vector2(33, 20), Vector2(43, 28), Vector2(59, 40)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r6846"]
+_data = {
+&"RESET": SubResource("Animation_wmchb"),
+&"fall": SubResource("Animation_4r3pj")
+}
+
+[node name="Leaf" type="AnimatableBody2D" unique_id=1742013475]
+modulate = Color(0.72043425, 0.72043425, 0.72043425, 1)
+collision_layer = 2
+
+[node name="Leaf1" type="AnimatableBody2D" parent="." unique_id=1457558473]
+position = Vector2(-29, -1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf1" unique_id=1659705539]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
+frame_progress = 0.21230958
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf1" unique_id=440402262]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="Leaf2" type="AnimatableBody2D" parent="." unique_id=201677937]
+position = Vector2(-5, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf2" unique_id=950239687]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
+frame_progress = 0.6799976
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf2" unique_id=2041413912]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="Leaf3" type="AnimatableBody2D" parent="." unique_id=1031552243]
+position = Vector2(12, -3)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf3" unique_id=123525439]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf3" unique_id=1727330658]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="Leaf4" type="AnimatableBody2D" parent="." unique_id=1977866808]
+position = Vector2(29, 4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf4" unique_id=737468380]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf4" unique_id=57809555]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="Leaf5" type="AnimatableBody2D" parent="." unique_id=1932328937]
+position = Vector2(46, -5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Leaf5" unique_id=1893080838]
+sprite_frames = SubResource("SpriteFrames_wqh4w")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf5" unique_id=1200954818]
+shape = SubResource("RectangleShape2D_4x5om")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=446977275]
+light_mask = 0
+visibility_layer = 0
+shape = SubResource("RectangleShape2D_wqh4w")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1796362145]
+libraries/ = SubResource("AnimationLibrary_r6846")
+autoplay = &"fall"

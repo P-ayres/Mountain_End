@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://2fuk3ry10n7c" path="res://assets/music/loneliness-void.mp3" id="6_hu6vc"]
 [ext_resource type="AudioStream" uid="uid://b6j4y1uehpaui" path="res://assets/music/wind.mp3" id="6_jbem4"]
 [ext_resource type="AudioStream" uid="uid://6g288w4skygt" path="res://assets/music/lava_level_ambience.wav" id="6_p07gy"]
+[ext_resource type="AudioStream" uid="uid://djo0d5oiq0xuw" path="res://assets/music/free.mp3" id="7_hu6vc"]
 
 [node name="MusicManager" type="Node" unique_id=103155046 node_paths=PackedStringArray("clips")]
 script = ExtResource("1_jd6i5")
@@ -30,6 +31,10 @@ stream = ExtResource("6_jbem4")
 volume_db = -10.0
 parameters/looping = true
 
-[node name="MainMenu" type="AudioStreamPlayer" parent="Clips" unique_id=1758120213]
+[node name="Lonelly" type="AudioStreamPlayer" parent="Clips" unique_id=1758120213]
 stream = ExtResource("6_hu6vc")
+parameters/looping = true
+
+[node name="Freedom" type="AudioStreamPlayer" parent="Clips" unique_id=2033806425]
+stream = ExtResource("7_hu6vc")
 parameters/looping = true

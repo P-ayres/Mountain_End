@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://qjp2lfleaxaq" path="res://assets/sounds/lockedDoor.mp3" id="10_ymotv"]
 [ext_resource type="AudioStream" uid="uid://ctn4vtl1236bq" path="res://assets/sounds/wind-howling.mp3" id="11_sec7p"]
 [ext_resource type="AudioStream" uid="uid://bu47ft5cyfoiy" path="res://assets/sounds/opening_map.wav" id="11_ymotv"]
+[ext_resource type="AudioStream" uid="uid://dc34eyufk82pl" path="res://assets/sounds/thunder-crack.mp3" id="13_sec7p"]
 
 [node name="SfxManager" type="Node" unique_id=1878641415 node_paths=PackedStringArray("clips")]
 script = ExtResource("1_xl5ak")
@@ -54,3 +55,7 @@ volume_db = 10.0
 [node name="WallWind" type="AudioStreamPlayer" parent="Clips" unique_id=2046977159]
 stream = ExtResource("11_sec7p")
 volume_db = 10.0
+
+[node name="Thunder" type="AudioStreamPlayer" parent="Clips" unique_id=907736656]
+stream = ExtResource("13_sec7p")
+volume_db = -5.0

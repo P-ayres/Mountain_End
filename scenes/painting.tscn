@@ -1,0 +1,245 @@
+[gd_scene format=4 uid="uid://065gpwfl5x5x"]
+
+[ext_resource type="Script" uid="uid://bubdx3pg7yxbr" path="res://scripts/painting.gd" id="1_8u3ay"]
+[ext_resource type="Texture2D" uid="uid://bc0dtitma8l1e" path="res://assets/sprites/Objects/painting_item.png" id="2_bp4ab"]
+[ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="3_v5cps"]
+[ext_resource type="Texture2D" uid="uid://bvnr3thjbjbjl" path="res://assets/sprites/Tileset/caverna_centro.png" id="4_c01yy"]
+[ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="5_v5cps"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="6_b7yep"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pf7n"]
+atlas = ExtResource("2_bp4ab")
+region = Rect2(0, 0, 2, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7yep"]
+atlas = ExtResource("2_bp4ab")
+region = Rect2(0, 0, 2, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c01yy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pf7n")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pf7n")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pf7n")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 1,
+"name": &"collect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7yep")
+}],
+"loop": 0,
+"name": &"start",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5cps"]
+size = Vector2(16, 15)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7yep"]
+texture = ExtResource("5_v5cps")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+11:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+0:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_c01yy"]
+sources/0 = SubResource("TileSetAtlasSource_b7yep")
+
+[node name="Painting" type="Area2D" unique_id=636749260]
+collision_mask = 2
+script = ExtResource("1_8u3ay")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=646030762]
+rotation = -0.6340293
+sprite_frames = SubResource("SpriteFrames_c01yy")
+animation = &"start"
+autoplay = "start"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1384724823]
+shape = SubResource("RectangleShape2D_v5cps")
+
+[node name="InteractionPrompt" parent="." unique_id=1961884589 instance=ExtResource("3_v5cps")]
+offset_left = -4.0
+offset_top = -17.0
+offset_right = 4.0
+offset_bottom = -4.0
+
+[node name="PaintingFrame" type="Panel" parent="." unique_id=711354123]
+visible = false
+offset_left = -78.0
+offset_top = -95.0
+offset_right = 96.0
+offset_bottom = 49.0
+
+[node name="TextureRect" type="TextureRect" parent="PaintingFrame" unique_id=44794592]
+layout_mode = 0
+offset_right = 176.0
+offset_bottom = 144.0
+texture = ExtResource("4_c01yy")
+expand_mode = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="PaintingFrame" unique_id=1374533319]
+modulate = Color(18.534416, 18.534416, 1.8076193, 0.94900006)
+tile_map_data = PackedByteArray("AAAAAAkAAAAAAAMAAAABAAkAAAABAAMAAAACAAkAAAABAAMAAAADAAkAAAABAAMAAAAEAAkAAAABAAMAAAAFAAkAAAABAAMAAAAGAAkAAAABAAMAAAAHAAkAAAABAAMAAAAIAAkAAAABAAMAAAAJAAkAAAABAAMAAAAKAAkAAAACAAMAAAD//wgAAAACAAMAAFD//wcAAAABAAMAAFD//wYAAAABAAMAAFD//wAAAAAAAAMAAFD//wEAAAABAAMAAFD//wIAAAABAAMAAFD//wMAAAABAAMAAFD//wQAAAABAAMAAFD//wUAAAABAAMAAFALAAgAAAACAAMAAEALAAcAAAABAAMAAEALAAYAAAABAAMAAEALAAUAAAABAAMAAEALAAQAAAABAAMAAEALAAMAAAABAAMAAEALAAIAAAABAAMAAEALAAEAAAABAAMAAEALAAAAAAACAAMAAGAJAP//AAABAAMAADAIAP//AAABAAMAADAHAP//AAABAAMAADAGAP//AAABAAMAADAFAP//AAABAAMAADAEAP//AAABAAMAADADAP//AAABAAMAADACAP//AAABAAMAADABAP//AAABAAMAADAKAP//AAAAAAMAADAAAP//AAACAAMAADA=")
+tile_set = SubResource("TileSet_c01yy")
+
+[node name="SafeMessage" type="RichTextLabel" parent="PaintingFrame" unique_id=1623319763]
+layout_mode = 0
+offset_left = -51.0
+offset_top = 19.0
+offset_right = -7.0
+offset_bottom = 48.0
+theme_override_colors/default_color = Color(0.58437884, 0.52791494, 0.13449119, 1)
+theme_override_fonts/normal_font = ExtResource("6_b7yep")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center] You're [/center]
+[center] safe [/center]"
+
+[node name="CloseMessage" type="RichTextLabel" parent="PaintingFrame" unique_id=2068574759]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.078
+anchor_top = 0.684
+anchor_right = -0.078
+anchor_bottom = 0.684
+offset_left = -26.428
+offset_top = -27.496002
+offset_right = -7.4279995
+offset_bottom = 27.503998
+theme_override_colors/default_color = Color(0.5468543, 0.11774104, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_b7yep")
+theme_override_font_sizes/normal_font_size = 4
+bbcode_enabled = true
+text = "[center] [F] 
+
+T
+O
+
+C
+L
+O
+S
+E
+ [/center] "
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
