@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-var is_in_transition: bool = false;
+@export var is_in_transition: bool = false;
 
 
 func change_scene(scene):
