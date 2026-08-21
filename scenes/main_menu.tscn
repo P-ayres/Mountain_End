@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="2_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://bmqqlge32sqyh" path="res://assets/sprites/Tileset/tiles_lava.png" id="3_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="4_oa1go"]
+[ext_resource type="Script" uid="uid://iqaoku8h1gh7" path="res://scenes/language.gd" id="6_rtw2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbmy8"]
 texture = ExtResource("2_8ln24")
@@ -674,6 +675,7 @@ offset_left = 2.0
 offset_top = 208.0
 offset_right = 1150.0
 offset_bottom = 256.0
+pivot_offset = Vector2(34, -190)
 theme_override_fonts/normal_font = ExtResource("2_ekxnf")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
@@ -686,11 +688,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=414882106]
-layout_mode = 0
-offset_left = 473.0
-offset_top = 368.0
-offset_right = 670.0
-offset_bottom = 411.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.287001
+anchor_top = 9.037001
+anchor_right = 14.287001
+anchor_bottom = 9.037001
+offset_left = -98.48004
+offset_top = -21.480042
+offset_right = 98.51996
+offset_bottom = 21.519958
 layout_direction = 4
 theme_override_colors/font_hover_color = Color(0.57811034, 0.009401484, 0.009401484, 1)
 theme_override_fonts/font = ExtResource("2_ekxnf")
@@ -699,15 +706,35 @@ action_mode = 0
 text = "StartButton"
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1170306109]
-layout_mode = 0
-offset_left = 471.0
-offset_top = 433.0
-offset_right = 672.0
-offset_bottom = 474.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.287001
+anchor_top = 11.337001
+anchor_right = 14.287001
+anchor_bottom = 11.337001
+offset_left = -100.48004
+offset_top = -20.480042
+offset_right = 100.51996
+offset_bottom = 20.519958
 theme_override_colors/font_hover_color = Color(0.5764706, 0.007843138, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 text = "QuitButton"
+
+[node name="MenuButton" type="MenuButton" parent="Button_manager" unique_id=1816966703]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.275001
+anchor_top = 10.212001
+anchor_right = 14.275001
+anchor_bottom = 10.212001
+offset_left = -73.0
+offset_top = -15.4800415
+offset_right = 73.0
+offset_bottom = 15.5199585
+text = "LanguageSelector"
+icon_alignment = 1
+script = ExtResource("6_rtw2f")
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
