@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bubl87jwexasi"]
+
+[ext_resource type="Script" uid="uid://doeim76dllcgo" path="res://scripts/hunt_trigger.gd" id="1_hnttr"]
+
+[node name="HuntTrigger" type="Area2D" unique_id=1583920476]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_hnttr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
