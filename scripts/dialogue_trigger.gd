@@ -29,7 +29,7 @@ func _input(keyboardKey):
 			get_viewport().set_input_as_handled()
 			
 func start_dialogue(body):
-	continue_button.text = tr("DialogueButton")
+	continue_button.text = "DialogueButton"
 	if body == player and !started:
 		is_active = true
 		started = true
@@ -44,7 +44,7 @@ func continue_dialogue():
 
 	current_dialogue += 1
 	if current_dialogue < dialogues.size():
-		dialogue_text.text = tr(dialogues[current_dialogue])
+		dialogue_text.text = dialogues[current_dialogue]
 		speaker.text = speakers[current_dialogue]
 	else:
 		end_dialogue()
