@@ -579,13 +579,7 @@ scale = Vector2(0.2, 0.2)
 theme = SubResource("Theme_iywne")
 theme_override_colors/default_color = Color(0.24, 0.24, 0.24, 1)
 bbcode_enabled = true
-text = "[center]Tutorial:[/center]
-
-Press [A] / [D] to walk
-Press [Space] to jump
-Press [F] to interact
-Press [M] to open map
-Press [Esc] to pause game"
+text = "TutorialText"
 metadata/_edit_use_anchors_ = true
 
 [node name="close" type="RichTextLabel" parent="Sign/Tutorial" unique_id=248017697]
@@ -604,7 +598,7 @@ theme = SubResource("Theme_iywne")
 theme_override_colors/default_color = Color(0.24, 0.24, 0.24, 1)
 theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
-text = "[center] [F] to close this [/center]"
+text = "CloseTutorial"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("2_yqjtg")]
