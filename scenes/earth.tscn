@@ -676,7 +676,6 @@ scene = "uid://drg1vyrvvu8eu"
 next_scene_position = Vector2(776, 720)
 
 [node name="worm" parent="TileMapLayer" unique_id=1726133864 instance=ExtResource("12_np46n")]
-visible = false
 position = Vector2(458, 435)
 
 [node name="HuntTrigger" parent="TileMapLayer" unique_id=1583920477 node_paths=PackedStringArray("target") instance=ExtResource("13_hnttr")]
