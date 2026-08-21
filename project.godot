@@ -120,3 +120,4 @@ locale/translations=PackedStringArray("res://assets/translation/Translate.en_US.
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
