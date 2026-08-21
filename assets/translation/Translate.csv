@@ -9,3 +9,5 @@ DialogueButton,What?,O que?
 StartButton,Start,Iniciar
 QuitButton,Quit,Sair
 ResumeButton,Resume,Continuar
+TutorialText,[center]Tutorial:[/center][br] -[br]Press [A] / [D] to walk [br]Press [Space] to jump [br]Press [F] to interact [br]Press [M] to open map [br]Press [Esc] to pause game,[center]Tutorial:[/center][br] -[br] [A]/[D] para caminhar[br] [Spaço] para pular[br] [F] para interagir[br] [M] abre o mapa[br] [Esc] pausa o jogo
+CloseTutorial,[center] [F] to close this,[center] [F] para fechar isso
