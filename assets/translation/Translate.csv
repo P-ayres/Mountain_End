@@ -6,3 +6,6 @@ TutorialFred2,"[center]Strange, my map changed","[center]Estranho, meu mapa mudo
 TutorialTrio,[center]Come and play with us!,[center]Venha e brinque conosco!
 TutorialFred3,[center]What kind of place is this?,[center]Que raio de lugar é esse?
 DialogueButton,What?,O que?
+StartButton,Start,Iniciar
+QuitButton,Quit,Sair
+ResumeButton,Resume,Continuar

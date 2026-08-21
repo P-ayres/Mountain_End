@@ -696,7 +696,7 @@ theme_override_colors/font_hover_color = Color(0.57811034, 0.009401484, 0.009401
 theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 action_mode = 0
-text = "Start"
+text = "StartButton"
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1170306109]
 layout_mode = 0
@@ -707,7 +707,7 @@ offset_bottom = 474.0
 theme_override_colors/font_hover_color = Color(0.5764706, 0.007843138, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
-text = "Quit"
+text = "QuitButton"
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
