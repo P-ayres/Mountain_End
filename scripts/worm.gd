@@ -7,14 +7,14 @@ extends CharacterBody2D
 @export var speed := 250.0
 
 enum State {IDLE, TUNNELING, ATTACKING, BURROWING}
-const ATTACK_FRAMES := [1, 2, 3] # emersão com a boca pra cima
+const ATTACK_FRAMES := [1, 2, 3]
 
 var state := State.IDLE
 var player: CharacterBody2D
 var is_player_in_attack_range := false
 var is_chasing := false
-var is_hunt_forced := false # a fase mandou caçar, ver scripts/hunt_trigger.gd
-var killzone_offset_x := 0.0 # posição original da hitbox, usado ao espelhar
+var is_hunt_forced := false
+var killzone_offset_x := 0.0
 
 
 func _ready():
@@ -70,7 +70,7 @@ func attack() -> void:
 
 func burrow() -> void:
 	state = State.BURROWING
-	sprite.play_backwards("surge_attack") # nao existe animação para voltar para terra, então roda a animação se emergir ao contrario
+	sprite.play_backwards("surge_attack")
 	await sprite.animation_finished
 
 	await get_tree().create_timer(0.2).timeout
@@ -79,7 +79,6 @@ func burrow() -> void:
 		state = State.TUNNELING if _should_chase() else State.IDLE
 		sprite.play("walk")
 
-# persegue por conta própria (ChaseArea) ou porque a fase mandou (HuntTrigger)
 func _should_chase() -> bool:
 	return is_chasing or is_hunt_forced
 
