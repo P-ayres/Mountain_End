@@ -26,6 +26,7 @@ func _on_body_exited(_body: Node2D) -> void:
 
 func toggle_tutorial():
 	if sign_img.visible==false:
+		
 		player.SPEED = 0
 		sign_img.visible=true
 	elif sign_img.visible==true:
