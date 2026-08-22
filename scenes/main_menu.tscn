@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="2_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://bmqqlge32sqyh" path="res://assets/sprites/Tileset/tiles_lava.png" id="3_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="4_oa1go"]
-[ext_resource type="Script" uid="uid://iqaoku8h1gh7" path="res://scenes/language.gd" id="6_rtw2f"]
+[ext_resource type="PackedScene" uid="uid://bxhqsaprwgd6n" path="res://scenes/LanguageButton.tscn" id="6_rtw2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbmy8"]
 texture = ExtResource("2_8ln24")
@@ -721,20 +721,12 @@ theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 text = "QuitButton"
 
-[node name="MenuButton" type="MenuButton" parent="Button_manager" unique_id=1816966703]
+[node name="MenuButton" parent="Button_manager" unique_id=1575072825 instance=ExtResource("6_rtw2f")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 14.275001
-anchor_top = 10.212001
-anchor_right = 14.275001
-anchor_bottom = 10.212001
-offset_left = -73.0
-offset_top = -15.4800415
-offset_right = 73.0
-offset_bottom = 15.5199585
-text = "LanguageSelector"
-icon_alignment = 1
-script = ExtResource("6_rtw2f")
+offset_left = -69.0
+offset_top = -17.480042
+offset_right = 77.0
+offset_bottom = 13.5199585
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
