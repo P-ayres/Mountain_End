@@ -1027,3 +1027,19 @@ theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
 text = "MusicTitle"
 autowrap_trim_flags = 0
+
+[node name="RandomGuy" type="RichTextLabel" parent="Credits" unique_id=279089653]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 25.925001
+anchor_top = 12.6
+anchor_right = 25.925001
+anchor_bottom = 12.6
+offset_left = -114.0
+offset_top = -12.0
+offset_right = 114.0
+offset_bottom = 12.0
+theme_override_fonts/normal_font = ExtResource("6_gqe5s")
+theme_override_font_sizes/normal_font_size = 5
+bbcode_enabled = true
+text = "SfxCredits"
