@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://bxhqsaprwgd6n"]
 
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="1_7pwwh"]
 [ext_resource type="Script" uid="uid://iqaoku8h1gh7" path="res://scenes/language.gd" id="1_hryj3"]
+
+[sub_resource type="Theme" id="Theme_7pwwh"]
+default_font = ExtResource("1_7pwwh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8uj4"]
+bg_color = Color(0.105963215, 0.105963215, 0.105963215, 0.58400005)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pwwh"]
+bg_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
 
 [node name="MenuButton" type="MenuButton" unique_id=1575072825]
 anchors_preset = -1
@@ -12,6 +22,14 @@ offset_left = -16446.8
 offset_top = -6618.3765
 offset_right = -16300.801
 offset_bottom = -6587.3765
+theme = SubResource("Theme_7pwwh")
+theme_type_variation = &"FlatMenuButton"
+theme_override_colors/font_hover_color = Color(1, 0.07846785, 0.17184411, 1)
+theme_override_fonts/font = ExtResource("1_7pwwh")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_a8uj4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7pwwh")
 text = "LanguageSelector"
+flat = false
 icon_alignment = 1
 script = ExtResource("1_hryj3")
