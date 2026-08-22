@@ -923,45 +923,121 @@ offset_right = 5.0
 offset_bottom = -10.0
 prompt_text = "Leave"
 
-[node name="Ttile" type="RichTextLabel" parent="." unique_id=267691222]
-offset_left = 372.0
-offset_top = 338.0
-offset_right = 580.0
-offset_bottom = 350.0
+[node name="Credits" type="Control" parent="." unique_id=1681177969]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ttile" type="RichTextLabel" parent="Credits" unique_id=267691222]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.9
+anchor_top = 12.05
+anchor_right = 4.9
+anchor_bottom = 12.05
+offset_left = -104.0
+offset_top = -6.0
+offset_right = 104.0
+offset_bottom = 6.0
 theme_override_fonts/normal_font = ExtResource("6_gqe5s")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "[center]This game was brought to life by:"
-metadata/_edit_use_anchors_ = true
+text = "CreditsTitle"
 
-[node name="Devs" type="RichTextLabel" parent="." unique_id=860286091]
-offset_left = 286.0
-offset_top = 464.0
-offset_right = 849.0
-offset_bottom = 482.0
+[node name="Dev1" type="RichTextLabel" parent="Credits" unique_id=860286091]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 9.587001
+anchor_top = 11.925
+anchor_right = 9.587001
+anchor_bottom = 11.925
+offset_left = -79.48004
+offset_top = -9.0
+offset_right = 79.51996
+offset_bottom = 9.0
 theme_override_fonts/normal_font = ExtResource("6_gqe5s")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "[center] Jaime Moura de Araújo  - Guilherme Schirmer da Costa - Patrick Bueno Ayres"
-metadata/_edit_use_anchors_ = true
+text = "[center] Jaime Moura de Araújo"
 
-[node name="Art" type="RichTextLabel" parent="." unique_id=179130509]
-offset_left = 825.0
-offset_top = 423.0
-offset_right = 974.0
-offset_bottom = 455.0
+[node name="Dev2" type="RichTextLabel" parent="Credits" unique_id=487197461]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.012001
+anchor_top = 11.725
+anchor_right = 14.012001
+anchor_bottom = 11.725
+offset_left = -96.48004
+offset_top = -9.0
+offset_right = 96.51996
+offset_bottom = 9.0
 theme_override_fonts/normal_font = ExtResource("6_gqe5s")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "[center] Art by
+text = "[center] Guilherme Schirmer da Costa"
 
-Mariana Flores Pinto"
+[node name="Dev3" type="RichTextLabel" parent="Credits" unique_id=1358605408]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 18.462002
+anchor_top = 11.475
+anchor_right = 18.462002
+anchor_bottom = 11.475
+offset_left = -76.4801
+offset_top = -9.0
+offset_right = 76.5199
+offset_bottom = 9.0
+theme_override_fonts/normal_font = ExtResource("6_gqe5s")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]Patrick Bueno Ayres"
 
-[node name="RandomGuy" type="RichTextLabel" parent="." unique_id=172509900]
-offset_left = 927.0
-offset_top = 496.0
-offset_right = 1158.0
-offset_bottom = 520.0
+[node name="Art" type="RichTextLabel" parent="Credits" unique_id=179130509]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 22.162
+anchor_top = 10.950001
+anchor_right = 22.162
+anchor_bottom = 10.950001
+offset_left = -74.48004
+offset_top = -16.00003
+offset_right = 74.51996
+offset_bottom = 15.9999695
+theme_override_fonts/normal_font = ExtResource("6_gqe5s")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "ArtTtile"
+autowrap_trim_flags = 0
+
+[node name="Music" type="RichTextLabel" parent="Credits" unique_id=160665736]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 25.887001
+anchor_top = 10.3
+anchor_right = 25.887001
+anchor_bottom = 10.3
+offset_left = -74.47998
+offset_top = -16.0
+offset_right = 74.52002
+offset_bottom = 16.0
+theme_override_fonts/normal_font = ExtResource("6_gqe5s")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "MusicTitle"
+autowrap_trim_flags = 0
+
+[node name="RandomGuy" type="RichTextLabel" parent="Credits" unique_id=172509900]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 26.062002
+anchor_top = 12.700001
+anchor_right = 26.062002
+anchor_bottom = 12.700001
+offset_left = -115.4801
+offset_top = -12.0000305
+offset_right = 115.5199
+offset_bottom = 11.9999695
 theme_override_fonts/normal_font = ExtResource("6_gqe5s")
 theme_override_font_sizes/normal_font_size = 5
 bbcode_enabled = true
