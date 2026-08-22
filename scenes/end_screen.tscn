@@ -327,6 +327,21 @@ bbcode_enabled = true
 text = "MusicTitle"
 autowrap_trim_flags = 0
 
+[node name="SfxCredits" type="RichTextLabel" parent="Credits" unique_id=2056089814]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.412001
+anchor_top = 2.5500002
+anchor_right = 14.412001
+anchor_bottom = 2.6750002
+offset_left = -568.48004
+offset_top = 474.0
+offset_right = 568.51996
+offset_bottom = 494.0
+theme_override_fonts/normal_font = ExtResource("3_jc7ji")
+bbcode_enabled = true
+text = "SfxCredits"
+
 [node name="DefaultEnd" type="CanvasLayer" parent="." unique_id=176225084]
 layer = -1
 
