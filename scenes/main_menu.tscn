@@ -723,10 +723,12 @@ text = "QuitButton"
 
 [node name="MenuButton" parent="Button_manager" unique_id=1575072825 instance=ExtResource("6_rtw2f")]
 layout_mode = 1
-offset_left = -69.0
-offset_top = -17.480042
-offset_right = 77.0
-offset_bottom = 13.5199585
+anchor_top = 10.187
+anchor_bottom = 10.187
+offset_left = -73.0
+offset_top = -15.480011
+offset_right = 73.0
+offset_bottom = 15.519989
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
