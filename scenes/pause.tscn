@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uj1i7qkiwpn7" path="res://scripts/pause.gd" id="1_f1d2v"]
 [ext_resource type="Texture2D" uid="uid://cp5qm1wlch0qc" path="res://assets/sprites/Objects/papiro_2.png" id="1_r8yp4"]
 [ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="2_m0klm"]
+[ext_resource type="PackedScene" uid="uid://bxhqsaprwgd6n" path="res://scenes/LanguageButton.tscn" id="4_aicil"]
 
 [node name="Pause" type="Control" unique_id=658263292]
 layout_mode = 3
@@ -37,10 +38,10 @@ anchor_left = 0.517
 anchor_top = 0.397
 anchor_right = 0.517
 anchor_bottom = 0.397
-offset_left = -81.584045
-offset_top = -15.256012
-offset_right = 77.415955
-offset_bottom = 15.743988
+offset_left = -82.584045
+offset_top = -33.256012
+offset_right = 76.415955
+offset_bottom = -2.256012
 theme_override_fonts/font = ExtResource("2_m0klm")
 theme_override_font_sizes/font_size = 14
 text = "ResumeButton"
@@ -57,6 +58,12 @@ offset_right = 68.87201
 offset_bottom = 15.76001
 theme_override_fonts/font = ExtResource("2_m0klm")
 text = "QuitButton"
+
+[node name="Language" parent="Canvas" unique_id=1575072825 instance=ExtResource("4_aicil")]
+offset_left = -15925.801
+offset_top = -6346.3765
+offset_right = -15779.801
+offset_bottom = -6315.3765
 
 [connection signal="pressed" from="Canvas/Resume" to="." method="toggle_pause"]
 [connection signal="pressed" from="Canvas/Exit" to="." method="quit_game"]

@@ -576,5 +576,5 @@ position = Vector2(774, 726)
 [node name="area_dialogue" parent="." unique_id=1217533880 instance=ExtResource("10_3t4bq")]
 position = Vector2(776, 408)
 scale = Vector2(5.32, 5.52)
-dialogues = Array[String](["[center]Feel the sea's embrace", "[center] Sea? we're in a cave", "[center]There's a waterfall ahead"])
+dialogues = Array[String](["Rogerio1", "FredWater1", "FredWater2"])
 speakers = Array[String](["[center]Rogerio", "[center]Fred", "[center]Fred"])
