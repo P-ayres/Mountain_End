@@ -12,3 +12,5 @@ ResumeButton,Resume,Continuar
 TutorialText,[center]Tutorial:[/center][br] -[br][A] / [D] to walk [br][Space] to jump [br][F] to interact [br][M] to open map [br][Esc] to pause game,[center]Tutorial:[/center][br] -[br] [A]/[D] para caminhar[br] [Spaço] para pular[br] [F] para interagir[br] [M] abre o mapa[br] [Esc] pausa o jogo
 CloseTutorial,[center] [F] to close this,[center] [F] para fechar isso
 LanguageSelector,Language,Idioma
+VisibleDoorLocked,Appears to be Locked,Parece estar trancado
+InviisibleDoorLocked,Looks like there's a fissure in this wall,Parece que há uma fissura nessa parede
