@@ -236,21 +236,11 @@ offset_right = 1152.0
 offset_bottom = 521.0
 theme_override_fonts/normal_font = ExtResource("3_jc7ji")
 bbcode_enabled = true
-text = "[center] Jaime Moura de Araújo
-
-Guilherme Schirmer da Costa
-
-Patrick Bueno Ayres
-
-
-Art by
-
-Mariana Flores Pinto
-
-
-And some thanks to João Vitor
+text = "[center] Jaime Moura de Araújo[br] [br]Guilherme Schirmer da Costa[br] [br]Patrick Bueno Ayres[br] [br]
+Art by[br] [br]Mariana Flores Pinto[br] [br][br] [br]And some thanks to João Vitor
 
 for helping us with the audio"
+autowrap_trim_flags = 0
 
 [node name="Ttile" type="RichTextLabel" parent="." unique_id=1551364117]
 offset_left = 3.0

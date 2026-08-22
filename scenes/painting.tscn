@@ -229,6 +229,7 @@ theme_override_fonts/normal_font = ExtResource("6_b7yep")
 theme_override_font_sizes/normal_font_size = 4
 bbcode_enabled = true
 text = "PaintingClose"
+autowrap_trim_flags = 0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
