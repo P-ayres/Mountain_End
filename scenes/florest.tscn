@@ -917,11 +917,12 @@ position = Vector2(1134, 456)
 script = ExtResource("4_s4mi7")
 
 [node name="InteractionPrompt2" parent="Sign" unique_id=1961884589 instance=ExtResource("5_3lx21")]
+z_index = 5
 offset_left = -4.0
 offset_top = -26.0
 offset_right = 5.0
 offset_bottom = -10.0
-prompt_text = "Leave"
+prompt_text = "LeaveSign"
 
 [node name="Credits" type="Control" parent="." unique_id=1681177969]
 layout_mode = 3
@@ -1026,19 +1027,3 @@ theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
 text = "MusicTitle"
 autowrap_trim_flags = 0
-
-[node name="RandomGuy" type="RichTextLabel" parent="Credits" unique_id=172509900]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 26.062002
-anchor_top = 12.700001
-anchor_right = 26.062002
-anchor_bottom = 12.700001
-offset_left = -115.4801
-offset_top = -12.0000305
-offset_right = 115.5199
-offset_bottom = 11.9999695
-theme_override_fonts/normal_font = ExtResource("6_gqe5s")
-theme_override_font_sizes/normal_font_size = 5
-bbcode_enabled = true
-text = "[center] And some thanks to João Vitor for helping us with the audio"

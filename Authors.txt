@@ -1,0 +1,12 @@
+Devs:
+	Guilherme Schirmer da Costa
+	Jaime Moura Araújo
+	Patrick Bueno Ayres - [Writer|Dev ISNI: 0000000530755145]
+	
+Art:
+	Mariana Flores Pintos
+	
+Music:
+	Eduardo Pisoni
+
+And some thanks to João Vitor for helping us with the initial audio implementation of our v1
