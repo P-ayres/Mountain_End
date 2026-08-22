@@ -580,6 +580,7 @@ theme = SubResource("Theme_iywne")
 theme_override_colors/default_color = Color(0.24, 0.24, 0.24, 1)
 bbcode_enabled = true
 text = "TutorialText"
+autowrap_trim_flags = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="close" type="RichTextLabel" parent="Sign/Tutorial" unique_id=248017697]

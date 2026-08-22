@@ -9,7 +9,7 @@ DialogueButton,What?,O que?
 StartButton,Start,Iniciar
 QuitButton,Quit,Sair
 ResumeButton,Resume,Continuar
-TutorialText,[center]Tutorial:[/center][br] -[br][A] / [D] to walk [br][Space] to jump [br][F] to interact [br][M] to open map [br][Esc] to pause game,[center]Tutorial:[/center][br] -[br] [A]/[D] para caminhar[br] [Spaço] para pular[br] [F] para interagir[br] [M] abre o mapa[br] [Esc] pausa o jogo
+TutorialText,[center]Tutorial:[/center][br] [br][A] / [D] to walk [br][Space] to jump [br][F] to interact [br][M] to open map [br][Esc] to pause game,[center]Tutorial:[/center][br] [br][A]/[D] para caminhar[br][Spaço] para pular[br][F] para interagir[br][M] abre o mapa[br] [Esc] pausa o jogo
 CloseTutorial,[center] [F] to close this,[center] [F] para fechar isso
 LanguageSelector,Language,Idioma
 VisibleDoorLocked,Appears to be Locked,Parece estar trancado
@@ -23,7 +23,7 @@ FredWater2,[center]There's a waterfall ahead,[center]Há uma cachoeira adiante
 Swimmer1,[center]Come swin with me!,[center]Venha nadar comigo!
 FredLava1,"[center]Nahh, this place looks way too hot","[center]Nahh, esse lugar parece quente demais pra mim"
 SafeMessage,[center] You're [br][center] safe,[center]Você[br][center]está[center]a[br][center]salvo
-PaintingClose,[center][F][br].[br]T[br]O[br].[br]C[br]L[br]O[br]S[br]E[br][/center],[center][F][br].[br]P[br]A[br]R[br]A[br].[br]F[br]E[br]C[br]H[br]A[br]R[/center]
+PaintingClose,[center][F][br] [br]T[br]O[br] [br]C[br]L[br]O[br]S[br]E[br][/center],[center][F][br] [br]P[br]A[br]R[br]A[br] [br]F[br]E[br]C[br]H[br]A[br]R[/center]
 FredLava2,[center]There's a relaxing energy coming from this painting,[center]Existe uma energia relaxante emanando desta pintura
 DivineMessage1,[center] Don't be afraid,[center]Não temas
 FredLava3,[center]Too late buddy,"[center]Amigo, já to têmido"
