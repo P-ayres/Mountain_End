@@ -44,14 +44,14 @@ func _process(_delta):
 	elif(is_in_range and Input.is_action_just_pressed("interact") and is_door_visible):
 		if !SceneTransition.is_in_transition:
 			interaction_prompt.hide_prompt()
-			noInteration.show_message("Appears to be Locked")
+			noInteration.show_message("VisibleDoorLocked")
 			SfxManager.play_sfx("LockedDoor")
 			
 	elif(is_in_range and Input.is_action_just_pressed("interact") and !is_door_visible):
 		if !SceneTransition.is_in_transition:
 			interaction_prompt.hide_prompt()
 			SfxManager.play_sfx("WallWind")
-			noInteration.show_message("Looks like there's a fissure in this wall")
+			noInteration.show_message("InviisibleDoorLocked")
 
 func _on_body_entered(_body: Node2D) -> void:
 	print("entered range")

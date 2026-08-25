@@ -3,6 +3,7 @@ extends Node2D
 @onready var dialogue_ui = get_tree().current_scene.get_node("dialogue_ui/canvas")
 @onready var speaker: RichTextLabel = get_tree().current_scene.get_node("dialogue_ui/canvas/speaker")
 @onready var dialogue_text: RichTextLabel = get_tree().current_scene.get_node("dialogue_ui/canvas/dialogue_text")
+@onready var continue_button: Button = get_tree().current_scene.get_node("dialogue_ui/canvas/continue")
 @onready var player: CharacterBody2D = get_tree().current_scene.get_node("Player")
 @onready var actual_speed = player.SPEED
 
@@ -28,6 +29,7 @@ func _input(keyboardKey):
 			get_viewport().set_input_as_handled()
 			
 func start_dialogue(body):
+	continue_button.text = "DialogueButton"
 	if body == player and !started:
 		is_active = true
 		started = true

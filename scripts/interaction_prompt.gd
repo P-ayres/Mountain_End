@@ -8,7 +8,7 @@ extends PanelContainer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var key: String = _get_key_text("interact")
-	var text: String = (" %s" % [prompt_text]) if !prompt_text.is_empty() else ""
+	var text: String = (" %s" % [tr(prompt_text)]) if !prompt_text.is_empty() else ""
 
 	visible = false
 	label.text = "[%s]%s" % [key, text]

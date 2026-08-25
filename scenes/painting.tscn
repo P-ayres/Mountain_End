@@ -203,16 +203,15 @@ tile_set = SubResource("TileSet_c01yy")
 
 [node name="SafeMessage" type="RichTextLabel" parent="PaintingFrame" unique_id=1623319763]
 layout_mode = 0
-offset_left = -51.0
-offset_top = 19.0
-offset_right = -7.0
-offset_bottom = 48.0
+offset_left = -54.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = 67.0
 theme_override_colors/default_color = Color(0.58437884, 0.52791494, 0.13449119, 1)
 theme_override_fonts/normal_font = ExtResource("6_b7yep")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "[center] You're [/center]
-[center] safe [/center]"
+text = "SafeMessage"
 
 [node name="CloseMessage" type="RichTextLabel" parent="PaintingFrame" unique_id=2068574759]
 layout_mode = 1
@@ -224,22 +223,13 @@ anchor_bottom = 0.684
 offset_left = -26.428
 offset_top = -27.496002
 offset_right = -7.4279995
-offset_bottom = 27.503998
+offset_bottom = 48.503998
 theme_override_colors/default_color = Color(0.5468543, 0.11774104, 0, 1)
 theme_override_fonts/normal_font = ExtResource("6_b7yep")
 theme_override_font_sizes/normal_font_size = 4
 bbcode_enabled = true
-text = "[center] [F] 
-
-T
-O
-
-C
-L
-O
-S
-E
- [/center] "
+text = "PaintingClose"
+autowrap_trim_flags = 0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

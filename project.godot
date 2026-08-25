@@ -102,6 +102,10 @@ map={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/translation/Translate.en_US.translation", "res://assets/translation/Translate.pt_BR.translation")
+
 [layer_names]
 
 2d_physics/layer_1="world"
