@@ -579,13 +579,8 @@ scale = Vector2(0.2, 0.2)
 theme = SubResource("Theme_iywne")
 theme_override_colors/default_color = Color(0.24, 0.24, 0.24, 1)
 bbcode_enabled = true
-text = "[center]Tutorial:[/center]
-
-Press [A] / [D] to walk
-Press [Space] to jump
-Press [F] to interact
-Press [M] to open map
-Press [Esc] to pause game"
+text = "TutorialText"
+autowrap_trim_flags = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="close" type="RichTextLabel" parent="Sign/Tutorial" unique_id=248017697]
@@ -604,7 +599,7 @@ theme = SubResource("Theme_iywne")
 theme_override_colors/default_color = Color(0.24, 0.24, 0.24, 1)
 theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
-text = "[center] [F] to close this [/center]"
+text = "CloseTutorial"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("2_yqjtg")]
@@ -612,8 +607,8 @@ position = Vector2(34, -169)
 
 [node name="dialoguetrigger" parent="." unique_id=1217533880 instance=ExtResource("9_0tnpc")]
 position = Vector2(110, 51)
-dialogues = Array[String](["[center] How unlucky, you fell into a pit while climbing the mountains, find a way out.[/center]", "[center]What?.... [/center]", "[center]Strange, my map changed [/center]", "[center]Come and play with us![/center]", "[center]What kind of place is this?[/center]", "[center] .... [/center]"])
-speakers = Array[String](["[center]Watcher[center]", "[center]Fred (me?)[center]", "[center]Fred (me?)[center]", "[center] Worm | Rogerio | Swimmer [/center]", "[center] Fred [/center]", ""])
+dialogues = Array[String](["WatcherTutorial", "TutorialFred1", "TutorialFred2", "TutorialTrio", "TutorialFred3", "[center] ...."])
+speakers = Array[String](["[center]Watcher", "Wandering", "Wandering", "[center] Worm | Rogerio | Swimmer", "[center] Fred ", ""])
 
 [node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("10_kvpfn")]
 visible = true

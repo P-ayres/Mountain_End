@@ -1,0 +1,40 @@
+keys,en_US,pt_BR
+Wandering,[center]Fred (me?),[center]Fred (eu?)
+WatcherTutorial,"[center]How unlucky, you fell into a pit while climbing the mountains, find a way out.","[center]Quanto azar… você caiu em uma fenda enquanto escalava as montanhas, encontre uma saída"
+TutorialFred1,[center]What?.…,[center] O que?.…
+TutorialFred2,"[center]Strange, my map changed","[center]Estranho, meu mapa mudou"
+TutorialTrio,[center]Come and play with us!,[center]Venha e brinque conosco!
+TutorialFred3,[center]What kind of place is this?,[center]Que raio de lugar é esse?
+DialogueButton,What?,O que?
+StartButton,Start,Iniciar
+QuitButton,Quit,Sair
+ResumeButton,Resume,Continuar
+TutorialText,[center]Tutorial:[/center][br] [br][A] / [D] to walk [br][Space] to jump [br][F] to interact [br][M] to open map [br][Esc] to pause game,[center]Tutorial:[/center][br] [br][A]/[D] para caminhar[br][Spaço] para pular[br][F] para interagir[br][M] abre o mapa[br] [Esc] pausa o jogo
+CloseTutorial,[center] [F] to close this,[center] [F] para fechar isso
+LanguageSelector,Language,Idioma
+VisibleDoorLocked,Appears to be Locked,Parece estar trancado
+InviisibleDoorLocked,Looks like there's a fissure in this wall,Parece que há uma fissura nessa parede
+DialogueContinueM,[center] [F or SPACE to continue],[center] [F ou SPAÇO para continuar]
+Worm1,[center]Fear the ground,[center]Tema o solo
+FredEarth,[center] Man... i wish i had a weapon now,[center] Cara... como eu queria ter uma arma agora
+Rogerio1,[center]Feel the sea's embrace,[center]Sinta o abraço do mar
+FredWater1,[center] Sea? we're in a cave,[center] Mar? Estamos em uma caverna
+FredWater2,[center]There's a waterfall ahead,[center]Há uma cachoeira adiante
+Swimmer1,[center]Come swin with me!,[center]Venha nadar comigo!
+FredLava1,"[center]Nahh, this place looks way too hot","[center]Nahh, esse lugar parece quente demais pra mim"
+SafeMessage,[center] You're [br][center] safe,[center]Você[br][center]está[center]a[br][center]salvo
+PaintingClose,[center][F][br] [br]T[br]O[br] [br]C[br]L[br]O[br]S[br]E[br][/center],[center][F][br] [br]P[br]A[br]R[br]A[br] [br]F[br]E[br]C[br]H[br]A[br]R[/center]
+FredLava2,[center]There's a relaxing energy coming from this painting,[center]Existe uma energia relaxante emanando desta pintura
+DivineMessage1,[center] Don't be afraid,[center]Não temas
+FredLava3,[center]Too late buddy,"[center]Amigo, já to têmido"
+FredLava4,[center]Hope to find a way out soon…,[center]Espero encontrar uma saída logo…
+FredFinal,[center] Wind?,[center] Vento?
+WormFinal,[center]Why don't you fear the ground?,[center]Por que você não teme o solo?
+RogerioFinal,[center]Why you reject the sea's embrace?,[center]Por que você rejeita o abraço do mar?
+SwimmerFinal,[center]Why are you afraid of swimming with me?,[center]Por que tens medo de nadar comigo?
+TheOneAbove,[center]This was fun,[center]Isso foi divertido
+CreditsTitle,[center]This game was brought to life by:,[center]Este jogo foi trazido a vida por:
+ArtTtile,[center]Art by[br] [br]Mariana Flores Pintos[/center],[center]Arte por[br] [br]Mariana Flores Pintos[/center]
+MusicTitle,[center]Music by[br] [br]Eduardo Pisoni[/center],[center]Música por[br] [br]Eduardo Pisoni[/center]
+LeaveSign,Leave,Sair
+SfxCredits,[center]And thanks to freepixel.art for the sound assets used for this project sfx,[center]E obrigado a freepixel.art pelos assets de som utilizados nos SFX deste projeto

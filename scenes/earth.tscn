@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d25wlqqaaiho5" path="res://scenes/dialogue_ui.tscn" id="8_videg"]
 [ext_resource type="PackedScene" uid="uid://dxehvknm8bvo4" path="res://scenes/dialoguetrigger.tscn" id="9_te4mb"]
 [ext_resource type="PackedScene" uid="uid://b0ygnuit7m2tu" path="res://scenes/worm.tscn" id="12_np46n"]
+[ext_resource type="PackedScene" uid="uid://bubl87jwexasi" path="res://scenes/hunt_trigger.tscn" id="13_hnttr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t2fh"]
 texture = ExtResource("2_2tfwh")
@@ -600,6 +601,9 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_m7k1a")
 sources/1 = SubResource("TileSetAtlasSource_8ll37")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnttr"]
+size = Vector2(292, 148)
+
 [node name="Earth" type="Node2D" unique_id=469155997]
 script = ExtResource("1_te4mb")
 enemy_saw = "Worm"
@@ -674,6 +678,14 @@ next_scene_position = Vector2(776, 720)
 [node name="worm" parent="TileMapLayer" unique_id=1726133864 instance=ExtResource("12_np46n")]
 position = Vector2(458, 435)
 
+[node name="HuntTrigger" parent="TileMapLayer" unique_id=1583920477 node_paths=PackedStringArray("target") instance=ExtResource("13_hnttr")]
+position = Vector2(680, 615)
+target = NodePath("../worm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer/HuntTrigger" unique_id=1583920478]
+shape = SubResource("RectangleShape2D_hnttr")
+debug_color = Color(0.85, 0.20400001, 0.2147665, 0.41960785)
+
 [node name="marker_blue_door" type="Marker2D" parent="." unique_id=372773192]
 position = Vector2(11, 84)
 
@@ -696,5 +708,5 @@ collision_mask = 1
 position = Vector2(125.99999, 452)
 rotation = -1.5817019
 scale = Vector2(1, 2.3590465)
-dialogues = Array[String](["[center]Fear the ground", "[center] Man... i wish i had a weapon now"])
+dialogues = Array[String](["Worm1", "FredEarth"])
 speakers = Array[String](["[center]Worm", "[center]Fred"])

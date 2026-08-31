@@ -102,6 +102,10 @@ map={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/translation/Translate.en_US.translation", "res://assets/translation/Translate.pt_BR.translation")
+
 [layer_names]
 
 2d_physics/layer_1="world"
@@ -116,3 +120,4 @@ map={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true

@@ -832,12 +832,12 @@ autoplay = "default"
 frame_progress = 0.16424757
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("5_0vw2w")]
-position = Vector2(7, 107)
+position = Vector2(10, 108)
 SPEED = 30.0
 
 [node name="dialoguetrigger" parent="." unique_id=1217533880 instance=ExtResource("8_x2ws3")]
 position = Vector2(20, 59)
-dialogues = Array[String](["[center] Wind? [/center]", "[center]Why don't you fear the ground?[/center]", "[center] Why you reject the sea's embrace? [/center]", "[center] Why are you afraid of swimming with me? [/center]", "[center] This was fun [/center]"])
+dialogues = Array[String](["FredFinal", "WormFinal", "RogerioFinal", "SwimmerFinal", "TheOneAbove"])
 speakers = Array[String](["[center] Fred [/center]", "[center] Worm [/center]", "[center] Rogerio [/center]", "[center] Swimmer [/center]", "[center] The one above [/center]"])
 
 [node name="dialogue_ui" parent="." unique_id=1092085197 instance=ExtResource("9_d32fx")]

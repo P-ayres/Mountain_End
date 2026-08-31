@@ -25,7 +25,7 @@ func _ready():
 func _process(_delta):
 	if(is_in_range and is_interractable and Input.is_action_just_pressed("interact") && (!needed_key or GameSystem.item.has(needed_key))):
 		if player.SPEED == 0:
-			print("Porta bloqueada por outra inteeeração")
+			print("Porta bloqueada por outra interação")
 			return
 			
 		SfxManager.play_sfx(door_sound, 0.8)
@@ -40,14 +40,18 @@ func _process(_delta):
 		is_interractable = false
 		await get_tree().create_timer(0.2).timeout
 		SceneTransition.change_scene(scene)
+		
 	elif(is_in_range and Input.is_action_just_pressed("interact") and is_door_visible):
-		interaction_prompt.hide_prompt()
-		noInteration.show_message("Appears to be Locked")
-		SfxManager.play_sfx("LockedDoor")
+		if !SceneTransition.is_in_transition:
+			interaction_prompt.hide_prompt()
+			noInteration.show_message("VisibleDoorLocked")
+			SfxManager.play_sfx("LockedDoor")
+			
 	elif(is_in_range and Input.is_action_just_pressed("interact") and !is_door_visible):
-		interaction_prompt.hide_prompt()
-		SfxManager.play_sfx("WallWind")
-		noInteration.show_message("Looks like there's a fissure in this wall")
+		if !SceneTransition.is_in_transition:
+			interaction_prompt.hide_prompt()
+			SfxManager.play_sfx("WallWind")
+			noInteration.show_message("InviisibleDoorLocked")
 
 func _on_body_entered(_body: Node2D) -> void:
 	print("entered range")

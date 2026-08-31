@@ -229,38 +229,118 @@ sources/0 = SubResource("TileSetAtlasSource_6e1uj")
 [node name="end_screen" type="Node2D" unique_id=1123754925]
 script = ExtResource("1_6e1uj")
 
-[node name="Names" type="RichTextLabel" parent="." unique_id=1132429045]
-offset_left = 2.0
-offset_top = 215.0
-offset_right = 1152.0
-offset_bottom = 521.0
+[node name="Credits" type="Control" parent="." unique_id=913002250]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ttile" type="RichTextLabel" parent="Credits" unique_id=1563516005]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.412001
+anchor_top = 2.5500002
+anchor_right = 14.412001
+anchor_bottom = 2.6750002
+offset_left = -568.48004
+offset_top = 34.999992
+offset_right = 568.51996
+offset_bottom = 54.999992
 theme_override_fonts/normal_font = ExtResource("3_jc7ji")
 bbcode_enabled = true
-text = "[center] Jaime Moura de Araújo
+text = "CreditsTitle"
 
-Guilherme Schirmer da Costa
-
-Patrick Bueno Ayres
-
-
-Art by
-
-Mariana Flores Pinto
-
-
-And some thanks to João Vitor
-
-for helping us with the audio"
-
-[node name="Ttile" type="RichTextLabel" parent="." unique_id=1551364117]
-offset_left = 3.0
-offset_top = 153.0
-offset_right = 1151.0
-offset_bottom = 186.0
+[node name="Dev1" type="RichTextLabel" parent="Credits" unique_id=1587488281]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.400001
+anchor_top = 4.275
+anchor_right = 14.400001
+anchor_bottom = 4.275
+offset_left = -575.0
+offset_top = 36.0
+offset_right = 575.0
+offset_bottom = 56.0
 theme_override_fonts/normal_font = ExtResource("3_jc7ji")
 bbcode_enabled = true
-text = "[center]This game was brought to life by"
-metadata/_edit_use_anchors_ = true
+text = "[center] Jaime Moura de Araújo"
+
+[node name="Dev2" type="RichTextLabel" parent="Credits" unique_id=478386225]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.387001
+anchor_top = 5.4370003
+anchor_right = 14.387001
+anchor_bottom = 5.4370003
+offset_left = -575.48004
+offset_top = 35.51999
+offset_right = 575.51996
+offset_bottom = 56.51999
+theme_override_fonts/normal_font = ExtResource("3_jc7ji")
+bbcode_enabled = true
+text = "[center] Guilherme Schirmer da Costa"
+
+[node name="Dev3" type="RichTextLabel" parent="Credits" unique_id=1200769100]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.400001
+anchor_top = 6.775
+anchor_right = 14.400001
+anchor_bottom = 6.775
+offset_left = -576.0
+offset_top = 32.0
+offset_right = 576.0
+offset_bottom = 58.0
+theme_override_fonts/normal_font = ExtResource("3_jc7ji")
+bbcode_enabled = true
+text = "[center]Patrick Bueno Ayres"
+
+[node name="Art" type="RichTextLabel" parent="Credits" unique_id=39726563]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.362
+anchor_top = 8.812
+anchor_right = 14.362
+anchor_bottom = 8.812
+offset_left = -575.48004
+offset_top = -2.480011
+offset_right = 575.51996
+offset_bottom = 92.51999
+theme_override_fonts/normal_font = ExtResource("3_jc7ji")
+bbcode_enabled = true
+text = "ArtTtile"
+autowrap_trim_flags = 0
+
+[node name="Music" type="RichTextLabel" parent="Credits" unique_id=1770157221]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.400001
+anchor_top = 11.05
+anchor_right = 14.400001
+anchor_bottom = 11.05
+offset_left = -576.0
+offset_top = 3.0
+offset_right = 576.0
+offset_bottom = 87.0
+theme_override_fonts/normal_font = ExtResource("3_jc7ji")
+bbcode_enabled = true
+text = "MusicTitle"
+autowrap_trim_flags = 0
+
+[node name="SfxCredits" type="RichTextLabel" parent="Credits" unique_id=2056089814]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.412001
+anchor_top = 2.5500002
+anchor_right = 14.412001
+anchor_bottom = 2.6750002
+offset_left = -568.48004
+offset_top = 474.0
+offset_right = 568.51996
+offset_bottom = 494.0
+theme_override_fonts/normal_font = ExtResource("3_jc7ji")
+bbcode_enabled = true
+text = "SfxCredits"
 
 [node name="DefaultEnd" type="CanvasLayer" parent="." unique_id=176225084]
 layer = -1
