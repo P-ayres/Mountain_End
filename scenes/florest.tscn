@@ -1096,16 +1096,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Hey!" type="RichTextLabel" parent="." unique_id=1474397021]
-offset_left = 439.0
-offset_top = 204.0
-offset_right = 588.0
-offset_bottom = 214.0
-theme_override_fonts/normal_font = ExtResource("6_gqe5s")
-theme_override_font_sizes/normal_font_size = 8
-bbcode_enabled = true
-text = "[center] Congratulations! lol"
-
 [node name="Ttile" type="RichTextLabel" parent="Credits" unique_id=267691222]
 layout_mode = 1
 anchors_preset = -1
@@ -1219,3 +1209,13 @@ theme_override_fonts/normal_font = ExtResource("6_gqe5s")
 theme_override_font_sizes/normal_font_size = 5
 bbcode_enabled = true
 text = "SfxCredits"
+
+[node name="Hey!" type="RichTextLabel" parent="." unique_id=1474397021]
+offset_left = 439.0
+offset_top = 204.0
+offset_right = 588.0
+offset_bottom = 214.0
+theme_override_fonts/normal_font = ExtResource("6_gqe5s")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center] Congratulations! lol"
