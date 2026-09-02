@@ -35,14 +35,18 @@ func update_music():
 		"Game":
 			play_music("CaveAmbience")
 		"Earth":
-			play_music("CaveAmbience")
+			play_music("Suspense")
+			#play_music("CaveAmbience")
 		"area_aquatica":
-			play_music("WaterLevelAmbience")
+			play_music("Tensao")
+			#play_music("WaterLevelAmbience")
 		"Volcano":
-			play_music("LavaLevelAmbience")
+			play_music("Energia")
+			#play_music("LavaLevelAmbience")
 		"Florest":
 			play_music("Freedom")
 		"FinalScene":
+			play_music("Conclusao")
 			play_music("Wind")
 
 func play_music(audio_name: String, from_position: float = 0.0, skip_restart: bool = false) -> void:

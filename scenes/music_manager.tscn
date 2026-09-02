@@ -7,6 +7,10 @@
 [ext_resource type="AudioStream" uid="uid://b6j4y1uehpaui" path="res://assets/music/wind.mp3" id="6_jbem4"]
 [ext_resource type="AudioStream" uid="uid://6g288w4skygt" path="res://assets/music/lava_level_ambience.wav" id="6_p07gy"]
 [ext_resource type="AudioStream" uid="uid://djo0d5oiq0xuw" path="res://assets/music/free.mp3" id="7_hu6vc"]
+[ext_resource type="AudioStream" uid="uid://bkb3jn63cj24v" path="res://assets/music/suspense.mp3" id="8_r6agn"]
+[ext_resource type="AudioStream" uid="uid://dqsaxtpmi6a21" path="res://assets/music/tensao.mp3" id="9_suxwa"]
+[ext_resource type="AudioStream" uid="uid://byoknw1unxn4x" path="res://assets/music/energia.mp3" id="10_r5t12"]
+[ext_resource type="AudioStream" uid="uid://bd63ulivp8byg" path="res://assets/music/conclusao.mp3" id="11_l62sp"]
 
 [node name="MusicManager" type="Node" unique_id=103155046 node_paths=PackedStringArray("clips")]
 script = ExtResource("1_jd6i5")
@@ -37,4 +41,21 @@ parameters/looping = true
 
 [node name="Freedom" type="AudioStreamPlayer" parent="Clips" unique_id=2033806425]
 stream = ExtResource("7_hu6vc")
+parameters/looping = true
+
+[node name="Suspense" type="AudioStreamPlayer" parent="Clips" unique_id=205991543]
+stream = ExtResource("8_r6agn")
+parameters/looping = true
+
+[node name="Tensao" type="AudioStreamPlayer" parent="Clips" unique_id=9969698]
+stream = ExtResource("9_suxwa")
+parameters/looping = true
+
+[node name="Energia" type="AudioStreamPlayer" parent="Clips" unique_id=148472526]
+stream = ExtResource("10_r5t12")
+playback_type = 1
+parameters/looping = true
+
+[node name="Conclusao" type="AudioStreamPlayer" parent="Clips" unique_id=640688941]
+stream = ExtResource("11_l62sp")
 parameters/looping = true
