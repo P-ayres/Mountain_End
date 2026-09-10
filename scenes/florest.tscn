@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bimrftean0q04" path="res://scenes/leaf.tscn" id="3_ah75g"]
 [ext_resource type="Texture2D" uid="uid://ce16rpgglax5k" path="res://assets/sprites/Tileset/Tiles_florestBlue.png" id="3_jghty"]
 [ext_resource type="PackedScene" uid="uid://73n8ab8ihqia" path="res://scenes/sign.tscn" id="3_lqi2m"]
+[ext_resource type="Texture2D" uid="uid://pejqsqgqdhi1" path="res://assets/sprites/Objects/arvore_blue.png" id="4_18wto"]
 [ext_resource type="Texture2D" uid="uid://c4ufs1ov7j0lb" path="res://assets/sprites/Objects/GroupedLeafs.png" id="4_ktom5"]
 [ext_resource type="Script" uid="uid://6wa67ivowi2x" path="res://scripts/leave.gd" id="4_s4mi7"]
 [ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="5_3lx21"]
@@ -696,6 +697,167 @@ texture = ExtResource("3_jghty")
 [sub_resource type="TileSet" id="TileSet_ktom5"]
 sources/0 = SubResource("TileSetAtlasSource_18wto")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58012"]
+texture = ExtResource("4_18wto")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6, 8, 6, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/one_way = true
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6, 8, 6, 8, 8, -8, 8)
+1:0/0/physics_layer_0/polygon_0/one_way = true
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6, 8, 6, 8, 8, -8, 8)
+2:0/0/physics_layer_0/polygon_0/one_way = true
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6, 8, 6, 8, 8, -8, 8)
+3:0/0/physics_layer_0/polygon_0/one_way = true
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6, 8, 6, 8, 8, -8, 8)
+4:0/0/physics_layer_0/polygon_0/one_way = true
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6, 8, 6, 8, 8, -8, 8)
+5:0/0/physics_layer_0/polygon_0/one_way = true
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6edfr"]
+texture = ExtResource("3_jghty")
+0:0/0 = 0
+1:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+6:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+0:6/0 = 0
+6:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+6:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6, 8, 6, 8, 8, -8, 8)
+10:7/0/physics_layer_0/polygon_0/one_way = true
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+0:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+1:13/0 = 0
+3:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+7:14/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4x5om"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_58012")
+sources/1 = SubResource("TileSetAtlasSource_6edfr")
+
 [sub_resource type="Animation" id="Animation_jghty"]
 resource_name = "falling"
 length = 4.0333333
@@ -865,9 +1027,8 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAHAA4AAAAAAAEAAAAHAA4AAAAAAAIAAAAHAA4
 tile_set = SubResource("TileSet_ktom5")
 
 [node name="BackgrounLeafGroups" type="Sprite2D" parent="flores_enviroment/Leafs/leafGroup/background" unique_id=1834528027]
-visible = false
 modulate = Color(1.0845727, 1.0845727, 1.0845727, 1)
-position = Vector2(220, 358)
+position = Vector2(230, 195)
 texture = ExtResource("4_ktom5")
 
 [node name="LeafGroup2" type="Sprite2D" parent="flores_enviroment/Leafs/leafGroup/background/BackgrounLeafGroups" unique_id=717442640]
@@ -890,24 +1051,29 @@ texture = ExtResource("4_ktom5")
 position = Vector2(611, -17)
 texture = ExtResource("4_ktom5")
 
+[node name="Tree" type="TileMapLayer" parent="flores_enviroment/Leafs/leafGroup" unique_id=1560465946]
+modulate = Color(0.53779024, 0.6535649, 0.68939155, 1)
+tile_map_data = PackedByteArray("AAAeAB8AAAABAAQAAAAfAB8AAAACAAQAAAAgAB8AAAADAAQAAAAhAB8AAAAEAAQAAAAfAB4AAAACAAMAAAAgAB4AAAADAAMAAAAfAB0AAAACAAMAAAAfABwAAAACAAMAAAAfABsAAAACAAMAAAAfABoAAAACAAMAAAAfABkAAAACAAMAAAAfABgAAAACAAMAAAAfABcAAAACAAMAAAAfABYAAAACAAMAAAAfABUAAAACAAMAAAAgAB0AAAADAAMAAAAgABwAAAADAAMAAAAgABsAAAADAAMAAAAgABoAAAADAAMAAAAgABkAAAADAAMAAAAgABgAAAADAAMAAAAgABcAAAADAAMAAAAgABYAAAADAAMAAAAgABUAAAADAAMAAAAeABMAAAABAAEAAAAfABMAAAACAAEAAAAfABQAAAACAAQAACAgABMAAAADAAEAAAAgABQAAAADAAQAACAhABMAAAAEAAEAAAAZABMAAAAAAAEAAAAaABMAAAABAAEAAAAbABMAAAABAAEAAAAcABMAAAABAAEAAAAdABMAAAAAAAEAAAAeABQAAAABAAQAACAhABQAAAAEAAQAACAiABMAAAAEAAEAAAAjABMAAAAEAAEAAAAkABMAAAAFAAEAAAAlABMAAAAEAAEAAAAmABMAAAAFAAEAAAAmABIAAAAFAAAAAAAlABIAAAAEAAAAAAAkABIAAAAFAAAAAAAjABIAAAACAAAAAAAiABIAAAAFAAAAAAAhABIAAAACAAAAAAAcABIAAAACAAAAAAAdABIAAAAFAAAAAAAeABIAAAAEAAAAAAAfABIAAAAEAAAAAAAgABIAAAAFAAAAAAAZABIAAAAEAAAAAAAaABIAAAAFAAAAAAAbABIAAAACAAAAAAANACAAAAABAAQAAAAOACAAAAACAAQAAAAPACAAAAAEAAQAAAAOAB8AAAACAAMAAAAOAB4AAAACAAMAAAAOAB0AAAACAAEAAAAPAB0AAAAFAAEAABANAB0AAAABAAEAAAANABwAAAAFAAEAACAOABwAAAAEAAEAACAPABwAAAAFAAEAADAMAB0AAQAJAAcAAGAMABwAAQAJAAcAAGAQABwAAQAJAAcAAHAQAB0AAQAJAAcAAHAYABMAAQALAAsAAFAnABMAAQALAAsAAEAnABIAAAAFAAEAAEAYABIAAAAFAAEAAFASABsAAQAJAAcAAGASABwAAQAJAAcAAGATABsAAAAFAAEAACATABwAAAABAAEAAAATAB8AAAABAAQAAAAUABsAAAAEAAEAACAUABwAAAACAAEAAAAUAB0AAAACAAMAAAAUAB4AAAACAAMAAAAUAB8AAAACAAQAAAAVABsAAAAFAAEAADAVABwAAAAFAAEAABAVAB8AAAAEAAQAAAAWABsAAQAJAAcAAHAWABwAAQAJAAcAAHAZAB8AAAABAAQAAAAaAB0AAAACAAMAAAAaAB4AAAACAAMAAAAaAB8AAAACAAQAAAAbAB8AAAAEAAQAAAAYABsAAQAJAAcAAGAZABsAAAABAAEAAAAaABsAAAACAAEAAAAbABsAAAAFAAEAABAcABsAAQAJAAcAAHAYABoAAQAJAAcAAGAZABoAAAAFAAEAACAaABoAAAAEAAEAACAbABoAAAAFAAEAADAcABoAAQAJAAcAAHAaABwAAAACAAIAAAAJAB4AAQAJAAcAAGAKAB0AAQAKAAcAAAAKAB4AAAACAAEAAGAKAB8AAQAJAAcAACALAB4AAAAEAAQAAHALAB8AAAAEAAQAAFANABsAAQAKAAcAAAAOABsAAQAKAAcAAAAPABsAAQAKAAcAAAATABoAAQAKAAcAAAAUABoAAQAKAAcAAAAVABoAAQAKAAcAAAAZABkAAQAKAAcAAAAaABkAAQAKAAcAAAAbABkAAQAKAAcAAAAeABkAAQAKAAcAAGAhABcAAQAKAAcAAHAeABUAAQAKAAcAAGAYABAAAAAFAAEAAFAZABAAAAADAAAAAAAaABAAAAACAAAAAAAbABAAAAAEAAAAAAAcABAAAAADAAAAAAAdABAAAAADAAAAAAAeABAAAAADAAAAAAAfABAAAAABAAAAAAAgABAAAAADAAAAAAAhABAAAAADAAAAAAAiABAAAAACAAAAAAAjABAAAAADAAAAAAAkABAAAAADAAAAAAAlABAAAAAEAAAAAAAmABAAAAADAAAAAAAnABAAAAAFAAEAAEAYABEAAAAFAAEAAFAZABEAAAADAAAAAAAaABEAAAADAAAAAAAbABEAAAAEAAAAAAAcABEAAAADAAAAAAAdABEAAAADAAAAAAAeABEAAAACAAAAAAAfABEAAAADAAAAAAAgABEAAAADAAAAAAAhABEAAAAEAAAAAAAiABEAAAAFAAAAAAAjABEAAAAEAAAAAAAkABEAAAADAAAAAAAlABEAAAADAAAAAAAmABEAAAACAAAAAAAnABEAAAAFAAEAAEAmAA8AAAAFAAEAACAlAA8AAAAFAAEAACAkAA8AAAAFAAEAACAjAA8AAAAFAAEAACAiAA8AAAAFAAEAACAhAA8AAAAFAAEAACAgAA8AAAAFAAEAACAeAA8AAAAFAAEAACAdAA8AAAAFAAEAACAcAA8AAAAFAAEAACAbAA8AAAAFAAEAACAfAA8AAAAFAAEAACAaAA8AAAAFAAEAACAZAA8AAAAFAAEAACAYAA8AAQALAAsAAHAnAA8AAQALAAsAAGAkABoAAQAJAAcAAGAkABsAAQAJAAcAAGAlABkAAQAKAAcAAAAlABoAAAAFAAEAACAlABsAAAABAAEAAAAlAB8AAAABAAQAAAAmABkAAQAKAAcAAAAmABoAAAAEAAEAACAmABsAAAACAAEAAAAmABwAAAACAAIAAAAmAB0AAAACAAMAAAAmAB4AAAACAAMAAAAmAB8AAAACAAQAAAAnABkAAQAKAAcAAAAnABoAAAAFAAEAADAnABsAAAAFAAEAABAnAB8AAAAEAAQAAAAoABoAAQAJAAcAAHAoABsAAQAJAAcAAHAtABoAAQAJAAcAAGAtABsAAQAJAAcAAGAuABkAAQAKAAcAAAAuABoAAAAFAAEAACAuABsAAAABAAEAAAAuAB4AAAABAAQAAAAvABkAAQAKAAcAAAAvABoAAAAEAAEAACAvABsAAAACAAEAAAAvABwAAAACAAMAAAAvAB0AAAACAAMAAAAvAB4AAAACAAQAAAAwABkAAQAKAAcAAAAwABoAAAAFAAEAADAwABsAAAAFAAEAABAwAB4AAAAEAAQAAAAxABoAAQAJAAcAAHAxABsAAQAJAAcAAHA2ABgAAQAJAAcAAGA2ABkAAQAJAAcAAGA3ABcAAQAKAAcAAAA3ABgAAAAFAAEAACA3ABkAAAABAAEAAAA3AB0AAAABAAQAAAA4ABcAAQAKAAcAAAA4ABgAAAAEAAEAACA4ABkAAAACAAEAAAA4ABoAAAACAAIAAAA4ABsAAAACAAMAAAA4ABwAAAACAAMAAAA4AB0AAAACAAQAAAA5ABcAAQAKAAcAAAA5ABgAAAAFAAEAADA5ABkAAAAFAAEAABA5AB0AAAAEAAQAAAA6ABgAAQAJAAcAAHA6ABkAAQAJAAcAAHA=")
+tile_set = SubResource("TileSet_4x5om")
+
 [node name="Leaf1" parent="flores_enviroment/Leafs/leafGroup" unique_id=1565485706 instance=ExtResource("3_ah75g")]
-position = Vector2(286.43558, 523.0579)
+position = Vector2(296.5072, 501.27515)
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="flores_enviroment/Leafs/leafGroup/Leaf1" unique_id=1838727011]
 libraries/ = SubResource("AnimationLibrary_ktom5")
 autoplay = &"falling"
 
 [node name="Leaf2" parent="flores_enviroment/Leafs/leafGroup" unique_id=856848520 instance=ExtResource("3_ah75g")]
-position = Vector2(409, 331)
+position = Vector2(395.83264, 487.25256)
 
 [node name="Leaf3" parent="flores_enviroment/Leafs/leafGroup" unique_id=1515960343 instance=ExtResource("3_ah75g")]
-position = Vector2(465, 328)
+position = Vector2(603.6961, 488.64166)
 
 [node name="Leaf4" parent="flores_enviroment/Leafs/leafGroup" unique_id=734338005 instance=ExtResource("3_ah75g")]
-position = Vector2(529, 327)
+position = Vector2(747.578, 476.22998)
 
 [node name="Leaf5" parent="flores_enviroment/Leafs/leafGroup" unique_id=1742013475 instance=ExtResource("3_ah75g")]
-position = Vector2(579, 327)
+position = Vector2(889.7495, 460.42914)
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("2_yse1t")]
 position = Vector2(7, 620)
@@ -1043,3 +1209,13 @@ theme_override_fonts/normal_font = ExtResource("6_gqe5s")
 theme_override_font_sizes/normal_font_size = 5
 bbcode_enabled = true
 text = "SfxCredits"
+
+[node name="Hey!" type="RichTextLabel" parent="." unique_id=1474397021]
+offset_left = 439.0
+offset_top = 204.0
+offset_right = 588.0
+offset_bottom = 214.0
+theme_override_fonts/normal_font = ExtResource("6_gqe5s")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center] Congratulations! lol"

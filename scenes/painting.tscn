@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bubdx3pg7yxbr" path="res://scripts/painting.gd" id="1_8u3ay"]
 [ext_resource type="Texture2D" uid="uid://bc0dtitma8l1e" path="res://assets/sprites/Objects/painting_item.png" id="2_bp4ab"]
 [ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="3_v5cps"]
-[ext_resource type="Texture2D" uid="uid://bvnr3thjbjbjl" path="res://assets/sprites/Tileset/caverna_centro.png" id="4_c01yy"]
+[ext_resource type="Texture2D" uid="uid://cebfb6j3riy3i" path="res://assets/arvoreAzul.jpg" id="4_b7yep"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="5_v5cps"]
 [ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="6_b7yep"]
 
@@ -181,25 +181,35 @@ offset_left = -4.0
 offset_top = -17.0
 offset_right = 4.0
 offset_bottom = -4.0
+metadata/_edit_use_anchors_ = true
 
 [node name="PaintingFrame" type="Panel" parent="." unique_id=711354123]
 visible = false
-offset_left = -78.0
+offset_left = -53.0
 offset_top = -95.0
-offset_right = 96.0
+offset_right = 91.0
 offset_bottom = 49.0
-
-[node name="TextureRect" type="TextureRect" parent="PaintingFrame" unique_id=44794592]
-layout_mode = 0
-offset_right = 176.0
-offset_bottom = 144.0
-texture = ExtResource("4_c01yy")
-expand_mode = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="PaintingFrame" unique_id=1374533319]
 modulate = Color(18.534416, 18.534416, 1.8076193, 0.94900006)
-tile_map_data = PackedByteArray("AAAAAAkAAAAAAAMAAAABAAkAAAABAAMAAAACAAkAAAABAAMAAAADAAkAAAABAAMAAAAEAAkAAAABAAMAAAAFAAkAAAABAAMAAAAGAAkAAAABAAMAAAAHAAkAAAABAAMAAAAIAAkAAAABAAMAAAAJAAkAAAABAAMAAAAKAAkAAAACAAMAAAD//wgAAAACAAMAAFD//wcAAAABAAMAAFD//wYAAAABAAMAAFD//wAAAAAAAAMAAFD//wEAAAABAAMAAFD//wIAAAABAAMAAFD//wMAAAABAAMAAFD//wQAAAABAAMAAFD//wUAAAABAAMAAFALAAgAAAACAAMAAEALAAcAAAABAAMAAEALAAYAAAABAAMAAEALAAUAAAABAAMAAEALAAQAAAABAAMAAEALAAMAAAABAAMAAEALAAIAAAABAAMAAEALAAEAAAABAAMAAEALAAAAAAACAAMAAGAJAP//AAABAAMAADAIAP//AAABAAMAADAHAP//AAABAAMAADAGAP//AAABAAMAADAFAP//AAABAAMAADAEAP//AAABAAMAADADAP//AAABAAMAADACAP//AAABAAMAADABAP//AAABAAMAADAKAP//AAAAAAMAADAAAP//AAACAAMAADA=")
+tile_map_data = PackedByteArray("AAABAP//AAABAAMAADABAAkAAAABAAMAAAACAP//AAABAAMAADACAAkAAAABAAMAAAADAP//AAABAAMAADADAAkAAAABAAMAAAAEAP//AAABAAMAADAEAAkAAAABAAMAAAAFAP//AAABAAMAADAFAAkAAAABAAMAAAAGAP//AAABAAMAADAGAAkAAAABAAMAAAAHAP//AAABAAMAADAHAAkAAAABAAMAAAAIAP//AAAAAAMAADAIAAkAAAACAAMAAAD//wAAAAAAAAMAAFD//wEAAAABAAMAAFD//wIAAAABAAMAAFD//wMAAAABAAMAAFD//wQAAAABAAMAAFD//wUAAAABAAMAAFD//wYAAAABAAMAAFD//wcAAAABAAMAAFD//wgAAAACAAMAAFAAAP//AAACAAMAADAAAAkAAAAAAAMAAAAJAAAAAAACAAMAAGAJAAEAAAABAAMAAEAJAAIAAAABAAMAAEAJAAMAAAABAAMAAEAJAAQAAAABAAMAAEAJAAUAAAABAAMAAEAJAAYAAAABAAMAAEAJAAcAAAABAAMAAEAJAAgAAAACAAMAAEAAAAAAAAAGAAoAAFAAAAgAAAAGAAoAAHAIAAgAAAAGAAoAAGAIAAAAAAAGAAoAAEAIAAcAAAACAAgAAFAIAAYAAAALAAoAAFAIAAUAAAALAAoAAFAIAAQAAAALAAoAAFAIAAMAAAALAAoAAFAIAAIAAAALAAoAAFAIAAEAAAALAAoAAFAAAAcAAAALAAoAAEAAAAYAAAALAAoAAEAAAAUAAAALAAoAAEAAAAQAAAALAAoAAEAAAAMAAAALAAoAAEAAAAIAAAALAAoAAEAAAAEAAAALAAoAAEA=")
 tile_set = SubResource("TileSet_c01yy")
+
+[node name="TextureRect" type="TextureRect" parent="PaintingFrame" unique_id=44794592]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -72.0
+offset_right = 80.0
+offset_bottom = 72.0
+texture = ExtResource("4_b7yep")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
 
 [node name="SafeMessage" type="RichTextLabel" parent="PaintingFrame" unique_id=1623319763]
 layout_mode = 0
