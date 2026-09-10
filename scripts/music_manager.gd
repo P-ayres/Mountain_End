@@ -13,7 +13,7 @@ func _process(_delta):
 	if scene == null:
 		return
 	
-	if scene.name != last_scene_name:
+	elif scene.name != last_scene_name:
 		last_scene_name = scene.name
 		stop()
 		update_music()
@@ -36,15 +36,12 @@ func update_music():
 			play_music("CaveAmbience")
 		"Earth":
 			play_music("Suspense")
-			#play_music("CaveAmbience")
 		"area_aquatica":
 			play_music("Tensao")
-			#play_music("WaterLevelAmbience")
 		"Volcano":
 			play_music("Energia")
-			#play_music("LavaLevelAmbience")
 		"Florest":
-			play_music("Freedom")
+			play_music("Floresta")
 		"FinalScene":
 			play_music("Conclusao")
 			play_music("Wind")
