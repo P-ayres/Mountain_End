@@ -88,7 +88,6 @@ metadata/_edit_vertical_guides_ = [400.0, -400.0]
 position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"surge_attack"
-autoplay = "walk"
 frame = 5
 frame_progress = 1.0
 
@@ -143,4 +142,3 @@ debug_color = Color(0.9149989, 8.105218e-05, 0.7161235, 0.41960785)
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
 [connection signal="body_entered" from="ChaseArea" to="." method="_on_chase_area_body_entered"]
-[connection signal="body_exited" from="ChaseArea" to="." method="_on_chase_area_body_exited"]
