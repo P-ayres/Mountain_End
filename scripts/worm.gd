@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 @export var speed := 250.0
 
-enum State {SURFACED, TUNNELING, ATTACKING, BURROWING, SURGING}
+enum State {SURFACED, CHASING, ATTACKING}
 const ATTACK_FRAMES := [1, 2, 3]
 const SURGE_ANIM := &"surge_attack"
 
@@ -15,6 +15,7 @@ var player: CharacterBody2D
 var is_player_in_attack_range := false
 var is_chasing := false
 var is_hunt_forced := false
+var is_submerged := false
 var killzone_offset_x := 0.0
 
 
@@ -37,57 +38,34 @@ func _physics_process(delta: float) -> void:
 
 	var direction = (player.global_position - global_position).normalized()
 
-	# movimento: cada estado declara o seu
+	# movimento: cada estado declara o seu (anda até enquanto entra/sai da terra)
 	match state:
-		State.SURFACED, State.ATTACKING, State.BURROWING, State.SURGING:
+		State.SURFACED, State.ATTACKING:
 			velocity = lerp(velocity, Vector2.ZERO, 10.0 * delta)
-		State.TUNNELING:
+		State.CHASING:
 			velocity = lerp(velocity, direction * speed, 8.5 * delta)
 
 	# decisões: transições que dependem de "onde o player está agora"
 	match state:
 		State.SURFACED:
-			if _should_chase():
-				burrow()
-			elif is_player_in_attack_range:
+			if is_player_in_attack_range:
 				attack()
-		State.TUNNELING:
+			elif _should_chase():
+				state = State.CHASING
+				_sync_burrow_pose()
+		State.CHASING:
 			if is_player_in_attack_range:
 				attack()
 			elif not _should_chase():
-				emerge()
+				state = State.SURFACED
+				if is_submerged:
+					sprite.play(SURGE_ANIM)
 
 	move_and_slide()
 
 # --- Transições com animação ---
 
-# Player chegou perto: se enterra parada e só depois começa a caçar
-func burrow() -> void:
-	state = State.BURROWING
-	sprite.play_backwards(SURGE_ANIM)
-	await sprite.animation_finished
-
-	await get_tree().create_timer(0.2).timeout
-
-	if state != State.BURROWING:
-		return
-
-	if _should_chase():
-		state = State.TUNNELING
-		sprite.play("walk")
-	else:
-		emerge()
-
-# Perdeu o player: volta à superfície e fica visível de novo
-func emerge() -> void:
-	state = State.SURGING
-	sprite.play(SURGE_ANIM)
-	await sprite.animation_finished
-
-	if state == State.SURGING:
-		state = State.SURFACED
-		_show_surfaced()
-
+# Player está no alcance de golpe: ataca de onde estiver (visível ou escondida)
 func attack() -> void:
 	state = State.ATTACKING
 
@@ -103,13 +81,21 @@ func attack() -> void:
 	if state != State.ATTACKING:
 		return
 
+	# a animação já termina totalmente emergida
 	if _should_chase():
-		burrow()
+		state = State.CHASING
+		_sync_burrow_pose()
 	else:
 		state = State.SURFACED
-		_show_surfaced()
 
-# Pose de repouso: não existe animação de idle, então congela o último frame do surge
+# Acompanha a SubmergeArea: entra na terra se o player está dentro dela, sai se não
+func _sync_burrow_pose() -> void:
+	if is_submerged:
+		sprite.play_backwards(SURGE_ANIM)
+	else:
+		sprite.play(SURGE_ANIM)
+
+# Pose de repouso: não existe animação de idle, então segura o último frame do surge
 func _show_surfaced() -> void:
 	sprite.animation = SURGE_ANIM
 	sprite.set_frame_and_progress(sprite.sprite_frames.get_frame_count(SURGE_ANIM) - 1, 1.0)
@@ -131,6 +117,22 @@ func _on_attack_area_body_entered(body: Node2D) -> void:
 func _on_attack_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		is_player_in_attack_range = false
+
+func _on_submerge_area_body_entered(body: Node2D) -> void:
+	if not body.is_in_group("Player"):
+		return
+
+	is_submerged = true
+	if state == State.CHASING:
+		_sync_burrow_pose()
+
+func _on_submerge_area_body_exited(body: Node2D) -> void:
+	if not body.is_in_group("Player"):
+		return
+
+	is_submerged = false
+	if state == State.CHASING:
+		_sync_burrow_pose()
 
 func _on_vision_area_body_exited(body: Node2D) -> void:
 	if not body.is_in_group("Player"):
