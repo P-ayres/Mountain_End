@@ -13,7 +13,7 @@ var state := State.IDLE
 var player: CharacterBody2D
 var is_player_in_attack_range := false
 var is_player_in_chase_range := false
-var is_player_in_ambush_range := false
+var is_hunt_forced := false 	# a fase mandou emboscar, ver scripts/hunt_trigger.gd
 var killzone_offset_x := 0.0 	# posição original da hitbox, usado ao espelhar
 
 
@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 	# decisões: transições que dependem de "onde o player está agora"
 	match state:
 		State.IDLE:
-			if is_player_in_ambush_range:
+			if is_hunt_forced:
 				burrow()
 			elif is_player_in_chase_range:
 				state = State.CHASING
@@ -102,14 +102,6 @@ func _on_chase_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		is_player_in_chase_range = false
 
-func _on_ambush_area_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		is_player_in_ambush_range = true
-
-func _on_ambush_area_body_exited(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		is_player_in_ambush_range = false
-
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		is_player_in_attack_range = true
@@ -130,3 +122,6 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 	
 	var is_attack_frame := sprite.animation == &"attack" and sprite.frame in ATTACK_FRAMES
 	killzone.monitoring = is_attack_frame
+
+func set_hunt_forced(value: bool) -> void:
+	is_hunt_forced = value
