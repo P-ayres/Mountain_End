@@ -91,8 +91,8 @@ metadata/_edit_vertical_guides_ = [400.0, -400.0]
 position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"surge_attack"
-frame = 5
-frame_progress = 1.0
+frame = 0
+frame_progress = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1861131137]
 light_mask = 2
