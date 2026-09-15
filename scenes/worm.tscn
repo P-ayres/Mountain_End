@@ -79,6 +79,9 @@ height = 22.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_chase"]
 radius = 64.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_submerge"]
+radius = 32.0
+
 [node name="worm" type="CharacterBody2D" unique_id=1726133864]
 script = ExtResource("1_fb06d")
 speed = 60.0
@@ -88,9 +91,8 @@ metadata/_edit_vertical_guides_ = [400.0, -400.0]
 position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"surge_attack"
-autoplay = "walk"
-frame = 5
-frame_progress = 1.0
+frame = 0
+frame_progress = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1861131137]
 light_mask = 2
@@ -127,6 +129,14 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_chase")
 debug_color = Color(0.8204019, 0.3966344, 0.19680524, 0.41960785)
 
+[node name="SubmergeArea" type="Area2D" parent="." unique_id=1900000001]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubmergeArea" unique_id=1900000002]
+shape = SubResource("CircleShape2D_submerge")
+debug_color = Color(0.2444213, 0.4448544, 0.8395062, 0.41960785)
+
 [node name="KillzoneArea" parent="." unique_id=1461249974 instance=ExtResource("3_g4v7s")]
 collision_layer = 2
 collision_mask = 2
@@ -143,4 +153,5 @@ debug_color = Color(0.9149989, 8.105218e-05, 0.7161235, 0.41960785)
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
 [connection signal="body_entered" from="ChaseArea" to="." method="_on_chase_area_body_entered"]
-[connection signal="body_exited" from="ChaseArea" to="." method="_on_chase_area_body_exited"]
+[connection signal="body_entered" from="SubmergeArea" to="." method="_on_submerge_area_body_entered"]
+[connection signal="body_exited" from="SubmergeArea" to="." method="_on_submerge_area_body_exited"]
