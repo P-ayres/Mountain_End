@@ -192,15 +192,6 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_47noy")
 debug_color = Color(0.8204019, 0.3966344, 0.19680524, 0.41960785)
 
-[node name="AmbushArea" type="Area2D" parent="." unique_id=1842341]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AmbushArea" unique_id=449600582]
-light_mask = 2
-visibility_layer = 2
-polygon = PackedVector2Array(-39, 26, -39, -26, -390, -120, -390, 120)
-
 [node name="KillzoneArea" parent="." unique_id=1461249974 instance=ExtResource("3_5bwlj")]
 collision_layer = 2
 collision_mask = 2
@@ -218,5 +209,3 @@ debug_color = Color(0.67377853, 0.38152438, 0.85380393, 0.41960785)
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
 [connection signal="body_entered" from="ChaseArea" to="." method="_on_chase_area_body_entered"]
 [connection signal="body_exited" from="ChaseArea" to="." method="_on_chase_area_body_exited"]
-[connection signal="body_entered" from="AmbushArea" to="." method="_on_ambush_area_body_entered"]
-[connection signal="body_exited" from="AmbushArea" to="." method="_on_ambush_area_body_exited"]
