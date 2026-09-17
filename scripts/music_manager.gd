@@ -1,33 +1,24 @@
 extends Node
 
-var active_music_stream: AudioStreamPlayer
+var active_streams: Dictionary = {}
+var last_scene_name := ""
 
 @export_group("Main")
 @export var clips: Node
-var last_scene: Node
-var last_scene_name := ""
 
 func _process(_delta):
 	var scene := get_tree().current_scene
-	
 	if scene == null:
 		return
-	
-	elif scene.name != last_scene_name:
+	if scene.name != last_scene_name:
 		last_scene_name = scene.name
-		stop()
+		stop_all()
 		update_music()
 
 func update_music():
-	var scene = get_tree().current_scene
-
+	var scene := get_tree().current_scene
 	if scene == null:
 		return
-		
-	if scene.name != last_scene_name:
-		last_scene.name = scene.name
-		stop()
-		update_music()
 
 	match scene.name:
 		"main_menu":
@@ -47,12 +38,20 @@ func update_music():
 			play_music("Wind")
 
 func play_music(audio_name: String, from_position: float = 0.0, skip_restart: bool = false) -> void:
-	if skip_restart and active_music_stream and active_music_stream.name == audio_name:
+	if skip_restart and active_streams.has(audio_name):
 		return
-		
-	active_music_stream = clips.get_node(audio_name)
-	active_music_stream.play(from_position)
 
-func stop():
-	if active_music_stream != null:
-		active_music_stream.stop()
+	var music_player: AudioStreamPlayer = clips.get_node(audio_name)
+	music_player.play(from_position)
+	active_streams[audio_name] = music_player
+
+func stop_music(audio_name: String) -> void:
+	if active_streams.has(audio_name):
+		active_streams[audio_name].stop()
+		active_streams.erase(audio_name)
+
+func stop_all() -> void:
+	for music_player in active_streams.values():
+		if is_instance_valid(music_player):
+			music_player.stop()
+	active_streams.clear()
