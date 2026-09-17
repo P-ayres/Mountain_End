@@ -31,7 +31,7 @@ func update_music():
 
 	match scene.name:
 		"main_menu":
-			play_music("Lonelly")
+			play_music("MainMenu")
 		"Game":
 			play_music("CaveAmbience")
 		"Earth":
