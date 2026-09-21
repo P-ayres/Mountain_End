@@ -20,7 +20,6 @@ var is_interractable = true
 
 func _ready():
 	animated_sprite_2d.play(door_type)
-	animated_sprite_2d.visible = is_door_visible
 
 func _process(_delta):
 	if(is_in_range and is_interractable and Input.is_action_just_pressed("interact") && (!needed_key or GameSystem.item.has(needed_key))):
