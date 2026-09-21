@@ -1076,7 +1076,7 @@ position = Vector2(747.578, 476.22998)
 position = Vector2(889.7495, 460.42914)
 
 [node name="Player" parent="." unique_id=1021298550 instance=ExtResource("2_yse1t")]
-position = Vector2(7, 620)
+position = Vector2(555, 190)
 
 [node name="Sign" parent="." unique_id=1430650561 instance=ExtResource("3_lqi2m")]
 position = Vector2(1134, 456)
@@ -1218,4 +1218,4 @@ offset_bottom = 214.0
 theme_override_fonts/normal_font = ExtResource("6_gqe5s")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "[center] Congratulations! lol"
+text = "Congratulations"
