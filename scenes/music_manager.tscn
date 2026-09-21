@@ -44,6 +44,8 @@ parameters/looping = true
 
 [node name="Floresta" type="AudioStreamPlayer" parent="Clips" unique_id=322030940]
 stream = ExtResource("12_suxwa")
+parameters/looping = true
 
 [node name="MainMenu" type="AudioStreamPlayer" parent="Clips" unique_id=1420090506]
 stream = ExtResource("10_fkbch")
+parameters/looping = true
