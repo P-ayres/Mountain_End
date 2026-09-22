@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://c7p4vxrauutao" path="res://assets/music/MainMenu.mp3" id="10_fkbch"]
 [ext_resource type="AudioStream" uid="uid://byoknw1unxn4x" path="res://assets/music/energia.mp3" id="10_r5t12"]
 [ext_resource type="AudioStream" uid="uid://bd63ulivp8byg" path="res://assets/music/conclusao.mp3" id="11_l62sp"]
-[ext_resource type="AudioStream" uid="uid://bpeajqnw30f0c" path="res://assets/music/Floresta.mp3" id="12_suxwa"]
+[ext_resource type="AudioStream" uid="uid://bpeajqnw30f0c" path="res://assets/music/Forest.mp3" id="12_suxwa"]
 
 [node name="MusicManager" type="Node" unique_id=103155046 node_paths=PackedStringArray("clips")]
 script = ExtResource("1_jd6i5")
@@ -42,7 +42,7 @@ parameters/looping = true
 stream = ExtResource("11_l62sp")
 parameters/looping = true
 
-[node name="Floresta" type="AudioStreamPlayer" parent="Clips" unique_id=322030940]
+[node name="Forest" type="AudioStreamPlayer" parent="Clips" unique_id=322030940]
 stream = ExtResource("12_suxwa")
 parameters/looping = true
 
