@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ce16rpgglax5k"
-path="res://.godot/imported/Tiles_florestBlue.png-c197d082e19d407fecee40337b101def.ctex"
+path="res://.godot/imported/tiles_blue_forest.png-39f2cabbb5ff3f8b24a0da93363cb7c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Tileset/Tiles_florestBlue.png"
-dest_files=["res://.godot/imported/Tiles_florestBlue.png-c197d082e19d407fecee40337b101def.ctex"]
+source_file="res://assets/sprites/Tileset/tiles_blue_forest.png"
+dest_files=["res://.godot/imported/tiles_blue_forest.png-39f2cabbb5ff3f8b24a0da93363cb7c5.ctex"]
 
 [params]
 

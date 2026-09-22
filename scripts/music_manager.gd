@@ -31,8 +31,8 @@ func update_music():
 			play_music("Tensao")
 		"Volcano":
 			play_music("Energia")
-		"Florest":
-			play_music("Floresta")
+		"Forest":
+			play_music("Forest")
 		"FinalScene":
 			play_music("Conclusao")
 			play_music("Wind")

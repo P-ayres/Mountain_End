@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://dbrv4x23kajcg"]
 
-[ext_resource type="Script" uid="uid://c4bwmdcp4fdpn" path="res://scripts/florest.gd" id="1_fjnv5"]
+[ext_resource type="Script" uid="uid://c4bwmdcp4fdpn" path="res://scripts/forest.gd" id="1_fjnv5"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="1_oxau5"]
 [ext_resource type="PackedScene" uid="uid://tl02yxutky3c" path="res://scenes/player.tscn" id="2_yse1t"]
 [ext_resource type="PackedScene" uid="uid://bimrftean0q04" path="res://scenes/leaf.tscn" id="3_ah75g"]
-[ext_resource type="Texture2D" uid="uid://ce16rpgglax5k" path="res://assets/sprites/Tileset/Tiles_florestBlue.png" id="3_jghty"]
+[ext_resource type="Texture2D" uid="uid://ce16rpgglax5k" path="res://assets/sprites/Tileset/tiles_blue_forest.png" id="3_jghty"]
 [ext_resource type="PackedScene" uid="uid://73n8ab8ihqia" path="res://scenes/sign.tscn" id="3_lqi2m"]
 [ext_resource type="Texture2D" uid="uid://pejqsqgqdhi1" path="res://assets/sprites/Objects/arvore_blue.png" id="4_18wto"]
 [ext_resource type="Texture2D" uid="uid://c4ufs1ov7j0lb" path="res://assets/sprites/Objects/GroupedLeafs.png" id="4_ktom5"]
@@ -994,7 +994,7 @@ _data = {
 &"fallingOverlay": SubResource("Animation_18wto")
 }
 
-[node name="Florest" type="Node2D" unique_id=696075997]
+[node name="Forest" type="Node2D" unique_id=696075997]
 script = ExtResource("1_fjnv5")
 
 [node name="flores_enviroment" type="Node2D" parent="." unique_id=1778397336]
@@ -1218,4 +1218,4 @@ offset_bottom = 214.0
 theme_override_fonts/normal_font = ExtResource("6_gqe5s")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "[center] Congratulations! lol"
+text = "Congratulations"
