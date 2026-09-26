@@ -21,3 +21,6 @@ mono_crash.*.json
 
 # Build-specific ignores
 /builds
+
+# Node-specific ignores
+node_modules/

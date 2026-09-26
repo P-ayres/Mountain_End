@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "prepare:web": "node tools/prepare-web-deploy.mjs",
+    "deploy": "npm run prepare:web && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.141.0"
+  }
+}
