@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bav8v3atcql1a" path="res://scripts/end_screen.gd" id="1_6e1uj"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="1_kq7ac"]
-[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="3_jc7ji"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://third-party/fonts/PixelOperator8.ttf" id="3_jc7ji"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jc7ji"]
 texture = ExtResource("1_kq7ac")

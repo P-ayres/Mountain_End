@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hjqxqxpkpxdh" path="res://scripts/music_manager.gd" id="1_jd6i5"]
 [ext_resource type="AudioStream" uid="uid://cgxnlr74se5tm" path="res://assets/music/cave_ambience.wav" id="2_yodp2"]
-[ext_resource type="AudioStream" uid="uid://b6j4y1uehpaui" path="res://assets/music/wind.mp3" id="6_jbem4"]
+[ext_resource type="AudioStream" uid="uid://b6j4y1uehpaui" path="res://third-party/sounds/wind.mp3" id="6_jbem4"]
 [ext_resource type="AudioStream" uid="uid://bkb3jn63cj24v" path="res://assets/music/suspense.mp3" id="8_r6agn"]
 [ext_resource type="AudioStream" uid="uid://dqsaxtpmi6a21" path="res://assets/music/tensao.mp3" id="9_suxwa"]
 [ext_resource type="AudioStream" uid="uid://c7p4vxrauutao" path="res://assets/music/MainMenu.mp3" id="10_fkbch"]

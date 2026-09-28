@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://difrkc4dtf5k5" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="2_8ln24"]
-[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://third-party/fonts/PixelOperator8.ttf" id="2_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://bmqqlge32sqyh" path="res://assets/sprites/Tileset/tiles_lava.png" id="3_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://57cx0y1uxr8l" path="res://assets/sprites/Tileset/tiles_aquaticos.png" id="4_oa1go"]
 [ext_resource type="PackedScene" uid="uid://bxhqsaprwgd6n" path="res://scenes/LanguageButton.tscn" id="6_rtw2f"]

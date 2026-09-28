@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://458sumt2vwco" path="res://scenes/door.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://bt3ttiisrgf13" path="res://assets/sprites/Objects/papiro_1.png" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://73n8ab8ihqia" path="res://scenes/sign.tscn" id="4_lbhrr"]
-[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="5_p57ef"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://third-party/fonts/PixelOperator8.ttf" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dxehvknm8bvo4" path="res://scenes/dialoguetrigger.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://d25wlqqaaiho5" path="res://scenes/dialogue_ui.tscn" id="10_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://vhd54kylrnbd" path="res://scenes/watcher.tscn" id="10_vtaks"]

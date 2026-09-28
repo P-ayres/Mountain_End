@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uj1i7qkiwpn7" path="res://scripts/pause.gd" id="1_f1d2v"]
 [ext_resource type="Texture2D" uid="uid://cp5qm1wlch0qc" path="res://assets/sprites/Objects/papiro_2.png" id="1_r8yp4"]
-[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="2_m0klm"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://third-party/fonts/PixelOperator8.ttf" id="2_m0klm"]
 [ext_resource type="PackedScene" uid="uid://bxhqsaprwgd6n" path="res://scenes/LanguageButton.tscn" id="4_aicil"]
 
 [node name="Pause" type="Control" unique_id=658263292]

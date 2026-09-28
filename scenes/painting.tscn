@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="3_v5cps"]
 [ext_resource type="Texture2D" uid="uid://cebfb6j3riy3i" path="res://assets/arvoreAzul.jpg" id="4_b7yep"]
 [ext_resource type="Texture2D" uid="uid://dyp3w4wuajbnj" path="res://assets/sprites/Tileset/tiles_caverna.png" id="5_v5cps"]
-[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="6_b7yep"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://third-party/fonts/PixelOperator8.ttf" id="6_b7yep"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3pf7n"]
 atlas = ExtResource("2_bp4ab")

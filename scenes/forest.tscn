@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ufs1ov7j0lb" path="res://assets/sprites/Objects/GroupedLeafs.png" id="4_ktom5"]
 [ext_resource type="Script" uid="uid://6wa67ivowi2x" path="res://scripts/leave.gd" id="4_s4mi7"]
 [ext_resource type="PackedScene" uid="uid://dvx1y8o0hp7mv" path="res://scenes/interaction_prompt.tscn" id="5_3lx21"]
-[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="6_gqe5s"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://third-party/fonts/PixelOperator8.ttf" id="6_gqe5s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lqi2m"]
 texture = ExtResource("1_oxau5")

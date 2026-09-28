@@ -33,7 +33,7 @@ or redistributed without explicit permission.
 The assets located in `/assets/third-party` are third party assets and remain
 under their original licenses.
 
-See [AssetCredits.txt](assets/third-party/AssetCredits.txt)
+See [AssetCredits.txt](third-party/AssetCredits.txt)
 
 ---
 
