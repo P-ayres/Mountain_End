@@ -37,10 +37,9 @@ git clone https://github.com/<username>/<repository>.git
 
 ```
 assets/         Game assets
-audio/          Music and sound effects
 scenes/         Godot scenes
 scripts/        GDScript files
-addons/         Godot plugins
+third-party/    Third-party games assets used in the project
 project.godot   Project configuration
 ```
 
@@ -48,16 +47,16 @@ project.godot   Project configuration
 
 ## Development
 
-This repository follows a simple Git workflow during the jam.
+This repository follows a simple Git workflow with card based issues.
 
 Main branch:
 
 - `main`
 
-Feature branches may be created when time allows.
+[The team](https://github.com/P-ayres/Mountain_End/blob/main/Authors.txt)
 
 ---
 
-Developed during **Godot Wild Jam #95**.
+Initially developed during **Godot Wild Jam #95**.
 
 [See the project board](https://github.com/users/JaimeAraujo18/projects/4)
