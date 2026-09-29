@@ -24,7 +24,7 @@ This repository contains the complete source code for our Game Jam entry.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/<username>/<repository>.git
+git clone https://github.com/P-ayres/Mountain_End.git
 ```
 
 2. Open the project using Godot.
