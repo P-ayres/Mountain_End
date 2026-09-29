@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dvx1y8o0hp7mv"]
 
 [ext_resource type="Script" uid="uid://ms4i6ymb3yoy" path="res://scripts/interaction_prompt.gd" id="1_xrhpy"]
-[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="2_vkmgc"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://third-party/fonts/PixelOperator8.ttf" id="2_vkmgc"]
 
 [sub_resource type="Theme" id="Theme_xrhpy"]
 default_font = ExtResource("2_vkmgc")

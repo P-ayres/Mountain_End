@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://5s4vo42cv8er"
-path="res://.godot/imported/closing_map.wav-18edb6deeb498d1634b152625006803b.sample"
+path="res://.godot/imported/closing_map.wav-c6df4b54537511877a33d15c2a388544.sample"
 
 [deps]
 
-source_file="res://assets/sounds/closing_map.wav"
-dest_files=["res://.godot/imported/closing_map.wav-18edb6deeb498d1634b152625006803b.sample"]
+source_file="res://third-party/sounds/closing_map.wav"
+dest_files=["res://.godot/imported/closing_map.wav-c6df4b54537511877a33d15c2a388544.sample"]
 
 [params]
 

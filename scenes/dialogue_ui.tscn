@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d25wlqqaaiho5"]
 
-[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://assets/fonts/PixelOperator8.ttf" id="1_dwk8m"]
-[ext_resource type="FontFile" uid="uid://re38ryxf8nfj" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_6q285"]
+[ext_resource type="FontFile" uid="uid://83wsw74e3rum" path="res://third-party/fonts/PixelOperator8.ttf" id="1_dwk8m"]
+[ext_resource type="FontFile" uid="uid://re38ryxf8nfj" path="res://third-party/fonts/PixelOperator8-Bold.ttf" id="2_6q285"]
 
 [node name="dialogue_ui" type="Control" unique_id=1092085197]
 visible = false
